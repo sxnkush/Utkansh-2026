@@ -43,7 +43,7 @@ const Gallery = () => {
 
     return (
         <div
-            className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat"
+            className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat font-['Permanent_Marker']"
             style={{ backgroundImage: "url('images/gallery/gallery.jpg')" }}
         >
             {/* Overlay */}
