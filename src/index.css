@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @font-face {
     font-family: "Rockybilly";
     src: url("/fonts/Rockybilly.ttf") format("truetype");
@@ -12,4 +13,23 @@
     src: url("/fonts/Selima.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
+}
+
+@keyframes drip {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.animate-drip {
+    animation: drip 1.5s ease-out forwards;
 }

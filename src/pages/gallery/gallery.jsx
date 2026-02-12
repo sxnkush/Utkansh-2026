@@ -35,6 +35,9 @@ const Gallery = () => {
     const navigate = useNavigate();
     const containerRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [sprayDone, setSprayDone] = useState(false);
+
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -66,8 +69,7 @@ const Gallery = () => {
                 <h1
                     className="text-white select-none"
                     style={{
-                        fontFamily: "Selima",
-                        fontSize: "4vw",
+                        fontSize: "5vw",
                         textShadow: "2px 2px 6px rgba(0,0,0,0.4)",
                     }}
                 >
