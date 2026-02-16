@@ -8,55 +8,26 @@ const SprayReveal = ({ trigger }) => {
     const bufferRef = useRef(null);
     const sourceRef = useRef(null);
 
-    const dripsRef = useRef([]);
-    const particlesRef = useRef([]);
     const [showGalleries, setShowGalleries] = useState(false);
     const galleryTriggeredRef = useRef(false);
-
+    const SPRAY_DONE_KEY = "spray_done_once";
     const stateRef = useRef({
         phase: "IDLE",
         progress: 0,
-        shakeFrames: 0,
         fallVelocity: 0,
         fallRotation: 0,
-        currentPos: { x: 0, y: 0, angle: 0 }
+        currentPos: { x: 0, y: 0, angle: 0 },
+        landedTime: 0,
+        itemDrips: {} // Tracks drip progress per gallery item
     });
 
     const [sprayHead, setSprayHead] = useState({ x: 0, y: 0, angle: 0 });
 
     const GALLERY_ITEMS = [
-        {
-            id: 1,
-            src: "/images/navreveal/schedule.png",
-            x: "27%",
-            y: "32%",
-            link: "/gallery/one",
-            delay: 200
-        },
-        {
-            id: 2,
-            src: "/images/navreveal/accomodation.png",
-            x: "45%",
-            y: "82%",
-            link: "/gallery/two",
-            delay: 200
-        },
-        {
-            id: 3,
-            src: "/images/navreveal/gallery.png",
-            x: "66%",
-            y: "23%",
-            link: "/gallery",
-            delay: 400
-        },
-        {
-            id: 4,
-            src: "/images/navreveal/team.png",
-            x: "82%",
-            y: "73%",
-            link: "/teams",
-            delay: 600
-        }
+        { id: 1, src: "/images/navreveal/schedule.png", x: "27%", y: "32%", link: "/schedule", delay: 200 },
+        { id: 2, src: "/images/navreveal/accomodation.png", x: "45%", y: "82%", link: "/accomodation", delay: 200 },
+        { id: 3, src: "/images/navreveal/gallery.png", x: "66%", y: "23%", link: "/gallery", delay: 400 },
+        { id: 4, src: "/images/navreveal/team.png", x: "82%", y: "73%", link: "/teams", delay: 600 }
     ];
 
     useEffect(() => {
@@ -68,18 +39,16 @@ const SprayReveal = ({ trigger }) => {
             .then(res => res.arrayBuffer())
             .then(data => ctx.decodeAudioData(data))
             .then(buffer => bufferRef.current = buffer)
-            .catch(console.error);
+            .catch(e => console.error("Audio failed", e));
 
         const resumeAudio = () => ctx.state === "suspended" && ctx.resume();
         window.addEventListener("click", resumeAudio, { once: true });
-
         return () => window.removeEventListener("click", resumeAudio);
     }, []);
 
     const playSpraySound = async () => {
         if (!bufferRef.current || !audioCtxRef.current || sourceRef.current) return;
         if (audioCtxRef.current.state === "suspended") await audioCtxRef.current.resume();
-
         const source = audioCtxRef.current.createBufferSource();
         source.buffer = bufferRef.current;
         source.loop = true;
@@ -105,26 +74,25 @@ const SprayReveal = ({ trigger }) => {
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        const w = canvas.width;
-        const h = canvas.height;
+
 
         if (!trigger) {
             stopSpraySound();
             setShowGalleries(false);
             galleryTriggeredRef.current = false;
             stateRef.current.phase = "IDLE";
-            dripsRef.current = [];
-            setSprayHead({ x: 0, y: 0, angle: 0 });
+            stateRef.current.itemDrips = {};
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             cancelAnimationFrame(animationRef.current);
             return;
         }
 
+
         const segments = [
-            [{ x: w * 0.15, y: h * 0.7 }, { x: w * 0.2, y: h * 0.2 }, { x: w * 0.3, y: h * 0.2 }, { x: w * 0.35, y: h * 0.5 }],
-            [{ x: w * 0.35, y: h * 0.5 }, { x: w * 0.4, y: h * 0.9 }, { x: w * 0.5, y: h * 0.9 }, { x: w * 0.55, y: h * 0.5 }],
-            [{ x: w * 0.55, y: h * 0.5 }, { x: w * 0.6, y: h * 0.1 }, { x: w * 0.7, y: h * 0.1 }, { x: w * 0.75, y: h * 0.5 }],
-            [{ x: w * 0.75, y: h * 0.5 }, { x: w * 0.8, y: h * 0.8 }, { x: w * 0.85, y: h * 0.8 }, { x: w * 0.9, y: h * 0.4 }]
+            [{ x: canvas.width * 0.15, y: canvas.height * 0.7 }, { x: canvas.width * 0.2, y: canvas.height * 0.2 }, { x: canvas.width * 0.3, y: canvas.height * 0.2 }, { x: canvas.width * 0.35, y: canvas.height * 0.5 }],
+            [{ x: canvas.width * 0.35, y: canvas.height * 0.5 }, { x: canvas.width * 0.4, y: canvas.height * 0.9 }, { x: canvas.width * 0.5, y: canvas.height * 0.9 }, { x: canvas.width * 0.55, y: canvas.height * 0.5 }],
+            [{ x: canvas.width * 0.55, y: canvas.height * 0.5 }, { x: canvas.width * 0.6, y: canvas.height * 0.1 }, { x: canvas.width * 0.7, y: canvas.height * 0.1 }, { x: canvas.width * 0.75, y: canvas.height * 0.5 }],
+            [{ x: canvas.width * 0.75, y: canvas.height * 0.5 }, { x: canvas.width * 0.8, y: canvas.height * 0.8 }, { x: canvas.width * 0.85, y: canvas.height * 0.8 }, { x: canvas.width * 0.9, y: canvas.height * 0.4 }]
         ];
 
         const getBezierPoint = (t, p0, p1, p2, p3) => {
@@ -140,98 +108,122 @@ const SprayReveal = ({ trigger }) => {
             };
         };
 
-        const createDrip = (x, y) => {
-            if (Math.random() > 0.05) return;
-            dripsRef.current.push({ x, y, length: 0, maxLen: 40 + Math.random() * 60, speed: 0.5 + Math.random() });
-        };
-
-        const sprayDensity = 1600;
-        const sprayRadius = 80;
-
         const drawSpray = (x, y) => {
-            ctx.fillStyle = "rgba(209,249,3)";
-            for (let i = 0; i < sprayDensity; i++) {
-                const angle = Math.random() * Math.PI * 2;
-                const radius = Math.random() * Math.random() * sprayRadius;
+            ctx.fillStyle = "rgba(209,249,3, 0.9)";
+            for (let i = 0; i < 1600; i++) {
+                const a = Math.random() * Math.PI * 2;
+                const r = Math.random() * Math.random() * 80;
                 ctx.beginPath();
-                ctx.arc(x + Math.cos(angle) * radius, y + Math.sin(angle) * radius, Math.random() * 2.5, 0, Math.PI * 2);
+                ctx.arc(x + Math.cos(a) * r, y + Math.sin(a) * r, Math.random() * 2.5, 0, Math.PI * 2);
                 ctx.fill();
             }
-            createDrip(x, y);
         };
 
-        const drawVisuals = () => {
-            ctx.strokeStyle = "rgba(209,249,3, 0.6)";
-            ctx.lineCap = "round";
-            dripsRef.current.forEach(d => {
-                ctx.lineWidth = 2;
+        const drawSplat = (x, y) => {
+            ctx.fillStyle = "rgba(209,249,3, 0.95)";
+            for (let i = 0; i < 2000; i++) {
+                const a = Math.random() * Math.PI * 2;
+                const r = Math.random() * Math.random() * 75;
                 ctx.beginPath();
-                ctx.moveTo(d.x, d.y);
-                ctx.lineTo(d.x, d.y + d.length);
-                ctx.stroke();
-                if (d.length < d.maxLen) d.length += d.speed;
-            });
+                ctx.arc(x + Math.cos(a) * r, y + Math.sin(a) * r, Math.random() * 2, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        };
+
+        const createDripData = (x, y) => {
+            const numDrips = 4 + Math.floor(Math.random() * 5);
+            return Array.from({ length: numDrips }, () => ({
+                x: x + (Math.random() - 0.5) * 80,
+                currentY: y + (Math.random() * 20),
+                targetY: y + 60 + Math.random() * 160,
+                speed: 0.8 + Math.random() * 1.5,
+                width: 2.5 + Math.random() * 3
+            }));
         };
 
         stateRef.current = {
-            phase: "SHAKE",
+            phase: "SPRAY",
             progress: 0,
-            shakeFrames: 45,
             fallVelocity: 0,
             fallRotation: 0,
-            currentPos: { x: segments[0][0].x, y: segments[0][0].y, angle: 0 }
+            currentPos: { x: segments[0][0].x, y: segments[0][0].y, angle: 0 },
+            landedTime: 0,
+            itemDrips: {}
         };
+
+        playSpraySound();
 
         const animate = () => {
             const state = stateRef.current;
             let { x, y, angle } = state.currentPos;
-            drawVisuals();
 
-            if (state.phase === "SHAKE") {
-                x = segments[0][0].x + Math.sin(state.shakeFrames * 0.8) * 8;
-                y = segments[0][0].y + Math.cos(state.shakeFrames * 0.8) * 4;
-                angle = Math.sin(state.shakeFrames * 0.5) * 15;
-                state.shakeFrames--;
-                if (state.shakeFrames <= 0) {
-                    state.phase = "SPRAY";
-                    playSpraySound();
-                }
-            }
-            else if (state.phase === "SPRAY") {
-                const segmentIndex = Math.floor(state.progress);
-                if (segmentIndex >= segments.length) {
+            if (state.phase === "SPRAY") {
+                const idx = Math.floor(state.progress);
+                if (idx >= segments.length) {
                     state.phase = "FALL";
                     stopSpraySound();
                 } else {
-                    const localT = state.progress - segmentIndex;
-                    const [p0, p1, p2, p3] = segments[segmentIndex];
-                    const pos = getBezierPoint(localT, p0, p1, p2, p3);
-                    x = pos.x; y = pos.y;
-                    const dx = p3.x - p0.x;
-                    const dy = p3.y - p0.y;
-                    angle = Math.atan2(dy, dx) * (180 / Math.PI);
+                    const t = state.progress - idx;
+                    const [p0, p1, p2, p3] = segments[idx];
+                    const pos = getBezierPoint(t, p0, p1, p2, p3);
+                    x = pos.x;
+                    y = pos.y;
+                    angle = Math.atan2(p3.y - p0.y, p3.x - p0.x) * (180 / Math.PI);
                     drawSpray(x, y);
-                    state.progress += 0.025;
+                    state.progress += 0.02;
                 }
-            }
-            else if (state.phase === "FALL") {
+            } else if (state.phase === "FALL") {
                 state.fallVelocity += 0.8;
                 y += state.fallVelocity;
                 angle += (95 - angle) * 0.1;
-                if (y >= h + 300) {
+
+                if (y > canvas.height + 300) {
                     state.phase = "LANDED";
-                    if (!galleryTriggeredRef.current) {
-                        galleryTriggeredRef.current = true;
-                        setShowGalleries(true);
-                    }
+                    state.landedTime = Date.now();
                 }
+            } else if (state.phase === "LANDED") {
+                const elapsed = Date.now() - state.landedTime;
+
+                GALLERY_ITEMS.forEach((item, idx) => {
+                    // Start individual splat and drips after item's specific delay
+                    if (elapsed > item.delay && !state.itemDrips[idx]) {
+                        const px = (parseFloat(item.x) / 100) * canvas.width;
+                        const py = (parseFloat(item.y) / 100) * canvas.height;
+                        drawSplat(px, py);
+                        state.itemDrips[idx] = createDripData(px, py);
+
+                        // Show gallery items only after drips start
+                        if (!galleryTriggeredRef.current && idx === GALLERY_ITEMS.length - 1) {
+                            galleryTriggeredRef.current = true;
+                            setShowGalleries(true);
+                        }
+                    }
+                });
+
+                // Render ongoing drips
+                Object.values(state.itemDrips).forEach(drips => {
+                    drips.forEach(drip => {
+                        if (drip.currentY < drip.targetY) {
+                            const nextY = drip.currentY + drip.speed;
+                            ctx.fillStyle = "rgba(209,249,3, 0.9)";
+                            ctx.beginPath();
+                            ctx.arc(drip.x, nextY, drip.width, 0, Math.PI * 2);
+                            ctx.fill();
+                            // Rectangle fills the gap between frames for a smooth line
+                            ctx.fillRect(drip.x - drip.width, drip.currentY, drip.width * 2, nextY - drip.currentY);
+                            drip.currentY = nextY;
+                        }
+                    });
+                });
             }
+
             state.currentPos = { x, y, angle };
             setSprayHead({ x, y, angle });
-            if (state.phase !== "LANDED") animationRef.current = requestAnimationFrame(animate);
+            animationRef.current = requestAnimationFrame(animate);
         };
 
         animate();
+
         return () => {
             cancelAnimationFrame(animationRef.current);
             stopSpraySound();
@@ -244,8 +236,12 @@ const SprayReveal = ({ trigger }) => {
                 @keyframes formIn {
                     0% {
                         opacity: 0;
-                        filter: blur(20px) brightness(2);
-                        transform: translate(-50%, -50%) scale(0.8);
+                        filter: blur(25px) brightness(2);
+                        transform: translate(-50%, -50%) scale(0.6);
+                    }
+                    60% {
+                        opacity: 0.8;
+                        filter: blur(5px) brightness(1.2);
                     }
                     100% {
                         opacity: 1;
@@ -260,16 +256,13 @@ const SprayReveal = ({ trigger }) => {
                     display: block;
                     width: fit-content;
                     opacity: 0;
-                    animation: formIn 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-                    /* Updated to a smoother timing function and longer duration for 'zoom out' behavior */
-                    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), filter 0.5s ease;
+                    animation: formIn 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+                    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1), filter 0.5s ease;
                 }
 
                 .gallery-item:hover {
                     transform: translate(-50%, -50%) scale(2.2) !important;
-                    filter: drop-shadow(0 0 20px rgba(209,249,3, 0.5));
-                    /* Added delay to the hover-in and made it feel more deliberate */
-                    transition-delay: 0.4s;
+                    filter: drop-shadow(0 0 25px rgba(209, 249, 3, 0.6));
                 }
 
                 .gallery-item img {
@@ -284,7 +277,7 @@ const SprayReveal = ({ trigger }) => {
                 x={sprayHead.x}
                 y={sprayHead.y}
                 angle={sprayHead.angle}
-                visible={trigger}
+                visible={trigger && stateRef.current.phase !== "LANDED"}
             />
 
             {showGalleries &&
@@ -296,10 +289,10 @@ const SprayReveal = ({ trigger }) => {
                         style={{
                             left: item.x,
                             top: item.y,
-                            animationDelay: `${item.delay}ms`,
+                            animationDelay: `${item.delay + 300}ms` // Delay appearance until drips start moving
                         }}
                     >
-                        <img src={item.src} alt="gallery" />
+                        <img src={item.src} alt="nav item" />
                     </a>
                 ))}
         </>

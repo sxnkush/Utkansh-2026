@@ -1,0 +1,19 @@
+<svg
+  viewBox="0 0 600 160"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-auto"
+>
+  <text
+    x="50%"
+    y="60%"
+    textAnchor="middle"
+    dominantBaseline="middle"
+    fill="#0b0b0b"
+    fontSize="110"
+    fontFamily="StreetBomber, 'Permanent Marker', 'Brush Script MT', cursive"
+    letterSpacing="4"
+    transform="rotate(-2 300 80)"
+  >
+    About Us
+  </text>
+</svg>
