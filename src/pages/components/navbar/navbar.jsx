@@ -6,7 +6,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
     const navLinks = [
         { name: 'HOME', href: '#' },
-        { name: 'ABOUT US', href: '#' },
+        { name: 'ABOUT US', href: '/aboutus' },
         { name: 'EVENTS', href: '#' },
         { name: 'CONTACT US', href: '#' },
     ];

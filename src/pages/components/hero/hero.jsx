@@ -22,10 +22,10 @@ const Hero = () => {
     });
 
     /* 🟢 PAINT REVEAL */
-    const revealProgress = useTransform(smoothProgress, [0, 0.45], [0, 1]);
-    const scale = useTransform(smoothProgress, [0, 0.45], [0.6, 4.2]);
-    const xTranslate = useTransform(smoothProgress, [0, 0.45], ["-15%", "10%"]);
-    const yTranslate = useTransform(smoothProgress, [0, 0.45], ["35%", "-35%"]);
+    const revealProgress = useTransform(smoothProgress, [0, 0.35], [0, 1]);
+    const scale = useTransform(smoothProgress, [0, 0.35], [0.6, 4.2]);
+    const xTranslate = useTransform(smoothProgress, [0, 0.35], ["-15%", "10%"]);
+    const yTranslate = useTransform(smoothProgress, [0, 0.35], ["35%", "-35%"]);
 
 
     const videos = [
@@ -86,21 +86,71 @@ const Hero = () => {
         document.body.appendChild(tag);
     }, []);
 
-
-    /* 🎥 VIDEO VISIBILITY */
-    const transitionProgress = useTransform(smoothProgress, [0.48, 0.58], [0, 1]);
-    const smoothTransition = useSpring(transitionProgress, {
+    const cardsProgress = useTransform(
+        scrollYProgress,
+        [0.42, 0.52],
+        [0, 1]
+    );
+    const cardsSpring = useSpring(cardsProgress, {
         stiffness: 120,
-        damping: 20,
-        mass: 0.4,
+        damping: 30,
+        mass: 0.8,
     });
 
-    /*  GREEN BG STYLES */
-    const greenOpacity = useTransform(smoothProgress, [0.42, 0.48, 0.6], [0, 1, 0]);
-    const greenY = useTransform(smoothTransition, [0, 1], [0, -80]);
-    const greenScale = useTransform(smoothProgress, [0.42, 0.48], [1, 1.12]);
-    const greenBrightness = useTransform(smoothTransition, [0, 1], ["brightness(1)", "brightness(0.82)"]);
+    // LEFT CARD transforms
+    const leftX = useTransform(cardsSpring, [0, 1], [-120, 0]);
+    const leftRotateY = useTransform(cardsSpring, [0, 1], [35, 18]);
+    const leftRotateZ = useTransform(cardsSpring, [0, 1], [2, 1]);
+    const leftOpacity = useTransform(cardsSpring, [0, 1], [0, 1]);
 
+    // RIGHT CARD transforms
+    const rightX = useTransform(cardsSpring, [0, 1], [120, 0]);
+    const rightRotateY = useTransform(cardsSpring, [0, 1], [-34, -20]);
+    const rightRotateZ = useTransform(cardsSpring, [0, 1], [-2, 1]);
+    const rightOpacity = useTransform(cardsSpring, [0, 1], [0, 1]);
+
+    // LABEL (optional match)
+    const labelX = useTransform(cardsSpring, [0, 1], [100, 0]);
+    const labelRotateY = useTransform(cardsSpring, [0, 1], [-35, -21]);
+    const labelRotateZ = useTransform(cardsSpring, [0, 1], [-2, 1]);
+    const labelOpacity = useTransform(cardsSpring, [0, 1], [0, 1]);
+
+    /* 🎥 VIDEO VISIBILITY */
+    const transitionProgress = useTransform(
+        scrollYProgress,
+        [0.62, 0.65],   // small 0.08 range
+        [0, 1]
+    );
+
+    const smoothTransition = useSpring(transitionProgress, {
+        stiffness: 110,
+        damping: 28,
+        mass: 0.9,
+    });
+    /*  GREEN BG STYLES */
+    const greenOpacity = useTransform(
+        smoothProgress,
+        [0.32, 0.38, 0.65],   // starts before paint fully finishes
+        [0, 1, 1]
+    );
+
+    const greenScale = useTransform(
+        smoothProgress,
+        [0.32, 0.38, 0.65],
+        [1, 1.08, 1.15]       // slightly softer pop
+    );
+
+    const greenY = useTransform(
+        smoothProgress,
+        [0.35, 0.75],
+        [0, -40]
+    );
+
+    const greenBrightness = useTransform(
+        smoothProgress,
+        [0.35, 0.65],
+        ["brightness(1)", "brightness(0.82)"]
+    );
     /* 🎥 VIDEO MOTION STYLES */
     const videoY = useTransform(smoothTransition, [0, 1], [140, 0]);
     const videoScale = useTransform(smoothTransition, [0, 0.7, 1], [0.85, 1.08, 1]);
@@ -108,24 +158,62 @@ const Hero = () => {
 
     useEffect(() => {
         const unsub = smoothProgress.on("change", (v) => {
-            if (v >= 0.48 && !startImageReveal) setStartImageReveal(true);
-            if (v < 0.45 && startImageReveal) setStartImageReveal(false);
+            // Updated thresholds to start cards reveal sooner
+            if (v >= 0.44 && !startImageReveal) setStartImageReveal(true);
+            if (v < 0.41 && startImageReveal) setStartImageReveal(false);
 
-            if (v >= 0.55) setRenderVideo(true);
-            else if (v < 0.52) setRenderVideo(false);
+            if (v >= 0.62) setRenderVideo(true);
+            else if (v < 0.60) setRenderVideo(false);
         });
         return () => unsub();
     }, [smoothProgress, startImageReveal]);
 
+    // Adjusted BG Graffiti Reveal (starts at 0.38 instead of 0.42)
+    const aboutUsOpacity = useTransform(smoothProgress, [0.38, 0.45, 0.52], [0, 1, 1]);
+    const aboutUsY = useTransform(smoothProgress, [0.38, 0.45], [60, 0]);
+    /* 🎯 PARALLAX AFTER REVEAL */
+    const contentParallaxY = useTransform(
+        smoothProgress,
+        [0.45, 0.75],
+        [0, 80] // how much it moves down
+    );
+
+    // VIDEO
+    const videoOpacity = useTransform(
+        smoothProgress,
+        [0.70, 0.77],
+        [0, 1]
+    );
+
+    const videoY_smooth = useTransform(
+        smoothProgress,
+        [0.70, 0.77],
+        [140, 0]
+    );
+
+    const videoScale_smooth = useTransform(
+        smoothProgress,
+        [0.70, 0.77],
+        [0.92, 1]
+    );
+
+    const videoBlur_smooth = useTransform(
+        smoothProgress,
+        [0.70, 0.77],
+        ["blur(18px)", "blur(0px)"]
+    );
+
+
     return (
-        <div ref={containerRef} className="relative h-[200vh] bg-slate-900">
+        <div ref={containerRef} className="relative h-[500vh] bg-slate-900">
             <section className="sticky top-0 w-full h-screen overflow-hidden relative">
                 {/* BASE BG */}
                 <img
-                    src="/images/herobg.png"
+                    src="/images/hero/herobg.png"
                     alt="Hero Background"
                     className="absolute inset-0 w-full h-full object-cover opacity-85"
                 />
+
 
                 {/* 🎨 PAINT REVEAL SVG */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
@@ -147,27 +235,24 @@ const Hero = () => {
 
                 {/* 🟢 SOLID GREEN LAYER */}
                 <motion.div
-                    className="absolute inset-0 bg-[#d1f903] z-20"
+                    className="absolute top-0 left-0 w-full h-[200%] bg-[#d1f903] z-20"
                     style={{ opacity: greenOpacity, y: greenY, scale: greenScale, filter: greenBrightness }}
                 />
 
                 {/* 🖼 SPRAY GRAFFITI REVEAL */}
                 <AnimatePresence>
-                    {startImageReveal && (
-                        <motion.div
-                            className="absolute inset-0 z-25"
-                            initial={{ clipPath: "circle(0% at 0% 100%)", opacity: 0, filter: "blur(20px)" }}
-                            animate={{ clipPath: "circle(150% at 0% 100%)", opacity: 1, filter: "blur(0px)" }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        >
-                            <img
-                                src="/images/aboutus/aboutus.png"
-                                alt="Graffiti Background"
-                                className="w-full h-full object-cover"
-                            />
-                        </motion.div>
-                    )}
+
+                    <motion.div
+                        className="absolute inset-0 z-25"
+                        style={{ opacity: aboutUsOpacity, y: aboutUsY }}
+                    >
+                        {/* BACKGROUND */}
+                        <img
+                            src="/images/aboutus/aboutus.png"
+                            alt="Graffiti Background"
+                            className="w-full h-full object-cover"
+                        />
+                    </motion.div>
                 </AnimatePresence>
 
                 {/* 🟨 CONTENT LAYER (YouTube + About Us) */}
@@ -183,9 +268,14 @@ const Hero = () => {
                             {/* 📺 YOUTUBE PLAYER (LEFT SIDE) */}
                             <motion.div
                                 className="absolute left-[7%] top-[58%] w-[43%] -translate-y-1/2 pointer-events-auto"
-                                initial={{ x: -100, rotateY: 35, rotateZ: 2, opacity: 0 }}
-                                animate={{ x: 0, rotateY: 18, rotateZ: 1, opacity: 1 }}
-                                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                                style={{
+                                    y: contentParallaxY,
+                                    x: leftX,
+                                    rotateY: leftRotateY,
+                                    rotateZ: leftRotateZ,
+                                    opacity: leftOpacity
+                                }}
+
                             >
                                 {/* THE IFRAME BOX */}
                                 <div
@@ -270,9 +360,13 @@ const Hero = () => {
                             {/*  CARD (EXISTING) */}
                             <motion.div
                                 className="absolute right-[7%] top-[54%] w-[43%] -translate-y-1/2"
-                                initial={{ x: 100, rotateY: -34, rotateZ: -2, opacity: 0 }}
-                                animate={{ x: 0, rotateY: -20, rotateZ: 1, opacity: 1 }}
-                                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                                style={{
+                                    y: contentParallaxY,
+                                    x: rightX,
+                                    rotateY: rightRotateY,
+                                    rotateZ: rightRotateZ,
+                                    opacity: rightOpacity
+                                }}
                             >
 
                                 <div
@@ -312,46 +406,68 @@ const Hero = () => {
                             {/* SVG LABEL */}
                             <motion.div
                                 className="absolute right-[16%] top-[12%] w-[23%]"
-                                initial={{ x: 100, rotateY: -35, rotateZ: -2, opacity: 0 }}
-                                animate={{ x: 0, rotateY: -21, rotateZ: 1, opacity: 1 }}
-                                transition={{ delay: 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                                style={{ transformStyle: "preserve-3d", filter: "brightness(1.05)" }}
+                                style={{
+                                    transformStyle: "preserve-3d",
+                                    y: contentParallaxY,
+                                    filter: "brightness(1.05)",
+                                    x: labelX,
+                                    rotateY: labelRotateY,
+                                    rotateZ: labelRotateZ,
+                                    opacity: labelOpacity
+                                }}
                             >
-                                <img src="/svgs/aboutus/abtus.svg" alt="About Us Label" className="w-full h-auto" />
-                                <svg viewBox="0 0 600 160" className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                                    <text
-                                        x="50%"
-                                        y="55%"
-                                        textAnchor="middle"
-                                        dominantBaseline="middle"
-                                        fill="#0b0b0b"
-                                        fontSize="90"
-                                        fontFamily="'Agbalumo', cursive"
-                                        letterSpacing="4"
-                                    >
-                                        About Us
-                                    </text>
+                                <img
+                                    src="/svgs/aboutus/abtus.svg"
+                                    alt="About Us Label"
+                                    className="w-full h-auto"
+                                />
+
+                                <svg
+                                    viewBox="0 0 600 160"
+                                    className="absolute inset-0 w-full h-full pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <image
+                                        href="/images/aboutus/aboutustext.png"
+                                        x="44%"
+                                        y="-10%"
+                                        width="700"
+                                        height="430"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        style={{ transform: "translate(-50%, -50%)" }}
+                                    />
+
                                 </svg>
                             </motion.div>
+
 
                         </motion.div>
                     )}
                 </AnimatePresence>
 
+
                 {/* 🎥 FULLSCREEN VIDEO REVEAL (CONTINUES AFTER CONTENT) */}
                 {renderVideo && (
                     <motion.div
                         className="absolute inset-0 z-40"
-                        style={{ y: videoY, scale: videoScale, filter: videoBlur }}
-                        onUpdate={() => { if (smoothTransition.get() > 0.95) videoRef.current?.play(); }}
+                        style={{
+                            opacity: videoOpacity,
+                            y: videoY_smooth,
+                            scale: videoScale_smooth,
+                            filter: videoBlur_smooth,
+                        }}
                     >
                         <video
                             ref={videoRef}
                             src="/videos/hero.mp4"
-                            loop playsInline
+                            loop
+                            playsInline
+
+                            muted autoPlay
                             className="w-full h-full object-cover bg-black"
                         />
                     </motion.div>
+
                 )}
             </section>
         </div>

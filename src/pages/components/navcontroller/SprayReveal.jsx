@@ -170,7 +170,7 @@ const SprayReveal = ({ trigger }) => {
                     y = pos.y;
                     angle = Math.atan2(p3.y - p0.y, p3.x - p0.x) * (180 / Math.PI);
                     drawSpray(x, y);
-                    state.progress += 0.02;
+                    state.progress += 0.025;
                 }
             } else if (state.phase === "FALL") {
                 state.fallVelocity += 0.8;
