@@ -76,19 +76,10 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
             {/* Mobile Fullscreen Menu - Now synced with menuOpen prop */}
             <div
-                className={`fixed inset-0 bg-black/95 flex flex-col items-center justify-center gap-12 transition-all duration-500 z-40
+                className={`fixed inset-0 bg-background flex flex-col items-center justify-center gap-12 transition-all duration-500 z-40
                 ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
             >
-                {navLinks.map((link) => (
-                    <Link
-                        key={link.name}
-                        to={link.path}
-                        onClick={onHamburgerClick} // Ensure menu closes when navigating
-                        className="text-[#d4ff00] text-5xl italic -skew-x-12 hover:skew-x-0 transition-transform active:scale-90"
-                    >
-                        {link.name}
-                    </Link>
-                ))}
+                
             </div>
         </nav>
     );
