@@ -25,9 +25,9 @@ const SprayReveal = ({ trigger }) => {
 
     const GALLERY_ITEMS = [
         { id: 1, src: "/images/navreveal/schedule.png", x: "27%", y: "32%", link: "/schedule", delay: 200 },
-        { id: 2, src: "/images/navreveal/accomodation.png", x: "45%", y: "82%", link: "/accomodation", delay: 200 },
+        { id: 2, src: "/images/navreveal/accomodation.png", x: "45%", y: "82%", link: "/accomodation", delay: 300 },
         { id: 3, src: "/images/navreveal/gallery.png", x: "66%", y: "23%", link: "/gallery", delay: 400 },
-        { id: 4, src: "/images/navreveal/team.png", x: "82%", y: "73%", link: "/teams", delay: 600 }
+        { id: 4, src: "/images/navreveal/team.png", x: "82%", y: "73%", link: "/teams", delay: 500 }
     ];
 
     useEffect(() => {
@@ -170,7 +170,7 @@ const SprayReveal = ({ trigger }) => {
                     y = pos.y;
                     angle = Math.atan2(p3.y - p0.y, p3.x - p0.x) * (180 / Math.PI);
                     drawSpray(x, y);
-                    state.progress += 0.025;
+                    state.progress += 0.022;
                 }
             } else if (state.phase === "FALL") {
                 state.fallVelocity += 0.8;
