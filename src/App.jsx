@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from "./Homepage";
 import Gallery from "./pages/gallery/gallery";
 import DevelopersPage from "./pages/teams/Teams";
-import AboutUs from "./pages/aboutus/aboutus";
+import ContactUsUtkansh26 from "./pages/contact/ContactUsUtkansh26";
+
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/teams" element={<DevelopersPage />} />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUsUtkansh26 />} />
       </Routes>
     </>
   );
