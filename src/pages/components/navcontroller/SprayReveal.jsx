@@ -9,8 +9,9 @@ const SprayReveal = ({ trigger }) => {
     const sourceRef = useRef(null);
 
     const [showGalleries, setShowGalleries] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const galleryTriggeredRef = useRef(false);
-    const SPRAY_DONE_KEY = "spray_done_once";
+
     const stateRef = useRef({
         phase: "IDLE",
         progress: 0,
@@ -18,17 +19,42 @@ const SprayReveal = ({ trigger }) => {
         fallRotation: 0,
         currentPos: { x: 0, y: 0, angle: 0 },
         landedTime: 0,
-        itemDrips: {} // Tracks drip progress per gallery item
+        itemDrips: {}
     });
 
     const [sprayHead, setSprayHead] = useState({ x: 0, y: 0, angle: 0 });
 
-    const GALLERY_ITEMS = [
-        { id: 1, src: "/images/navreveal/schedule.png", x: "27%", y: "32%", link: "/schedule", delay: 200 },
-        { id: 2, src: "/images/navreveal/accomodation.png", x: "45%", y: "82%", link: "/accomodation", delay: 300 },
-        { id: 3, src: "/images/navreveal/gallery.png", x: "66%", y: "23%", link: "/gallery", delay: 400 },
-        { id: 4, src: "/images/navreveal/team.png", x: "82%", y: "73%", link: "/teams", delay: 500 }
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    const NAV_ITEMS = [
+        {
+            id: 1, src: "/images/navreveal/schedule.png", link: "/schedule", delay: 200,
+            x: "27%", y: "32%", mobileX: "34%", mobileY: "12%", scale: 1.1
+        },
+        {
+            id: 2, src: "/images/navreveal/accomodations.png", link: "/accomodation", delay: 300,
+            x: "45.5%", y: "80%", mobileX: "73%", mobileY: "31.5%", scale: 1.1
+        },
+        {
+            id: 3, src: "/images/navreveal/gallery.png", link: "/gallery", delay: 400,
+            x: "66%", y: "23%", mobileX: "30%", mobileY: "57%", scale: 1.0
+        },
+        {
+            id: 4, src: "/images/navreveal/team.png", link: "/teams", delay: 500,
+            x: "83%", y: "72%", mobileX: "73%", mobileY: "82.2%", scale: 1.2
+        }
     ];
+
+    const GALLERY_ITEMS = NAV_ITEMS.map(item => ({
+        ...item,
+        currentX: isMobile ? item.mobileX : item.x,
+        currentY: isMobile ? item.mobileY : item.y
+    }));
 
     useEffect(() => {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -75,7 +101,6 @@ const SprayReveal = ({ trigger }) => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-
         if (!trigger) {
             stopSpraySound();
             setShowGalleries(false);
@@ -87,13 +112,21 @@ const SprayReveal = ({ trigger }) => {
             return;
         }
 
-
-        const segments = [
+        const desktopSegments = [
             [{ x: canvas.width * 0.15, y: canvas.height * 0.7 }, { x: canvas.width * 0.2, y: canvas.height * 0.2 }, { x: canvas.width * 0.3, y: canvas.height * 0.2 }, { x: canvas.width * 0.35, y: canvas.height * 0.5 }],
             [{ x: canvas.width * 0.35, y: canvas.height * 0.5 }, { x: canvas.width * 0.4, y: canvas.height * 0.9 }, { x: canvas.width * 0.5, y: canvas.height * 0.9 }, { x: canvas.width * 0.55, y: canvas.height * 0.5 }],
             [{ x: canvas.width * 0.55, y: canvas.height * 0.5 }, { x: canvas.width * 0.6, y: canvas.height * 0.1 }, { x: canvas.width * 0.7, y: canvas.height * 0.1 }, { x: canvas.width * 0.75, y: canvas.height * 0.5 }],
             [{ x: canvas.width * 0.75, y: canvas.height * 0.5 }, { x: canvas.width * 0.8, y: canvas.height * 0.8 }, { x: canvas.width * 0.85, y: canvas.height * 0.8 }, { x: canvas.width * 0.9, y: canvas.height * 0.4 }]
         ];
+
+        const mobileSegments = [
+            [{ x: canvas.width * 0.2, y: canvas.height * 0.1 }, { x: canvas.width * 0.5, y: canvas.height * 0.1 }, { x: canvas.width * 0.8, y: canvas.height * 0.2 }, { x: canvas.width * 0.7, y: canvas.height * 0.35 }],
+            [{ x: canvas.width * 0.7, y: canvas.height * 0.35 }, { x: canvas.width * 0.4, y: canvas.height * 0.45 }, { x: canvas.width * 0.2, y: canvas.height * 0.5 }, { x: canvas.width * 0.3, y: canvas.height * 0.6 }],
+            [{ x: canvas.width * 0.3, y: canvas.height * 0.6 }, { x: canvas.width * 0.6, y: canvas.height * 0.7 }, { x: canvas.width * 0.8, y: canvas.height * 0.75 }, { x: canvas.width * 0.7, y: canvas.height * 0.85 }],
+            [{ x: canvas.width * 0.7, y: canvas.height * 0.85 }, { x: canvas.width * 0.5, y: canvas.height * 0.95 }, { x: canvas.width * 0.3, y: canvas.height * 0.95 }, { x: canvas.width * 0.2, y: canvas.height * 0.9 }]
+        ];
+
+        const segments = isMobile ? mobileSegments : desktopSegments;
 
         const getBezierPoint = (t, p0, p1, p2, p3) => {
             const cx = 3 * (p1.x - p0.x);
@@ -110,9 +143,11 @@ const SprayReveal = ({ trigger }) => {
 
         const drawSpray = (x, y) => {
             ctx.fillStyle = "rgba(209,249,3, 0.9)";
-            for (let i = 0; i < 1600; i++) {
+            const particles = isMobile ? 800 : 1600;
+            const radius = isMobile ? 50 : 80;
+            for (let i = 0; i < particles; i++) {
                 const a = Math.random() * Math.PI * 2;
-                const r = Math.random() * Math.random() * 80;
+                const r = Math.random() * Math.random() * radius;
                 ctx.beginPath();
                 ctx.arc(x + Math.cos(a) * r, y + Math.sin(a) * r, Math.random() * 2.5, 0, Math.PI * 2);
                 ctx.fill();
@@ -121,9 +156,10 @@ const SprayReveal = ({ trigger }) => {
 
         const drawSplat = (x, y) => {
             ctx.fillStyle = "rgba(209,249,3, 0.95)";
+            const splashRadius = isMobile ? 50 : 75;
             for (let i = 0; i < 2000; i++) {
                 const a = Math.random() * Math.PI * 2;
-                const r = Math.random() * Math.random() * 75;
+                const r = Math.random() * Math.random() * splashRadius;
                 ctx.beginPath();
                 ctx.arc(x + Math.cos(a) * r, y + Math.sin(a) * r, Math.random() * 2, 0, Math.PI * 2);
                 ctx.fill();
@@ -133,9 +169,9 @@ const SprayReveal = ({ trigger }) => {
         const createDripData = (x, y) => {
             const numDrips = 4 + Math.floor(Math.random() * 5);
             return Array.from({ length: numDrips }, () => ({
-                x: x + (Math.random() - 0.5) * 80,
+                x: x + (Math.random() - 0.5) * (isMobile ? 50 : 80),
                 currentY: y + (Math.random() * 20),
-                targetY: y + 60 + Math.random() * 160,
+                targetY: y + 50 + Math.random() * (isMobile ? 100 : 160),
                 speed: 0.8 + Math.random() * 1.5,
                 width: 2.5 + Math.random() * 3
             }));
@@ -170,7 +206,7 @@ const SprayReveal = ({ trigger }) => {
                     y = pos.y;
                     angle = Math.atan2(p3.y - p0.y, p3.x - p0.x) * (180 / Math.PI);
                     drawSpray(x, y);
-                    state.progress += 0.022;
+                    state.progress += isMobile ? 0.035 : 0.022;
                 }
             } else if (state.phase === "FALL") {
                 state.fallVelocity += 0.8;
@@ -185,14 +221,12 @@ const SprayReveal = ({ trigger }) => {
                 const elapsed = Date.now() - state.landedTime;
 
                 GALLERY_ITEMS.forEach((item, idx) => {
-                    // Start individual splat and drips after item's specific delay
                     if (elapsed > item.delay && !state.itemDrips[idx]) {
-                        const px = (parseFloat(item.x) / 100) * canvas.width;
-                        const py = (parseFloat(item.y) / 100) * canvas.height;
+                        const px = (parseFloat(item.currentX) / 100) * canvas.width;
+                        const py = (parseFloat(item.currentY) / 100) * canvas.height;
                         drawSplat(px, py);
                         state.itemDrips[idx] = createDripData(px, py);
 
-                        // Show gallery items only after drips start
                         if (!galleryTriggeredRef.current && idx === GALLERY_ITEMS.length - 1) {
                             galleryTriggeredRef.current = true;
                             setShowGalleries(true);
@@ -200,7 +234,6 @@ const SprayReveal = ({ trigger }) => {
                     }
                 });
 
-                // Render ongoing drips
                 Object.values(state.itemDrips).forEach(drips => {
                     drips.forEach(drip => {
                         if (drip.currentY < drip.targetY) {
@@ -209,7 +242,6 @@ const SprayReveal = ({ trigger }) => {
                             ctx.beginPath();
                             ctx.arc(drip.x, nextY, drip.width, 0, Math.PI * 2);
                             ctx.fill();
-                            // Rectangle fills the gap between frames for a smooth line
                             ctx.fillRect(drip.x - drip.width, drip.currentY, drip.width * 2, nextY - drip.currentY);
                             drip.currentY = nextY;
                         }
@@ -228,7 +260,7 @@ const SprayReveal = ({ trigger }) => {
             cancelAnimationFrame(animationRef.current);
             stopSpraySound();
         };
-    }, [trigger]);
+    }, [trigger, isMobile]);
 
     return (
         <>
@@ -237,7 +269,7 @@ const SprayReveal = ({ trigger }) => {
                     0% {
                         opacity: 0;
                         filter: blur(25px) brightness(2);
-                        transform: translate(-50%, -50%) scale(0.6);
+                        transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
                     }
                     60% {
                         opacity: 0.8;
@@ -246,7 +278,7 @@ const SprayReveal = ({ trigger }) => {
                     100% {
                         opacity: 1;
                         filter: blur(0) brightness(1);
-                        transform: translate(-50%, -50%) scale(2);
+                        transform: translate(-50%, -50%) scale(var(--target-scale)) rotate(var(--target-rot));
                     }
                 }
 
@@ -261,13 +293,14 @@ const SprayReveal = ({ trigger }) => {
                 }
 
                 .gallery-item:hover {
-                    transform: translate(-50%, -50%) scale(2.2) !important;
+                    transform: translate(-50%, -50%) scale(calc(var(--target-scale) * 1.1)) rotate(var(--target-rot)) !important;
                     filter: drop-shadow(0 0 25px rgba(209, 249, 3, 0.6));
                 }
 
                 .gallery-item img {
                     display: block;
                     pointer-events: none;
+                    max-width: ${isMobile ? '120px' : 'none'};
                 }
             `}</style>
 
@@ -287,9 +320,11 @@ const SprayReveal = ({ trigger }) => {
                         href={item.link}
                         className="gallery-item"
                         style={{
-                            left: item.x,
-                            top: item.y,
-                            animationDelay: `${item.delay + 300}ms` // Delay appearance until drips start moving
+                            left: item.currentX,
+                            top: item.currentY,
+                            '--target-scale': (item.scale || 1) * (isMobile ? 1.4 : 2),
+                            '--target-rot': `${item.rotate || 0}deg`,
+                            animationDelay: `${item.delay + 300}ms`
                         }}
                     >
                         <img src={item.src} alt="nav item" />

@@ -5,7 +5,7 @@ const DiagonalReveal = ({ open, onComplete }) => {
         <motion.div
             className="fixed inset-0 z-30"
             style={{
-                backgroundImage: "url(/images/navreveal/navreveals.jpg)",
+                backgroundImage: " linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/images/navreveal/navreveals.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 background: "opaque",

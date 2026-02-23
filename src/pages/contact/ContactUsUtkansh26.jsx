@@ -15,7 +15,7 @@ const TiltCard = ({ children, onClick, position, delay = 0, isFullImage = false 
 
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["15deg", "-15deg"]);
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-15deg", "15deg"]);
-  
+
   const glareX = useTransform(mouseXSpring, [-0.5, 0.5], ["0%", "100%"]);
   const glareY = useTransform(mouseYSpring, [-0.5, 0.5], ["0%", "100%"]);
 
@@ -43,12 +43,12 @@ const TiltCard = ({ children, onClick, position, delay = 0, isFullImage = false 
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onClick={onClick}
-        whileHover={{ y: -8 }} 
-        style={{ 
-          rotateX, 
-          rotateY, 
+        whileHover={{ y: -8 }}
+        style={{
+          rotateX,
+          rotateY,
           perspective: 1000,
-          transformStyle: "preserve-3d" 
+          transformStyle: "preserve-3d"
         }}
         className={`
           relative cursor-pointer bg-white p-0.5 md:p-1 shadow-[0_10px_30px_rgba(0,0,0,0.8)] border-[4px] border-white
@@ -57,14 +57,14 @@ const TiltCard = ({ children, onClick, position, delay = 0, isFullImage = false 
           hover:border-[#FFD700] transition-all duration-300
         `}
       >
-        <motion.div 
-          style={{ 
-            background: `radial-gradient(circle at ${glareX} ${glareY}, rgba(255,255,255,0.4) 0%, transparent 80%)` 
+        <motion.div
+          style={{
+            background: `radial-gradient(circle at ${glareX} ${glareY}, rgba(255,255,255,0.4) 0%, transparent 80%)`
           }}
-          className="absolute inset-0 pointer-events-none z-30 opacity-0 group-hover:opacity-100 transition-opacity" 
+          className="absolute inset-0 pointer-events-none z-30 opacity-0 group-hover:opacity-100 transition-opacity"
         />
 
-        <div 
+        <div
           className={`
             w-full h-full flex flex-col items-center justify-center relative
             ${isFullImage ? 'bg-transparent' : 'bg-[#1a0b45] p-3 md:p-5'} 
@@ -96,7 +96,7 @@ const ContactUsUtkansh26 = () => {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden bg-black font-sans flex flex-col items-center">
       {/* Background Graffiti */}
-      <div 
+      <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/images/ContactusBG.png')` }}
       >
@@ -105,24 +105,18 @@ const ContactUsUtkansh26 = () => {
 
       {/* Main Content: Using py-4 and justify-center to fit fold */}
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center min-h-screen justify-center py-4">
-        
+
         {/* Compact Heading Section */}
         <div className="flex flex-col items-center mb-4 md:mb-8">
-          <motion.h1 
+          <motion.h1
             initial={{ scale: 0.9, opacity: 0 }}
             animate={isLoaded ? { scale: 1, opacity: 1 } : {}}
             className="text-4xl md:text-6xl lg:text-7xl font-black text-[#FFD700] text-center tracking-tighter italic uppercase leading-none"
             style={{
-              textShadow: `
-                0 0 20px rgba(255, 255, 255, 0.3),
-                2px 2px 0px #FF0000, 
-                4px 4px 0px #FF0000,
-                6px 6px 0px #AA0000
-              `,
-              WebkitTextStroke: '1.2px #FF0000'
+              fontFamily: "'Permanent Marker', cursive",
             }}
           >
-            REACH OUT
+            Contact Us
           </motion.h1>
 
           <motion.div
@@ -137,22 +131,22 @@ const ContactUsUtkansh26 = () => {
         <div className="relative w-full max-w-4xl mb-2">
           {/* Connector Lines */}
           <svg className="absolute inset-0 w-full h-full hidden md:block z-0 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <motion.line 
+            <motion.line
               initial={{ pathLength: 0 }} animate={isLoaded ? { pathLength: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.8 }}
               x1="18" y1="18" x2="50" y2="50" stroke="white" strokeWidth="1.2"
             />
-            <motion.line 
+            <motion.line
               initial={{ pathLength: 0 }} animate={isLoaded ? { pathLength: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.8 }}
               x1="82" y1="18" x2="50" y2="50" stroke="white" strokeWidth="1.2"
             />
-            <motion.line 
+            <motion.line
               initial={{ pathLength: 0 }} animate={isLoaded ? { pathLength: 1 } : {}}
               transition={{ duration: 1.2, delay: 1 }}
               x1="18" y1="82" x2="50" y2="50" stroke="white" strokeWidth="1.2"
             />
-            <motion.line 
+            <motion.line
               initial={{ pathLength: 0 }} animate={isLoaded ? { pathLength: 1 } : {}}
               transition={{ duration: 1.2, delay: 1 }}
               x1="82" y1="82" x2="50" y2="50" stroke="white" strokeWidth="1.2"
@@ -160,13 +154,13 @@ const ContactUsUtkansh26 = () => {
           </svg>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-x-12 md:gap-y-4 w-full relative z-10">
-            
+
             {/* Locate Us */}
             <div className="md:col-start-1 flex justify-center">
               <TiltCard onClick={scrollToMap} position="top-left" delay={0.1}>
-                <img 
-                  src="/images/nitjlogo.jpg" 
-                  alt="NITJ Logo" 
+                <img
+                  src="/images/nitjlogo.jpg"
+                  alt="NITJ Logo"
                   className="w-full h-16 md:h-20 object-contain brightness-110 contrast-125 mb-1"
                   onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=NITJ"; }}
                 />
@@ -213,9 +207,9 @@ const ContactUsUtkansh26 = () => {
             <div className="md:col-start-3 flex justify-center">
               <TiltCard onClick={() => navigate('/gallery')} position="bottom-right" delay={0.5} isFullImage={true}>
                 <div className="relative w-full h-full flex items-center justify-center min-h-[110px] md:min-h-[140px]">
-                  <img 
-                    src="/images/herobg.png" 
-                    alt="Gallery" 
+                  <img
+                    src="/images/herobg.png"
+                    alt="Gallery"
                     className="w-full h-full object-cover brightness-110"
                     onError={(e) => { e.target.src = "https://via.placeholder.com/200?text=UTKANSH"; }}
                   />
@@ -229,7 +223,7 @@ const ContactUsUtkansh26 = () => {
         </div>
 
         {/* Minimized View Map Trigger */}
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 4, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="text-white/40 cursor-pointer flex flex-col items-center gap-1 mt-2"
@@ -242,7 +236,7 @@ const ContactUsUtkansh26 = () => {
 
       {/* Map Section */}
       <div className="w-full flex flex-col items-center py-12 bg-black/70 backdrop-blur-xl relative z-20 border-t border-white/10">
-        <motion.div 
+        <motion.div
           ref={mapRef}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -256,13 +250,13 @@ const ContactUsUtkansh26 = () => {
               </h2>
               <p className="text-[#FFD700] font-black mt-3 text-xs md:text-lg uppercase tracking-[0.4em]">PIN - 144008</p>
             </div>
-            
-            <iframe 
+
+            <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.663184698305!2d75.53326897532395!3d31.39304995330364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a51d30c180edf%3A0x5b7633718d17ef33!2sDr.%20B.%20R.%20Ambedkar%20National%20Institute%20of%20Technology%20Jalandhar!5e0!3m2!1sen!2sin!4v1700000000000"
               className="w-full h-[300px] md:h-[500px] filter grayscale brightness-50 transition-all duration-700 group-hover:filter-none group-hover:brightness-100"
-              style={{ border: 0 }} 
+              style={{ border: 0 }}
               allowFullScreen
-              loading="lazy" 
+              loading="lazy"
             ></iframe>
           </div>
         </motion.div>

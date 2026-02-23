@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ onHamburgerClick, menuOpen }) => {
-    // CONTACT US is now set to '/contact'
-    // Other links kept as '#' placeholders as requested
+
+    const [showNavbar, setShowNavbar] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowNavbar(true);
+        }, 3000); // 3 seconds delay
+
+        return () => clearTimeout(timer);
+    }, []);
+
     const navLinks = [
         { name: 'HOME', path: '/' },
         { name: 'ABOUT US', path: '#' },
@@ -12,14 +21,20 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
     ];
 
     return (
-        <nav className="absolute top-0 left-0 w-full z-50 font-['Permanent_Marker']">
+        <nav
+            className={`absolute top-0 left-0 w-full z-50 font-['Permanent_Marker']
+            transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]
+            ${showNavbar ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"}`}
+        >
 
             <div className="w-full pt-10 pb-10 px-7">
                 <div className="max-w-7xl mx-auto flex justify-center items-center relative">
 
                     {/* GLOBAL HAMBURGER */}
                     <button
-                        className="group fixed top-6 left-6 w-20 h-20 flex items-center justify-center z-[9999] outline-none"
+                        className={`group fixed top-6 left-6 w-20 h-20 flex items-center justify-center z-[9999] outline-none
+                        transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]
+                        ${showNavbar ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
                         onClick={onHamburgerClick}
                     >
                         {/* Outer Rotating Crescent */}
@@ -79,7 +94,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                 className={`fixed inset-0 bg-background flex flex-col items-center justify-center gap-12 transition-all duration-500 z-40
                 ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
             >
-                
+
             </div>
         </nav>
     );

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, AnimatePresence, useMotionValue, useMotionTemplate } from "framer-motion";
 
 const Hero = () => {
     const containerRef = useRef(null);
@@ -9,6 +9,51 @@ const Hero = () => {
     const [startImageReveal, setStartImageReveal] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [introVideoEnded, setIntroVideoEnded] = useState(false);
+
+    // --- NEW: Effect intensity to control visual entry ---
+    const effectIntensity = useSpring(0, { stiffness: 40, damping: 20 });
+
+    useEffect(() => {
+        if (introVideoEnded) {
+            effectIntensity.set(1);
+        }
+    }, [introVideoEnded, effectIntensity]);
+
+    // Tilt only background video
+    const bgRotateX = useMotionValue(0);
+    const bgRotateY = useMotionValue(0);
+
+    const smoothBgRotateX = useSpring(bgRotateX, { stiffness: 60, damping: 20 });
+    const smoothBgRotateY = useSpring(bgRotateY, { stiffness: 60, damping: 20 });
+
+    // --- NEW: Apply intensity to rotation for smooth appearance ---
+    const finalRotateX = useTransform([smoothBgRotateX, effectIntensity], ([rot, intensity]) => rot * intensity);
+    const finalRotateY = useTransform([smoothBgRotateY, effectIntensity], ([rot, intensity]) => rot * intensity);
+
+    const glowX = useMotionValue(0);
+    const glowY = useMotionValue(0);
+
+    const smoothGlowX = useSpring(glowX, {
+        stiffness: 90,
+        damping: 20,
+        mass: 1.2
+    });
+
+    const smoothGlowY = useSpring(glowY, {
+        stiffness: 80,
+        damping: 20,
+        mass: 1.2
+    });
+
+    // --- MODIFIED: Glow opacity linked to effectIntensity ---
+    const glowBackground = useMotionTemplate`
+    radial-gradient(
+      1000px circle at ${smoothGlowX}px ${smoothGlowY}px,
+      rgba(63, 3, 185, ${effectIntensity}),
+      transparent 70%
+    )
+    `;
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -52,7 +97,7 @@ const Hero = () => {
     }, [isPlaying]);
 
     useEffect(() => {
-        if (!startImageReveal) return;
+        if (!startImageReveal || !introVideoEnded) return;
 
         const loadPlayer = () => {
             if (!window.YT || !window.YT.Player) return;
@@ -104,7 +149,25 @@ const Hero = () => {
             }
         };
 
-    }, [currentIndex, startImageReveal]);
+    }, [currentIndex, startImageReveal, introVideoEnded]);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const { innerWidth, innerHeight } = window;
+
+            const percentX = (e.clientX / innerWidth - 0.5);
+            const percentY = (e.clientY / innerHeight - 0.5);
+
+            bgRotateX.set(-percentY * 25);
+            bgRotateY.set(percentX * 25);
+
+            glowX.set(e.clientX);
+            glowY.set(e.clientY);
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, []);
 
     const togglePlayPause = () => setIsPlaying((prev) => !prev);
     const playNext = () => {
@@ -140,14 +203,21 @@ const Hero = () => {
     const greenBrightness = useTransform(smoothProgress, [0.35, 0.65], ["brightness(1)", "brightness(0.82)"]);
 
     useEffect(() => {
-        const unsub = smoothProgress.on("change", (v) => {
-            if (v >= 0.44 && !startImageReveal) setStartImageReveal(true);
-            if (v < 0.41 && startImageReveal) setStartImageReveal(false);
+        if (!introVideoEnded) return;
+
+        const updateStates = (v) => {
+            if (v >= 0.44) setStartImageReveal(true);
+            else if (v < 0.41) setStartImageReveal(false);
+
             if (v >= 0.62) setRenderVideo(true);
             else if (v < 0.60) setRenderVideo(false);
-        });
+        };
+
+        updateStates(smoothProgress.get());
+
+        const unsub = smoothProgress.on("change", updateStates);
         return () => unsub();
-    }, [smoothProgress, startImageReveal]);
+    }, [smoothProgress, introVideoEnded]);
 
     const aboutUsOpacity = useTransform(smoothProgress, [0.38, 0.45, 0.52], [0, 1, 1]);
     const aboutUsY = useTransform(smoothProgress, [0.38, 0.45], [60, 0]);
@@ -158,11 +228,133 @@ const Hero = () => {
     const videoScale_smooth = useTransform(smoothProgress, [0.70, 0.77], [0.92, 1]);
     const videoBlur_smooth = useTransform(smoothProgress, [0.70, 0.77], ["blur(18px)", "blur(0px)"]);
 
+
     return (
         <div ref={containerRef} className="relative h-[500vh] bg-slate-900">
-            <section className="sticky top-0 w-full h-screen overflow-hidden relative">
-                <img src="/images/hero/herobg.png" alt="Hero Background" className="absolute inset-0 w-full h-full object-cover opacity-85" />
 
+
+            <motion.div
+                className="fixed inset-0 z-0 bg-black"
+                style={{
+                    perspective: "1400px",
+                }}
+            >
+                <div style={{ perspective: "1900px" }}>
+                    <motion.video
+                        ref={videoRef}
+                        src="/videos/herobg.mp4"
+                        autoPlay
+                        muted
+                        playsInline
+                        onLoadedMetadata={() => {
+                            if (videoRef.current) {
+                                videoRef.current.playbackRate = 1.1;
+                            }
+                        }}
+                        onEnded={() => setIntroVideoEnded(true)}
+                        className="w-full h-full object-cover object-center scale-[1.6]"
+                        style={{
+                            rotateX: finalRotateX,   // MODIFIED
+                            rotateY: finalRotateY,   // MODIFIED
+                            transformStyle: "preserve-3d",
+                            transformOrigin: "50% 80%",
+                            marginTop: "6%",
+                        }}
+                    />
+                </div>
+
+                {/* Purple Glow */}
+                <motion.div
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                        background: glowBackground,
+                        mixBlendMode: "screen"
+                    }}
+                />
+            </motion.div>
+
+
+            <motion.section
+                className="sticky top-0 w-full h-screen overflow-hidden relative z-10"
+                initial={{ opacity: 0 }}
+                animate={{
+                    opacity: introVideoEnded ? 1 : 0,
+                    pointerEvents: introVideoEnded ? "auto" : "none"
+                }}
+                transition={{ duration: 0.8 }}
+            >
+
+                {/* Center Pop Container */}
+                <motion.div
+                    className="absolute inset-0 flex items-center justify-center z-5 pointer-events-none"
+                    style={{ perspective: "2200px" }}
+                >
+                    <motion.div
+                        style={{
+                            transformStyle: "preserve-3d",
+                            position: "relative",
+                            width: "45%",
+                            maxWidth: "900px",
+                        }}
+                    >
+
+                        {/* 🔄 Rotating White Ring: Pop Entrance + Scroll Rotation */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.6, rotate: -180, z: -200 }}
+                            animate={introVideoEnded ? {
+                                opacity: 1,
+                                scale: 1.6,
+                                rotate: 0,
+                                z: 100
+                            } : {}}
+                            transition={{
+                                duration: 1.6,
+                                ease: [0.16, 1, 0.3, 1],
+                            }}
+                            className="absolute inset-0"
+                        >
+                            <motion.img
+                                src="/images/hero/utkanshring.png"
+                                alt="Ring"
+                                className="w-full h-full object-contain"
+                                style={{
+
+                                    filter: "drop-shadow(0 20px 50px rgba(255,255,255,0.5))"
+                                }}
+                            />
+                        </motion.div>
+
+                        {/* 🚀 Utkansh Text Pop */}
+                        <motion.img
+                            src="/images/hero/utkansh.png"
+                            alt="Utkansh"
+                            className="relative w-full object-contain"
+                            initial={{
+                                opacity: 0,
+                                scale: 0.5,
+                                z: -400,
+                                filter: "blur(20px)"
+                            }}
+                            animate={introVideoEnded ? {
+                                opacity: 1,
+                                scale: 1.6,
+                                marginLeft: 30,
+                                z: 250,
+                                filter: "blur(0px)"
+                            } : {}}
+                            transition={{
+                                duration: 1.4,
+                                delay: 0.2,
+                                ease: [0.16, 1, 0.3, 1],
+                            }}
+                            style={{
+                                transformStyle: "preserve-3d",
+                                filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.8))"
+                            }}
+                        />
+
+                    </motion.div>
+                </motion.div>
                 <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
                     <defs>
                         <filter id="paint-drizzle">
@@ -186,7 +378,6 @@ const Hero = () => {
 
                 <AnimatePresence>
                     {startImageReveal && (
-                        /* CHANGED: Boosted z-index to 50 to stay above the transition video layers */
                         <motion.div className="absolute inset-0 z-50 pointer-events-none" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ perspective: "1200px" }}>
                             <motion.div className="absolute left-[7%] top-[58%] w-[43%] -translate-y-1/2 pointer-events-auto" style={{ y: contentParallaxY, x: leftX, rotateY: leftRotateY, rotateZ: leftRotateZ, opacity: leftOpacity }}>
                                 <div className="relative w-full aspect-video rounded-[1.2vw] overflow-hidden bg-black" style={{ boxShadow: "15px 30px 60px rgba(0,0,0,0.5)", border: "3px solid rgba(209, 249, 3)" }}>
@@ -245,15 +436,12 @@ const Hero = () => {
                     )}
                 </AnimatePresence>
 
-
-
                 {renderVideo && (
-                    /* CHANGED: Added pointer-events-none so this layer doesn't block the video controls below it */
                     <motion.div className="absolute inset-0 z-60 pointer-events-none" style={{ opacity: videoOpacity, y: videoY_smooth, scale: videoScale_smooth, filter: videoBlur_smooth }}>
                         <video ref={videoRef} src="/videos/hero.mp4" loop playsInline muted autoPlay className="w-full h-full object-cover bg-black" />
                     </motion.div>
                 )}
-            </section>
+            </motion.section>
         </div>
     );
 };
