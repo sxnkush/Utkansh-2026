@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
     const [showNavbar, setShowNavbar] = useState(false);
+    const [atTop, setAtTop] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -11,6 +12,18 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
         }, 3000); // 3 seconds delay
 
         return () => clearTimeout(timer);
+    }, []);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY < 100) {
+                setAtTop(true);
+            } else {
+                setAtTop(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const navLinks = [
@@ -22,9 +35,9 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
     return (
         <nav
-            className={`absolute top-0 left-0 w-full z-50 font-['Permanent_Marker']
-            transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]
-            ${showNavbar ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"}`}
+            className={`fixed top-0 left-0 w-full z-50 font-['Permanent_Marker']
+            transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
+            ${showNavbar && atTop ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}
         >
 
             <div className="w-full pt-10 pb-10 px-7">

@@ -11,8 +11,10 @@ const Hero = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [introVideoEnded, setIntroVideoEnded] = useState(false);
 
+
+
     // --- RESPONSIVE HANDLER ---
-    const [isMobile, setIsMobile] = useState(false);
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
     // --- NEW: Effect intensity to control visual entry ---
     const effectIntensity = useSpring(0, { stiffness: 40, damping: 20 });
@@ -231,7 +233,6 @@ const Hero = () => {
     const videoScale_smooth = useTransform(smoothProgress, [0.70, 0.77], [0.92, 1]);
     const videoBlur_smooth = useTransform(smoothProgress, [0.70, 0.77], ["blur(18px)", "blur(0px)"]);
 
-
     return (
         <div ref={containerRef} className="relative h-[500vh] bg-slate-900">
 
@@ -384,7 +385,16 @@ const Hero = () => {
                 <AnimatePresence>
                     {startImageReveal && (
                         <motion.div className="absolute inset-0 z-50 pointer-events-none" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} style={{ perspective: "1200px" }}>
-                            <motion.div className="absolute left-[7%] top-[58%] w-[43%] -translate-y-1/2 pointer-events-auto" style={{ y: contentParallaxY, x: leftX, rotateY: leftRotateY, rotateZ: leftRotateZ, opacity: leftOpacity }}>
+                            <motion.div
+                                className="absolute left-[7%] top-[58%] w-[43%] -translate-y-1/2 pointer-events-auto max-md:relative max-md:left-0 max-md:top-0 max-md:w-full  max-md:translate-y-0 max-md:px-4 max-md:mt-24"
+                                style={{
+                                    y: isMobile ? 0 : contentParallaxY,
+                                    x: isMobile ? 0 : leftX,
+                                    rotateY: isMobile ? 0 : leftRotateY,
+                                    rotateZ: isMobile ? 0 : leftRotateZ,
+                                    opacity: leftOpacity,
+                                }}
+                            >
                                 <div className="relative w-full aspect-video rounded-[1.2vw] overflow-hidden bg-black" style={{ boxShadow: "15px 30px 60px rgba(0,0,0,0.5)", border: "3px solid rgba(209, 249, 3)" }}>
                                     <div id={`yt-player-${currentIndex}`} className="w-full h-full pointer-events-none" />
                                 </div>
@@ -420,18 +430,40 @@ const Hero = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div className="absolute right-[7%] top-[54%] w-[43%] -translate-y-1/2" style={{ y: contentParallaxY, x: rightX, rotateY: rightRotateY, rotateZ: rightRotateZ, opacity: rightOpacity }}>
+                            <motion.div
+                                className="absolute right-[7%] top-[54%] w-[43%] -translate-y-1/2 max-md:relative max-md:right-0 max-md:top-0 max-md:w-full max-md:translate-y-0 max-md:px-4 max-md:mt-10"
+                                style={{
+                                    y: isMobile ? 0 : contentParallaxY,
+                                    x: isMobile ? 0 : rightX,
+                                    rotateY: isMobile ? 0 : rightRotateY,
+                                    rotateZ: isMobile ? 0 : rightRotateZ,
+                                    opacity: rightOpacity,
+                                }}
+                            >
                                 <div className="relative w-full aspect-video rounded-[1.3vw] overflow-hidden" style={{ boxShadow: "-15px 30px 60px rgba(0,0,0,0.5)", border: "3px solid rgba(209, 249, 3, 0.25)", backgroundColor: "#d1f903" }}>
                                     <img src="/images/aboutus/abtus.png" alt="About Us Card" className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center p-[10%]">
-                                        <p style={{ color: "#1a1a1a", fontSize: "clamp(8px, 1.5vw, 25px)", width: "90%", lineHeight: "1.4", fontFamily: "'Playfair Display', serif", textAlign: "center", textShadow: "1px 1px 2px rgba(255,255,255,0.5)" }}>
-                                            Utkansh-26 at NIT Jalandhar blends culture and technology in perfect harmony. Experience electrifying performances like Panache, Megasonic, BDM Night, and Star Night, alongside innovative events like Hackathons, RC Racing, NIT-yaan, Startup Mela, and Avishkar Exhibitions
+                                        <p
+                                            className="text-[15px] md:text-[clamp(8px,1.5vw,25px)]"
+                                            style={{
+                                                color: "#1a1a1a",
+                                                width: "90%",
+                                                lineHeight: "1.4",
+                                                fontFamily: "'Playfair Display', serif",
+                                                textAlign: "center",
+                                                textShadow: "1px 1px 2px rgba(255,255,255,0.5)",
+                                            }}
+                                        >
+                                            Utkansh-26 at NIT Jalandhar blends culture and technology in perfect harmony.
+                                            Experience electrifying performances like Panache, Megasonic, BDM Night,
+                                            and Star Night, alongside innovative events like Hackathons, RC Racing,
+                                            NIT-yaan, Startup Mela, and Avishkar Exhibitions
                                         </p>
                                     </div>
                                 </div>
                             </motion.div>
 
-                            <motion.div className="absolute right-[16%] top-[12%] w-[23%]" style={{ transformStyle: "preserve-3d", y: contentParallaxY, filter: "brightness(1.05)", x: labelX, rotateY: labelRotateY, rotateZ: labelRotateZ, opacity: labelOpacity }}>
+                            <motion.div className="hidden md:block absolute right-[16%] top-[12%] w-[23%]" style={{ transformStyle: "preserve-3d", y: contentParallaxY, filter: "brightness(1.05)", x: labelX, rotateY: labelRotateY, rotateZ: labelRotateZ, opacity: labelOpacity }}>
                                 <img src="/svgs/aboutus/abtus.svg" alt="About Us Label" className="w-full h-auto" />
                                 <svg viewBox="0 0 600 160" className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
                                     <image href="/images/aboutus/aboutustext.png" x="44%" y="-10%" width="700" height="430" preserveAspectRatio="xMidYMid meet" style={{ transform: "translate(-50%, -50%)" }} />
