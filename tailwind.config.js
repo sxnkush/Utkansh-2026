@@ -11,17 +11,10 @@ export default {
             },
             fontFamily: {
                 marker: ['"Permanent Marker"', "cursive"],
+                dancing: ['"Dancing Script"', 'cursive'],
+                chalk: ["'Gloria Hallelujah'", "cursive", "fantasy"],
             },
         },
     },
     plugins: [],
 };
-module.exports = {
-    theme: {
-        extend: {
-            fontFamily: {
-                dancing: ['"Dancing Script"', 'cursive'],
-            },
-        },
-    },
-}

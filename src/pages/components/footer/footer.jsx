@@ -33,7 +33,7 @@ const Footer = () => {
                 <div className="flex flex-col items-center gap-6 md:mt-12">
                     <a
                         href="/marketing-brochure"
-                        className="text-sm border-b-2 uppercase font-bold tracking-widest hover:text-white transition-all transform hover:-rotate-1"
+                        className=" border-b-2 uppercase tracking-widest hover:text-white transition-all transform hover:-rotate-0"
                         style={{ color: neonColor, borderColor: neonColor }}
                     >
                         Marketing Brochure
@@ -104,15 +104,15 @@ const Footer = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={neonColor}>
                             <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929l11.444 9.215 11.444-9.215h-22.888zm13.154 10.641l2.364 1.902 2.364-1.902 5.614 6.929h-15.955l5.613-6.929zm5.741-2.712l4.623-3.746v9.458l-4.623-5.712z" />
                         </svg>
-                        <a href="mailto:nitj.utk.accounts@nitj.ac.in" className="text-sm md:text-base font-bold hover:brightness-125 transition-all" style={{ color: neonColor }}>
+                        <a href="mailto:nitj.utk.accounts@nitj.ac.in" className="text-sm md:text-base hover:brightness-125 transition-all" style={{ color: neonColor }}>
                             nitj.utk.accounts@nitj.ac.in
                         </a>
                     </div>
 
                     {/* Phone numbers in vertical sequence */}
-                    <div className="flex flex-col items-start w-full mt-0 text-lg font-black italic tracking-widest" style={{ color: neonColor }}>
-                        {['+91 7726983748'].map((num) => (
-                            <div key={num} className="flex items-center gap-2 ml-10">
+                    <div className="flex flex-col items-start w-full mt-0 text-lg  tracking-widest" style={{ color: neonColor }}>
+                        {['+917726983748'].map((num) => (
+                            <div key={num} className="flex items-center gap-2 ml-15">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.509-8.954.058-.028 2.022-1.01 2.022-1.011l-3.522-6.872s-2.149 1.066-2.152 1.068c-1.468.74-2.257 2.115-2.257 3.737 0 3.702 1.636 7.643 4.864 12.016 3.018 4.075 6.069 5.86 9.471 5.86 1.487 0 3.016-.279 3.568-1.523.003-.004 2.142-1.066 2.142-1.068z" />
                                 </svg>
@@ -125,7 +125,7 @@ const Footer = () => {
 
             {/* Bottom Footer Credits */}
             <div className="w-full max-w-6xl mt-16 pt-6 border-t-2 text-center relative z-10 " style={{ borderColor: `${neonColor}44` }}>
-                <p className="text-sm font-black uppercase tracking-widest" style={{ color: neonColor }}>
+                <p className="text-sm  uppercase tracking-widest" style={{ color: neonColor }}>
                     Created with 🤍 by Developers
                 </p>
             </div>

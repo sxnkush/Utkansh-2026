@@ -15,8 +15,8 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
     const navLinks = [
         { name: 'HOME', path: '/' },
-        { name: 'ABOUT US', path: '#' },
-        { name: 'EVENTS', path: '#' },
+        { name: 'ABOUT US', path: '/aboutus' },
+        { name: 'EVENTS', path: '/events' },
         { name: 'CONTACT US', path: '/contact' },
     ];
 
@@ -66,6 +66,20 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                         </div>
                     </button>
 
+                    {/* --- MOBILE NAVIGATION: ONLY EVENTS --- */}
+                    <ul className={`flex md:hidden items-center justify-center transition-all duration-500 ease-in-out
+                        ${menuOpen ? "opacity-0 translate-y-[-10px] pointer-events-none" : "opacity-100 translate-y-0 pointer-events-auto"}`}>
+                        <li className="relative group">
+                            <Link
+                                to="/events"
+                                className="relative inline-block text-[#d4ff00] text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
+                            >
+                                EVENTS
+                                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
+                            </Link>
+                        </li>
+                    </ul>
+
                     {/* Desktop Navigation */}
                     <ul className={`hidden md:flex items-center gap-8 lg:gap-12 transition-all duration-500 ease-in-out
                         ${menuOpen ? "opacity-0 translate-y-[-10px] pointer-events-none" : "opacity-100 translate-y-0 pointer-events-auto"}`}>
@@ -94,7 +108,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                 className={`fixed inset-0 bg-background flex flex-col items-center justify-center gap-12 transition-all duration-500 z-40
                 ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
             >
-
+                {/* Full menu content goes here */}
             </div>
         </nav>
     );

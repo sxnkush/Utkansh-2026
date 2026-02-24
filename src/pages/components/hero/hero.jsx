@@ -11,6 +11,9 @@ const Hero = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [introVideoEnded, setIntroVideoEnded] = useState(false);
 
+    // --- RESPONSIVE HANDLER ---
+    const [isMobile, setIsMobile] = useState(false);
+
     // --- NEW: Effect intensity to control visual entry ---
     const effectIntensity = useSpring(0, { stiffness: 40, damping: 20 });
 
@@ -49,7 +52,7 @@ const Hero = () => {
     // --- MODIFIED: Glow opacity linked to effectIntensity ---
     const glowBackground = useMotionTemplate`
     radial-gradient(
-      1000px circle at ${smoothGlowX}px ${smoothGlowY}px,
+      700px circle at ${smoothGlowX}px ${smoothGlowY}px,
       rgba(63, 3, 185, ${effectIntensity}),
       transparent 70%
     )
@@ -234,12 +237,13 @@ const Hero = () => {
 
 
             <motion.div
-                className="fixed inset-0 z-0 bg-black"
+                className="fixed inset-0 z-0 bg-black overflow-hidden"
                 style={{
-                    perspective: "1400px",
+                    // Lower perspective on mobile helps maintain the visual filling
+                    perspective: isMobile ? "1000px" : "1400px",
                 }}
             >
-                <div style={{ perspective: "1900px" }}>
+                <div className="w-full h-full" style={{ perspective: "1900px" }}>
                     <motion.video
                         ref={videoRef}
                         src="/videos/herobg.mp4"
@@ -252,18 +256,21 @@ const Hero = () => {
                             }
                         }}
                         onEnded={() => setIntroVideoEnded(true)}
-                        className="w-full h-full object-cover object-center scale-[1.6]"
+                        // Higher scale [1.9] on mobile ensures it covers the portrait height
+                        className="w-full h-full object-cover object-center scale-[1.7] md:scale-[1.6]"
                         style={{
-                            rotateX: finalRotateX,   // MODIFIED
-                            rotateY: finalRotateY,   // MODIFIED
+                            rotateX: finalRotateX,
+                            rotateY: finalRotateY,
                             transformStyle: "preserve-3d",
-                            transformOrigin: "50% 80%",
-                            marginTop: "6%",
+                            // CRITICAL: Set marginTop to 0 on mobile to fill the gap
+                            marginTop: isMobile ? "0%" : "9%",
+                            // Center origin for mobile allows for a more natural tilt
+                            transformOrigin: isMobile ? "50% 50%" : "50% 80%",
                         }}
                     />
                 </div>
 
-                {/* Purple Glow */}
+                {/* Purple Glow - Adjusted radius for mobile focus */}
                 <motion.div
                     className="pointer-events-none absolute inset-0"
                     style={{
@@ -275,8 +282,7 @@ const Hero = () => {
 
 
             <motion.section
-                className="sticky top-0 w-full h-screen overflow-hidden relative z-10"
-                initial={{ opacity: 0 }}
+                className="sticky top-0 w-full min-h-[100svh] md:h-screen overflow-hidden relative z-10"
                 animate={{
                     opacity: introVideoEnded ? 1 : 0,
                     pointerEvents: introVideoEnded ? "auto" : "none"
@@ -293,12 +299,11 @@ const Hero = () => {
                         style={{
                             transformStyle: "preserve-3d",
                             position: "relative",
-                            width: "45%",
-                            maxWidth: "900px",
                         }}
+                        className="w-[80%] md:w-[45%] max-w-[900px]"
                     >
 
-                        {/* 🔄 Rotating White Ring: Pop Entrance + Scroll Rotation */}
+                        {/*  Rotating White Ring: Pop Entrance + Scroll Rotation */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.6, rotate: -180, z: -200 }}
                             animate={introVideoEnded ? {
@@ -324,7 +329,7 @@ const Hero = () => {
                             />
                         </motion.div>
 
-                        {/* 🚀 Utkansh Text Pop */}
+                        {/* Utkansh Text Pop */}
                         <motion.img
                             src="/images/hero/utkansh.png"
                             alt="Utkansh"
@@ -338,7 +343,7 @@ const Hero = () => {
                             animate={introVideoEnded ? {
                                 opacity: 1,
                                 scale: 1.6,
-                                marginLeft: 30,
+                                marginLeft: window.innerWidth < 768 ? 0 : 30,
                                 z: 250,
                                 filter: "blur(0px)"
                             } : {}}
