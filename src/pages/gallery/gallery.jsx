@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useTransition } from "../../transition/transitioncontext";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
@@ -32,7 +32,7 @@ const images = [
 /* ================= MAIN COMPONENT ================= */
 
 const Gallery = () => {
-    const navigate = useNavigate();
+    const { startTransition } = useTransition();
     const containerRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(null);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -55,7 +55,7 @@ const Gallery = () => {
             {/* ================= HEADER ================= */}
             <header className="relative h-32 md:h-40 flex items-center justify-center">
                 <button
-                    onClick={() => navigate(-1)}
+                    onClick={() => startTransition("/")}
                     className="absolute left-16 top-1/2 -translate-y-1/2
           h-14 w-14 md:h-16 md:w-16
           rounded-full flex items-center justify-center

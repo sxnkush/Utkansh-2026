@@ -13,6 +13,26 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
         return () => clearTimeout(timer);
     }, []);
+
+    const scrollToAboutSection = () => {
+        const container = document.getElementById("hero-container");
+        if (!container) return;
+
+        const totalScrollableHeight =
+            container.offsetHeight - window.innerHeight;
+
+        const aboutProgress = 0.52;
+
+        const targetScroll =
+            container.offsetTop +
+            totalScrollableHeight * aboutProgress;
+
+        window.scrollTo({
+            top: targetScroll,
+            behavior: "smooth",
+        });
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY < 100) {
@@ -28,7 +48,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
 
     const navLinks = [
         { name: 'HOME', path: '/' },
-        { name: 'ABOUT US', path: '/aboutus' },
+        { name: 'ABOUT US', action: 'scroll-about' },
         { name: 'EVENTS', path: '/events' },
         { name: 'CONTACT US', path: '/contact' },
     ];
@@ -94,19 +114,35 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                     </ul>
 
                     {/* Desktop Navigation */}
-                    <ul className={`hidden md:flex items-center gap-8 lg:gap-12 transition-all duration-500 ease-in-out
-                        ${menuOpen ? "opacity-0 translate-y-[-10px] pointer-events-none" : "opacity-100 translate-y-0 pointer-events-auto"}`}>
+                    <ul
+                        className={`hidden md:flex items-center gap-8 lg:gap-12 transition-all duration-500 ease-in-out
+  ${menuOpen
+                                ? "opacity-0 translate-y-[-10px] pointer-events-none"
+                                : "opacity-100 translate-y-0 pointer-events-auto"
+                            }`}
+                    >
                         {navLinks.map((link, index) => (
                             <React.Fragment key={link.name}>
                                 <li className="relative group">
-                                    <Link
-                                        to={link.path}
-                                        className="relative inline-block text-[#d4ff00] text-2xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
-                                    >
-                                        {link.name}
-                                        <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
-                                    </Link>
+                                    {link.name === "ABOUT US" ? (
+                                        <span
+                                            onClick={scrollToAboutSection}
+                                            className="cursor-pointer relative inline-block text-[#d4ff00] text-2xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
+                                        >
+                                            {link.name}
+                                            <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
+                                        </span>
+                                    ) : (
+                                        <Link
+                                            to={link.path}
+                                            className="relative inline-block text-[#d4ff00] text-2xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
+                                        >
+                                            {link.name}
+                                            <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
+                                        </Link>
+                                    )}
                                 </li>
+
                                 {index !== navLinks.length - 1 && (
                                     <div className="h-8 w-[2px] bg-[#d4ff00] opacity-70 rotate-[15deg] mx-2 shadow-[0_0_5px_#d4ff00]" />
                                 )}

@@ -3,8 +3,8 @@ import DaySelector from './DaySelector';
 import CategoryHeader from './CategoryHeader';
 import SubCategoryList from './SubCategoryList';
 import Timeline from './Timeline';
-import { useNavigate } from 'react-router-dom'; 
-import { ArrowLeft } from "lucide-react"; 
+import { ArrowLeft } from "lucide-react";
+import { useTransition } from "../../transition/transitioncontext";
 
 /**
  * Utkansh Schedule Component
@@ -13,23 +13,23 @@ import { ArrowLeft } from "lucide-react";
 const Schedule = () => {
   // State management for filtering even
   // ts
-  const navigate = useNavigate();
   const [selectedDay, setSelectedDay] = useState("Day 1");
   const [category, setCategory] = useState("Technical");
   const [subCat, setSubCat] = useState("Coding");
+  const { startTransition } = useTransition();
 
   return (
-    <div 
+    <div
       className="min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black"
       style={{ backgroundImage: `url('/images/schedule.png')` }}
     >
       {/* Main Wrapper: Centers all content horizontally */}
       <div className="w-full flex flex-col items-center p-4 md:p-8">
-        
+
         <header className="relative w-full h-32 md:h-40 flex items-center justify-center">
           {/* Circular Back Button matching Gallery */}
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => startTransition("/")}
             className="absolute left-4 md:left-16 top-1/2 -translate-y-1/2
                        h-14 w-14 md:h-16 md:w-16
                        rounded-full flex items-center justify-center
@@ -54,24 +54,24 @@ const Schedule = () => {
 
         {/* 3. Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full max-w-7xl items-start">
-          
+
           {/* Side Navigation: Category and Subcategory filters */}
           <aside className="lg:col-span-3 space-y-8">
             <CategoryHeader activeCat={category} setCat={setCategory} />
-            <SubCategoryList 
-              activeDay={selectedDay} 
-              activeMainCat={category} 
-              selectedSub={subCat} 
-              onSelectSub={setSubCat} 
+            <SubCategoryList
+              activeDay={selectedDay}
+              activeMainCat={category}
+              selectedSub={subCat}
+              onSelectSub={setSubCat}
             />
           </aside>
 
           {/* Timeline: Displays EventCards with high readability */}
           <main className="lg:col-span-9">
-            <Timeline 
-              selectedDay={selectedDay} 
-              category={category} 
-              subCategory={subCat} 
+            <Timeline
+              selectedDay={selectedDay}
+              category={category}
+              subCategory={subCat}
             />
           </main>
         </div>

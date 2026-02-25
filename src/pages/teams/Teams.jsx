@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaUser } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useTransition } from "../../transition/transitioncontext";
 
 /* ================= DATA ================= */
 
@@ -128,7 +128,7 @@ const HangingCard = ({
           {/* CAPTION */}
           <div className="mt-4 text-center">
             <h3
-              className="text-lg font-semibold text-[#2a1a10]"  
+              className="text-lg font-semibold text-[#2a1a10]"
             >
               {title}
             </h3>
@@ -153,7 +153,7 @@ const HangingCard = ({
 
 export default function DevelopersPage() {
   const [selectedCategory, setSelectedCategory] = useState("team");
-  const navigate = useNavigate();
+  const { startTransition } = useTransition();
 
   const data =
     selectedCategory === "developers"
@@ -164,12 +164,12 @@ export default function DevelopersPage() {
 
   return (
     <div className="min-h-screen bg-cover bg-center relative p-8 font-['Permanent_Marker']"
-    style={{ backgroundImage: "url('images/team_bg.jpg')" }}>
+      style={{ backgroundImage: "url('images/team_bg.jpg')" }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
       <div className="relative z-10 container mx-auto my-24">
         <header className="relative h-32 md:h-40 flex items-center justify-center">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => startTransition("/")}
             className="absolute left-16 top-1/2 -translate-y-1/2 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 transition"
           >
             <ArrowLeft size={24} strokeWidth={2.5} />
@@ -191,11 +191,10 @@ export default function DevelopersPage() {
             <button
               key={type}
               onClick={() => setSelectedCategory(type)}
-              className={`px-6 py-3 rounded-lg transition ${
-                selectedCategory === type
-                  ? "bg-[#f5e6c8] text-black shadow-xl font-semibold"
-                  : "bg-white/10 text-[#f5e6c8] border border-white/20 hover:bg-white/20"
-              }`}
+              className={`px-6 py-3 rounded-lg transition ${selectedCategory === type
+                ? "bg-[#f5e6c8] text-black shadow-xl font-semibold"
+                : "bg-white/10 text-[#f5e6c8] border border-white/20 hover:bg-white/20"
+                }`}
             >
               {type.charAt(0).toUpperCase() + type.slice(1)}
             </button>

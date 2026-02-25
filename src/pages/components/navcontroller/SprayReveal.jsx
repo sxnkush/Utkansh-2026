@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import SprayCan from "./spraycan";
-
+import { useTransition } from "../../../transition/transitioncontext";
 const SprayReveal = ({ trigger }) => {
     const canvasRef = useRef(null);
     const animationRef = useRef(null);
@@ -8,9 +8,12 @@ const SprayReveal = ({ trigger }) => {
     const bufferRef = useRef(null);
     const sourceRef = useRef(null);
 
+
+
     const [showGalleries, setShowGalleries] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const galleryTriggeredRef = useRef(false);
+    const { startTransition } = useTransition();
 
     const stateRef = useRef({
         phase: "IDLE",
@@ -315,20 +318,21 @@ const SprayReveal = ({ trigger }) => {
 
             {showGalleries &&
                 GALLERY_ITEMS.map(item => (
-                    <a
+                    <div
                         key={item.id}
-                        href={item.link}
+                        onClick={() => startTransition(item.link)}
                         className="gallery-item"
                         style={{
                             left: item.currentX,
                             top: item.currentY,
                             '--target-scale': (item.scale || 1) * (isMobile ? 1.4 : 2),
                             '--target-rot': `${item.rotate || 0}deg`,
-                            animationDelay: `${item.delay + 300}ms`
+                            animationDelay: `${item.delay + 300}ms`,
+                            cursor: "pointer"
                         }}
                     >
                         <img src={item.src} alt="nav item" />
-                    </a>
+                    </div>
                 ))}
         </>
     );

@@ -207,6 +207,12 @@ const Hero = () => {
     const greenY = useTransform(smoothProgress, [0.35, 0.75], [0, -40]);
     const greenBrightness = useTransform(smoothProgress, [0.35, 0.65], ["brightness(1)", "brightness(0.82)"]);
 
+    // --- NEW: Logo scroll transitions (Move to top right and shrink) ---
+    const logoScale = useTransform(smoothProgress, [0, 0.35], [1, isMobile ? 0.4 : 0.3]);
+    const logoXPos = useTransform(smoothProgress, [0, 0.35], ["0%", isMobile ? "35%" : "44%"]);
+    const logoYPos = useTransform(smoothProgress, [0, 0.35], ["0%", isMobile ? "-42%" : "-42%"]);
+    const logoOpacity = useTransform(smoothProgress, [0.35, 0.45], [1, 0]); // Fade out when about us fully covers
+
     useEffect(() => {
         if (!introVideoEnded) return;
 
@@ -234,131 +240,74 @@ const Hero = () => {
     const videoBlur_smooth = useTransform(smoothProgress, [0.70, 0.77], ["blur(18px)", "blur(0px)"]);
 
     return (
-        <div ref={containerRef} className="relative h-[500vh] bg-slate-900">
-
-
+        <div
+            id="hero-container"
+            ref={containerRef}
+            className="relative h-[500vh] bg-slate-900"
+        >
             <motion.div
                 className="fixed inset-0 z-0 bg-black overflow-hidden"
-                style={{
-                    // Lower perspective on mobile helps maintain the visual filling
-                    perspective: isMobile ? "1000px" : "1400px",
-                }}
+                style={{ perspective: isMobile ? "1000px" : "1400px" }}
             >
                 <div className="w-full h-full" style={{ perspective: "1900px" }}>
                     <motion.video
                         ref={videoRef}
                         src="/videos/herobg.mp4"
-                        autoPlay
-                        muted
-                        playsInline
-                        onLoadedMetadata={() => {
-                            if (videoRef.current) {
-                                videoRef.current.playbackRate = 1.1;
-                            }
-                        }}
+                        autoPlay muted playsInline
+                        onLoadedMetadata={() => { if (videoRef.current) videoRef.current.playbackRate = 1.1; }}
                         onEnded={() => setIntroVideoEnded(true)}
-                        // Higher scale [1.9] on mobile ensures it covers the portrait height
                         className="w-full h-full object-cover object-center scale-[1.7] md:scale-[1.6]"
                         style={{
                             rotateX: finalRotateX,
                             rotateY: finalRotateY,
                             transformStyle: "preserve-3d",
-                            // CRITICAL: Set marginTop to 0 on mobile to fill the gap
                             marginTop: isMobile ? "0%" : "9%",
-                            // Center origin for mobile allows for a more natural tilt
                             transformOrigin: isMobile ? "50% 50%" : "50% 80%",
                         }}
                     />
                 </div>
-
-                {/* Purple Glow - Adjusted radius for mobile focus */}
-                <motion.div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                        background: glowBackground,
-                        mixBlendMode: "screen"
-                    }}
-                />
+                <motion.div className="pointer-events-none absolute inset-0" style={{ background: glowBackground, mixBlendMode: "screen" }} />
             </motion.div>
-
 
             <motion.section
                 className="sticky top-0 w-full min-h-[100svh] md:h-screen overflow-hidden relative z-10"
-                animate={{
-                    opacity: introVideoEnded ? 1 : 0,
-                    pointerEvents: introVideoEnded ? "auto" : "none"
-                }}
+                animate={{ opacity: introVideoEnded ? 1 : 0, pointerEvents: introVideoEnded ? "auto" : "none" }}
                 transition={{ duration: 0.8 }}
             >
 
-                {/* Center Pop Container */}
+                {/* --- CENTER POP CONTAINER: Includes Move to Corner Transforms --- */}
                 <motion.div
                     className="absolute inset-0 flex items-center justify-center z-5 pointer-events-none"
-                    style={{ perspective: "2200px" }}
+                    style={{
+                        perspective: "2200px",
+                        x: logoXPos,
+                        y: logoYPos,
+                        scale: logoScale,
+                        opacity: logoOpacity
+                    }}
                 >
                     <motion.div
-                        style={{
-                            transformStyle: "preserve-3d",
-                            position: "relative",
-                        }}
+                        style={{ transformStyle: "preserve-3d", position: "relative" }}
                         className="w-[80%] md:w-[45%] max-w-[900px]"
                     >
-
-                        {/*  Rotating White Ring: Pop Entrance + Scroll Rotation */}
+                        {/* Rotating Ring */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.6, rotate: -180, z: -200 }}
-                            animate={introVideoEnded ? {
-                                opacity: 1,
-                                scale: 1.6,
-                                rotate: 0,
-                                z: 100
-                            } : {}}
-                            transition={{
-                                duration: 1.6,
-                                ease: [0.16, 1, 0.3, 1],
-                            }}
+                            animate={introVideoEnded ? { opacity: 1, scale: 1.6, rotate: 0, z: 100 } : {}}
+                            transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
                             className="absolute inset-0"
                         >
-                            <motion.img
-                                src="/images/hero/utkanshring.png"
-                                alt="Ring"
-                                className="w-full h-full object-contain"
-                                style={{
-
-                                    filter: "drop-shadow(0 20px 50px rgba(255,255,255,0.5))"
-                                }}
-                            />
+                            <img src="/images/hero/utkanshring.png" alt="Ring" className="w-full h-full object-contain" style={{ filter: "drop-shadow(0 20px 50px rgba(255,255,255,0.5))" }} />
                         </motion.div>
 
-                        {/* Utkansh Text Pop */}
+                        {/* Utkansh Logo */}
                         <motion.img
-                            src="/images/hero/utkansh.png"
-                            alt="Utkansh"
-                            className="relative w-full object-contain"
-                            initial={{
-                                opacity: 0,
-                                scale: 0.5,
-                                z: -400,
-                                filter: "blur(20px)"
-                            }}
-                            animate={introVideoEnded ? {
-                                opacity: 1,
-                                scale: 1.6,
-                                marginLeft: window.innerWidth < 768 ? 0 : 30,
-                                z: 250,
-                                filter: "blur(0px)"
-                            } : {}}
-                            transition={{
-                                duration: 1.4,
-                                delay: 0.2,
-                                ease: [0.16, 1, 0.3, 1],
-                            }}
-                            style={{
-                                transformStyle: "preserve-3d",
-                                filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.8))"
-                            }}
+                            src="/images/hero/utkansh.png" alt="Utkansh" className="relative w-full object-contain"
+                            initial={{ opacity: 0, scale: 0.5, z: -400, filter: "blur(20px)" }}
+                            animate={introVideoEnded ? { opacity: 1, scale: 1.6, marginLeft: isMobile ? 0 : 30, z: 250, filter: "blur(0px)" } : {}}
+                            transition={{ duration: 1.4, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                            style={{ transformStyle: "preserve-3d", filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.8))" }}
                         />
-
                     </motion.div>
                 </motion.div>
                 <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
