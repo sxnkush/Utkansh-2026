@@ -208,11 +208,10 @@ const Hero = () => {
     const greenBrightness = useTransform(smoothProgress, [0.35, 0.65], ["brightness(1)", "brightness(0.82)"]);
 
     // --- NEW: Logo scroll transitions (Move to top right and shrink) ---
-    const logoScale = useTransform(smoothProgress, [0, 0.35], [1, isMobile ? 0.4 : 0.3]);
-    const logoXPos = useTransform(smoothProgress, [0, 0.35], ["0%", isMobile ? "35%" : "44%"]);
-    const logoYPos = useTransform(smoothProgress, [0, 0.35], ["0%", isMobile ? "-42%" : "-42%"]);
-    const logoOpacity = useTransform(smoothProgress, [0.35, 0.45], [1, 0]); // Fade out when about us fully covers
-
+    const logoScale = useTransform(smoothProgress, [0, 0.3], [1, isMobile ? 0.35 : 0.22]);
+    const logoXPos = useTransform(smoothProgress, [0, 0.3], ["0%", isMobile ? "34%" : "44%"]);
+    const logoYPos = useTransform(smoothProgress, [0, 0.3], ["0%", isMobile ? "-43%" : "-42%"]);
+    const logoOpacity = useTransform(smoothProgress, [0, 0.1], [1, 1]);
     useEffect(() => {
         if (!introVideoEnded) return;
 
@@ -275,10 +274,12 @@ const Hero = () => {
                 transition={{ duration: 0.8 }}
             >
 
-                {/* --- CENTER POP CONTAINER: Includes Move to Corner Transforms --- */}
+                {/* --- CENTER POP CONTAINER: Modified to stay on top and never disappear --- */}
                 <motion.div
-                    className="absolute inset-0 flex items-center justify-center z-5 pointer-events-none"
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none"
                     style={{
+                        // Set z-index to 100 to stay above 'About Us' (z-25) and 'Cards' (z-50)
+                        zIndex: 100,
                         perspective: "2200px",
                         x: logoXPos,
                         y: logoYPos,
@@ -290,23 +291,44 @@ const Hero = () => {
                         style={{ transformStyle: "preserve-3d", position: "relative" }}
                         className="w-[80%] md:w-[45%] max-w-[900px]"
                     >
-                        {/* Rotating Ring */}
+                        {/* Rotating Ring with shimmer */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.6, rotate: -180, z: -200 }}
-                            animate={introVideoEnded ? { opacity: 1, scale: 1.6, rotate: 0, z: 100 } : {}}
+                            animate={introVideoEnded ? {
+                                opacity: 1,
+                                scale: 1.6,
+                                rotate: 0,
+                                z: 100
+                            } : {}}
                             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
                             className="absolute inset-0"
                         >
-                            <img src="/images/hero/utkanshring.png" alt="Ring" className="w-full h-full object-contain" style={{ filter: "drop-shadow(0 20px 50px rgba(255,255,255,0.5))" }} />
+                            <img
+                                src="/images/hero/utkanshring.png"
+                                alt="Ring"
+                                className="w-full h-full object-contain"
+                                style={{ filter: "drop-shadow(0 20px 50px rgba(255,255,255,0.5))" }}
+                            />
                         </motion.div>
 
                         {/* Utkansh Logo */}
                         <motion.img
-                            src="/images/hero/utkansh.png" alt="Utkansh" className="relative w-full object-contain"
+                            src="/images/hero/utkansh.png"
+                            alt="Utkansh"
+                            className="relative w-full object-contain"
                             initial={{ opacity: 0, scale: 0.5, z: -400, filter: "blur(20px)" }}
-                            animate={introVideoEnded ? { opacity: 1, scale: 1.6, marginLeft: isMobile ? 0 : 30, z: 250, filter: "blur(0px)" } : {}}
+                            animate={introVideoEnded ? {
+                                opacity: 1,
+                                scale: 1.6,
+                                marginLeft: isMobile ? 0 : 30,
+                                z: 250,
+                                filter: "blur(0px)"
+                            } : {}}
                             transition={{ duration: 1.4, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            style={{ transformStyle: "preserve-3d", filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.8))" }}
+                            style={{
+                                transformStyle: "preserve-3d",
+                                filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.8))"
+                            }}
                         />
                     </motion.div>
                 </motion.div>
@@ -423,8 +445,24 @@ const Hero = () => {
                 </AnimatePresence>
 
                 {renderVideo && (
-                    <motion.div className="absolute inset-0 z-60 pointer-events-none" style={{ opacity: videoOpacity, y: videoY_smooth, scale: videoScale_smooth, filter: videoBlur_smooth }}>
-                        <video ref={videoRef} src="/videos/hero.mp4" loop playsInline muted autoPlay className="w-full h-full object-cover bg-black" />
+                    <motion.div
+                        className="absolute inset-0 z-60 pointer-events-none"
+                        style={{
+                            opacity: videoOpacity,
+                            y: videoY_smooth,
+                            scale: videoScale_smooth,
+                            filter: videoBlur_smooth
+                        }}
+                    >
+                        <video
+                            ref={videoRef}
+                            src="https://res.cloudinary.com/dph7ygvuj/video/upload/v1772096483/utkanshbg_zctjyd.mp4" // <-- Replace this with your public URL
+                            loop
+                            playsInline
+                            muted
+                            autoPlay
+                            className="w-full h-full object-cover bg-black"
+                        />
                     </motion.div>
                 )}
             </motion.section>
