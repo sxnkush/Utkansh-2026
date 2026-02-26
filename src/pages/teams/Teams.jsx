@@ -163,7 +163,7 @@ export default function DevelopersPage() {
         : faculty;
 
   return (
-    <div className="min-h-screen bg-cover bg-center relative p-8 font-['Permanent_Marker']"
+    <div className="relative z-50 min-h-screen bg-cover bg-center p-8 font-['Permanent_Marker']"
       style={{ backgroundImage: "url('images/team_bg.jpg')" }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
       <div className="relative z-10 container mx-auto my-24">

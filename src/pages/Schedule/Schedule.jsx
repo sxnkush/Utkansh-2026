@@ -20,7 +20,7 @@ const Schedule = () => {
 
   return (
     <div
-      className="min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black"
+      className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black"
       style={{ backgroundImage: `url('/images/schedule.png')` }}
     >
       {/* Main Wrapper: Centers all content horizontally */}
