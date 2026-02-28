@@ -9,6 +9,7 @@ import NavController from "./pages/components/navcontroller/navcontroller";
 import WallTransition from "./pages/components/preloader/doorloader";
 import { useTransition } from "./transition/transitioncontext";
 import Events from "./pages/events/events";
+import EventsPage from "./pages/events";
 
 function App() {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ function App() {
         <Route path="/teams" element={<DevelopersPage />} />
         <Route path="/contact" element={<ContactUsUtkansh26 />} />
         <Route path="/events" element={<Events/>} />
+        <Route path='/event' element={<EventsPage/>}/>
       </Routes>
     </>
   );
