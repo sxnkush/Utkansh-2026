@@ -3,17 +3,9 @@ import { useTransition } from "../../transition/transitioncontext";
 export default function Events() {
   const { startTransition } = useTransition();
   const slices = [
+    
     {
-      title: "Dance",
-      img: "https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=600&auto=format&fit=crop",
-      rotate: "-60deg",
-      gradient: "linear-gradient(to bottom, rgba(41,210,138,0.18), #02060a)",
-      text: "text-[#29d28a]",
-      border: "border-[rgba(41,210,138,0.7)]",
-      z: "z-[1]",
-    },
-    {
-      title: "Music",
+      title: "Cultural",
       img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop",
       rotate: "-30deg",
       gradient: "linear-gradient(to bottom, rgba(138,63,245,0.18), #02040a)",
@@ -21,15 +13,7 @@ export default function Events() {
       border: "border-[rgba(138,63,245,0.7)]",
       z: "z-[2]",
     },
-    {
-      title: "Photography",
-      img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600&auto=format&fit=crop",
-      rotate: "0deg",
-      gradient: "linear-gradient(to bottom, rgba(0,225,255,0.2), #02040a)",
-      text: "text-[#00e1ff]",
-      border: "border-[rgba(0,225,255,0.9)]",
-      z: "z-[3]",
-    },
+    
     {
       title: "Technical",
       img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop",
@@ -39,15 +23,7 @@ export default function Events() {
       border: "border-[rgba(255,154,60,0.8)]",
       z: "z-[2]",
     },
-    {
-      title: "Street Art",
-      img: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?q=80&w=600&auto=format&fit=crop",
-      rotate: "60deg",
-      gradient: "linear-gradient(to bottom, rgba(255,92,92,0.18), #020208)",
-      text: "text-[#ff5c5c]",
-      border: "border-[rgba(255,92,92,0.8)]",
-      z: "z-[1]",
-    },
+   
   ];
 
   return (
@@ -83,6 +59,7 @@ export default function Events() {
             {slices.map((slice, index) => (
               <div
                 key={index}
+                
                 className={`absolute bottom-[-200px] left-1/2 w-[420px] h-[120vh]
               flex items-start justify-center pt-[200px]
               border-l border-white/5 border-r border-white/5

@@ -17,7 +17,7 @@ function App() {
   const { phase, setPhase, targetPath } = useTransition();
 
   //  Hide on contact page
-  const hideNavRoutes = ["/contact"];
+  const hideNavRoutes = ["/contact","/event"];
   const shouldHideNav = hideNavRoutes.includes(location.pathname);
 
   return (
@@ -42,8 +42,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/teams" element={<DevelopersPage />} />
         <Route path="/contact" element={<ContactUsUtkansh26 />} />
-        <Route path="/events" element={<Events/>} />
-        <Route path='/event' element={<EventsPage/>}/>
+        
+        <Route path='/events' element={<EventsPage/>}/>
       </Routes>
     </>
   );
