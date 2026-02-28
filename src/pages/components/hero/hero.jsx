@@ -428,7 +428,8 @@ const Hero = () => {
                                             Utkansh-26 at NIT Jalandhar blends culture and technology in perfect harmony.
                                             Experience electrifying performances like Panache, Megasonic, BDM Night,
                                             and Star Night, alongside innovative events like Hackathons, RC Racing,
-                                            NIT-yaan, Startup Mela, and Avishkar Exhibitions
+                                            NIT-yaan, Startup Mela, and Avishkar Exhibitions.This is Utkansh-where brilliance knows no boundaries, and the future takes center stage. Join us for an unforgettable celebration of talent, innovation, and creativity that promises to inspire and entertain.
+
                                         </p>
                                     </div>
                                 </div>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useTransition } from '../../../transition/transitioncontext';
 
 const Navbar = ({ onHamburgerClick, menuOpen }) => {
-
+    const { startTransition } = useTransition();
     const [showNavbar, setShowNavbar] = useState(false);
     const [atTop, setAtTop] = useState(true);
 
@@ -100,19 +100,27 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                     </button>
 
                     {/* --- MOBILE NAVIGATION: ONLY EVENTS --- */}
-                    <ul className={`flex md:hidden items-center justify-center transition-all duration-500 ease-in-out
-                        ${menuOpen ? "opacity-0 translate-y-[-10px] pointer-events-none" : "opacity-100 translate-y-0 pointer-events-auto"}`}>
+                    <ul
+                        className={`flex md:hidden items-center justify-center transition-all duration-500 ease-in-out
+  ${menuOpen
+                                ? "opacity-0 translate-y-[-10px] pointer-events-none"
+                                : "opacity-100 translate-y-0 pointer-events-auto"
+                            }`}
+                    >
                         <li className="relative group">
-                            <Link
-                                to="/events"
-                                className="relative inline-block text-[#d4ff00] text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
+                            <button
+                                onClick={() => startTransition("/events")}
+                                className="relative inline-block text-[#d4ff00] text-3xl tracking-wider italic transition-all duration-300 ease-out 
+      -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 
+      hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] 
+      active:scale-90 active:translate-y-1 
+      bg-transparent border-none"
                             >
                                 EVENTS
                                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
-                            </Link>
+                            </button>
                         </li>
                     </ul>
-
                     {/* Desktop Navigation */}
                     <ul
                         className={`hidden md:flex items-center gap-8 lg:gap-12 transition-all duration-500 ease-in-out
@@ -133,13 +141,13 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                                             <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
                                         </span>
                                     ) : (
-                                        <Link
-                                            to={link.path}
-                                            className="relative inline-block text-[#d4ff00] text-2xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
+                                        <button
+                                            onClick={() => startTransition(link.path)}
+                                            className="relative inline-block text-[#d4ff00] text-2xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1 bg-transparent border-none"
                                         >
                                             {link.name}
                                             <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
-                                        </Link>
+                                        </button>
                                     )}
                                 </li>
 

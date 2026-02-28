@@ -1,4 +1,7 @@
+import { ArrowLeft } from "lucide-react";
+import { useTransition } from "../../transition/transitioncontext";
 export default function Events() {
+  const { startTransition } = useTransition();
   const slices = [
     {
       title: "Dance",
@@ -52,6 +55,20 @@ export default function Events() {
       className="min-h-screen bg-cover bg-center relative font-['Permanent_Marker']"
       style={{ backgroundImage: "url('images/events_bg2.jpg')" }}
     >
+      {/*  BACK BUTTON */}
+      <button
+        onClick={() => startTransition("/")}
+        className="absolute left-6 md:left-16 top-6 md:top-10
+        h-14 w-14 md:h-16 md:w-16
+        rounded-full flex items-center justify-center
+        border-2 border-white text-white
+        bg-white/10 backdrop-blur-sm
+        hover:bg-white/20 hover:scale-105
+        transition-all duration-300
+        z-50"
+      >
+        <ArrowLeft size={24} strokeWidth={2.5} />
+      </button>
       <div
         className="relative w-screen min-h-screen overflow-hidden flex items-end justify-center"
       >

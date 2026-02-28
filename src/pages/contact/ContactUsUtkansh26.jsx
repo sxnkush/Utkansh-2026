@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Phone, Mail, Users, Home, MapPin } from 'lucide-react';
+import { Phone, Mail, Users, Home, MapPin, ArrowLeft } from 'lucide-react';
+import { useTransition } from '../../transition/transitioncontext';
 
 /**
  * 3D Tilt Card Component - Balanced Width for Viewport Fit
@@ -82,6 +83,7 @@ const TiltCard = ({ children, onClick, position, delay = 0, isFullImage = false 
 
 const ContactUsUtkansh26 = () => {
   const navigate = useNavigate();
+  const { startTransition } = useTransition();
   const mapRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -102,6 +104,20 @@ const ContactUsUtkansh26 = () => {
       >
         <div className="absolute inset-0 bg-black/25" />
       </div>
+      {/*  BACK BUTTON */}
+      <button
+        onClick={() => startTransition("/")}
+        className="absolute left-6 md:left-16 top-6 md:top-10
+        h-14 w-14 md:h-16 md:w-16
+        rounded-full flex items-center justify-center
+        border-2 border-white text-white
+        bg-white/10 backdrop-blur-sm
+        hover:bg-white/20 hover:scale-105
+        transition-all duration-300
+        z-50"
+      >
+        <ArrowLeft size={24} strokeWidth={2.5} />
+      </button>
 
       {/* Main Content: Using py-4 and justify-center to fit fold */}
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center min-h-screen justify-center py-4">
@@ -270,7 +286,7 @@ const ContactUsUtkansh26 = () => {
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #000; }
         ::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 5px; }
-        body { background-color: black; margin: 0; padding: 0; overflow-x: hidden; }
+        body { background-color: black; margin: 0; padding: 0; overflow-y: hidden; }
       `}</style>
     </div>
   );
