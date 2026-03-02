@@ -34,14 +34,7 @@ export default function Events() {
       {/*  BACK BUTTON */}
       <button
         onClick={() => startTransition("/")}
-        className="absolute left-6 md:left-16 top-6 md:top-10
-        h-14 w-14 md:h-16 md:w-16
-        rounded-full flex items-center justify-center
-        border-2 border-white text-white
-        bg-white/10 backdrop-blur-sm
-        hover:bg-white/20 hover:scale-105
-        transition-all duration-300
-        z-50"
+        className="absolute left-6 md:left-16 top-6 md:top-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 z-50"
       >
         <ArrowLeft size={24} strokeWidth={2.5} />
       </button>

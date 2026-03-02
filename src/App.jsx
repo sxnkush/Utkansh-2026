@@ -11,6 +11,7 @@ import WallTransition from "./pages/components/preloader/doorloader";
 import { useTransition } from "./transition/transitioncontext";
 import Events from "./pages/events/events";
 import EventsPage from "./pages/events";
+import Accomodation from "./pages/accomodation/accomodation";
 
 function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -45,6 +46,7 @@ function App() {
         <Route path="/teams" element={<DevelopersPage />} />
         <Route path="/contact" element={<ContactUsUtkansh26 />} />
         <Route path='/events' element={<EventsPage />} />
+        <Route path='/accomodation' element={<Accomodation/>} />
       </Routes>
       {/* LOADER ON TOP */}
       {!introDone && (
