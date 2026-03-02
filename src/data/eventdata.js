@@ -2,7 +2,7 @@ export const eventsData = [
   // ==========================
   // CULTURAL EVENTS
   // ==========================
-  
+
   // --- ARTS ---
   {
     id: "cult-art-1",
@@ -13,7 +13,7 @@ export const eventsData = [
     registration: "150/- per person",
     prize: "6,500",
     link: "/event/kuchad-kala",
-    description: "Transforming simple clay into work of art by painting decorative pillars."
+    description: "Painting decorative pillars with cultural motifs, modern patterns, or abstract designs." 
   },
   {
     id: "cult-art-2",
@@ -24,7 +24,7 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "6,500",
     link: "/event/manga-muse",
-    description: "Anime art platform to express creativity through original character design."
+    description: "Platform to express passion for anime through character creation and animation styles." 
   },
   {
     id: "cult-art-3",
@@ -35,7 +35,7 @@ export const eventsData = [
     registration: "150/- per person",
     prize: "5,000",
     link: "/event/inkspire",
-    description: "Creative design competition for original tattoo designs on paper."
+    description: "Creative competition focused on original tattoo designs on paper." 
   },
   {
     id: "cult-art-4",
@@ -46,7 +46,7 @@ export const eventsData = [
     registration: "150/- per person",
     prize: "6,500",
     link: "/event/folded-blooms",
-    description: "Origami-based competition focused on creating paper bouquets."
+    description: "Origami competition highlighting precision in creating paper bouquets." 
   },
   {
     id: "cult-art-5",
@@ -57,7 +57,29 @@ export const eventsData = [
     registration: "300/- per team",
     prize: "12,000",
     link: "/event/art-chase",
-    description: "Interactive event combining creativity and artistic problem-solving."
+    description: "Interactive event following clues and solving art-based tasks." 
+  },
+  {
+    id: "cult-art-6",
+    title: "Kintsugi Workshop",
+    category: "Cultural",
+    subCategory: "Arts",
+    day: "29 Mar",
+    registration: "250/- per team",
+    prize: "NIL",
+    link: "/event/kintsugi",
+    description: "Traditional Japanese art of repairing broken pottery with gold-inspired detailing." 
+  },
+  {
+    id: "cult-art-7",
+    title: "Art Exhibition",
+    category: "Cultural",
+    subCategory: "Arts",
+    day: "27-29 Mar",
+    registration: "NIL",
+    prize: "NIL",
+    link: "/event/art-exhibition",
+    description: "Display and sale of artworks including face painting and customized artifacts." 
   },
 
   // --- DRAMA ---
@@ -70,7 +92,7 @@ export const eventsData = [
     registration: "149/- per team",
     prize: "6,000",
     link: "/event/asmita",
-    description: "Spontaneous performance art creating unscripted scenes and stories."
+    description: "Spontaneous performance art creating unscripted scenes and stories." 
   },
   {
     id: "cult-dra-2",
@@ -81,7 +103,7 @@ export const eventsData = [
     registration: "2500/- per team",
     prize: "40,000",
     link: "/event/rangmanch",
-    description: "Stage play focusing on living the character on stage."
+    description: "Stage play competition focused on living a character on stage." 
   },
   {
     id: "cult-dra-3",
@@ -92,7 +114,7 @@ export const eventsData = [
     registration: "2500/- per team",
     prize: "32,000",
     link: "/event/halla-bol",
-    description: "Social activism performances addressing community issues."
+    description: "Street play competition addressing social issues for positive change." 
   },
   {
     id: "cult-dra-4",
@@ -103,53 +125,77 @@ export const eventsData = [
     registration: "120/- per person",
     prize: "14,500",
     link: "/event/eklavya",
-    description: "Solo theatrical performance portraying multiple characters."
+    description: "Solo theatrical performance portraying multiple characters through voice modulation." 
   },
 
-  // --- DANCE ---
+  // --- FASHION & FLAVOURS ---
   {
-    id: "cult-dan-1",
-    title: "80's Hustle",
+    id: "cult-fas-1",
+    title: "Nirvana",
     category: "Cultural",
-    subCategory: "Dance",
+    subCategory: "Fashion",
+    day: "28 Mar",
+    registration: "300/- per person",
+    prize: "61,000",
+    link: "/event/nirvana",
+    description: "Fashion parade featuring talented models and designers." 
+  },
+  {
+    id: "cult-fla-1",
+    title: "Spice Wars 8.0",
+    category: "Cultural",
+    subCategory: "Flavours",
     day: "27 Mar",
-    registration: "250/- per person",
-    prize: "50,000",
-    link: "/event/80s-hustle",
-    description: "Group dance competition in various styles like Bollywood and Hip Hop."
+    registration: "150/- per team",
+    prize: "3,000",
+    link: "/event/spice-wars",
+    description: "Culinary competition to create flavor-packed spice-infused dishes." 
   },
+
+  // --- LITERATURE ---
   {
-    id: "cult-dan-2",
-    title: "Beat Drop",
+    id: "cult-lit-1",
+    title: "Charter and Change",
     category: "Cultural",
-    subCategory: "Dance",
+    subCategory: "Literature",
     day: "28 Mar",
-    registration: "350/- per person",
-    prize: "15,000",
-    link: "/event/beat-drop",
-    description: "Solo dance face-off showcasing skill and performance ability."
-  },
-  {
-    id: "cult-dan-3",
-    title: "Crew Klash",
-    category: "Cultural",
-    subCategory: "Dance",
-    day: "28 Mar",
-    registration: "250/- per person",
-    prize: "24,000",
-    link: "/event/crew-klash",
-    description: "Group dance battle emphasizing synchronization and energy."
-  },
-  {
-    id: "cult-dan-4",
-    title: "Bhangra Fiesta",
-    category: "Cultural",
-    subCategory: "Dance",
-    day: "29 Mar",
     registration: "200/- per person",
-    prize: "50,000",
-    link: "/event/bhangra-fiesta",
-    description: "Traditional Punjabi percussion and dance battle."
+    prize: "9,000",
+    link: "/event/charter-change",
+    description: "Parliamentary committee simulation drafting fundamental laws for a new nation." 
+  },
+  {
+    id: "cult-lit-2",
+    title: "The Detective Showdown",
+    category: "Cultural",
+    subCategory: "Literature",
+    day: "27 Mar",
+    registration: "120/- per person",
+    prize: "NIL",
+    link: "/event/detective-showdown",
+    description: "Mystery solving through analysis of clues like text messages and photos." 
+  },
+  {
+    id: "cult-lit-3",
+    title: "Word Poem",
+    category: "Cultural",
+    subCategory: "Literature",
+    day: "29 Mar",
+    registration: "50/- per person",
+    prize: "NIL",
+    link: "/event/word-poem",
+    description: "Spontaneous poetry writing on the spot using given themes." 
+  },
+  {
+    id: "cult-lit-4",
+    title: "Diplomacy Battle",
+    category: "Cultural",
+    subCategory: "Literature",
+    day: "28 Mar",
+    registration: "600/- per team",
+    prize: "15,000",
+    link: "/event/diplomacy-battle",
+    description: "High-stakes MUN-style showdown with fierce debate and resolution drafting." 
   },
 
   // --- MUSIC ---
@@ -162,7 +208,7 @@ export const eventsData = [
     registration: "2500/- per team",
     prize: "30,000",
     link: "/event/megasonic",
-    description: "Western and Eastern Rock Band competition finals."
+    description: "Western and Eastern Rock Band competition finals." 
   },
   {
     id: "cult-mus-2",
@@ -173,7 +219,7 @@ export const eventsData = [
     registration: "250/- per person",
     prize: "12,000",
     link: "/event/raporiot",
-    description: "Rappers showcasing lyrical mastery in a competitive format."
+    description: "Lyrical mastery and creativity competition for rappers." 
   },
   {
     id: "cult-mus-3",
@@ -184,7 +230,158 @@ export const eventsData = [
     registration: "300/- per person",
     prize: "15,000",
     link: "/event/the-voice",
-    description: "Solo singing competition from folk to filmy songs."
+    description: "Solo singing competition ranging from folk to filmy songs." 
+  },
+
+  // --- QUEST & SANSKRIT ---
+  {
+    id: "cult-que-1",
+    title: "Questopia",
+    category: "Cultural",
+    subCategory: "Quest",
+    day: "28 Mar",
+    registration: "100/- per team",
+    prize: "5,000",
+    link: "/event/questopia",
+    description: "General quiz covering history, science, literature, and sports." 
+  },
+  {
+    id: "cult-san-1",
+    title: "Cultural Showcase",
+    category: "Cultural",
+    subCategory: "Sanskrit",
+    day: "28 Mar",
+    registration: "100/- per person",
+    prize: "3,000",
+    link: "/event/cultural-showcase",
+    description: "Representation of unique cultural backgrounds through creative expression." 
+  },
+  {
+    id: "cult-san-2",
+    title: "Alfaz",
+    category: "Cultural",
+    subCategory: "Sanskrit",
+    day: "28 Mar",
+    registration: "100/- per person",
+    prize: "XXXXX",
+    link: "/event/alfaz",
+    description: "Open stage talent event for singing, poetry, and traditional performances." 
+  },
+
+  // --- VIDEOGRAPHY ---
+  {
+    id: "cult-vid-1",
+    title: "Reel Making",
+    category: "Cultural",
+    subCategory: "Videography",
+    day: "28 Mar",
+    registration: "100/- per person",
+    prize: "8,000",
+    link: "/event/reel-making",
+    description: "Capture and edit powerful short stories to inspire the audience." 
+  },
+  {
+    id: "cult-vid-2",
+    title: "Mad Ads",
+    category: "Cultural",
+    subCategory: "Videography",
+    day: "27 Mar",
+    registration: "199/- per person",
+    prize: "10,000",
+    link: "/event/mad-ads",
+    description: "Creative event judging advertisement preparation for proposed products." 
+  },
+  {
+    id: "cult-vid-3",
+    title: "Short Film",
+    category: "Cultural",
+    subCategory: "Videography",
+    day: "29 Mar",
+    registration: "199/- per person",
+    prize: "10,000",
+    link: "/event/short-film",
+    description: "Original 2 to 15-minute film competition based on a revealed theme." 
+  },
+
+  // --- DANCE ---
+  {
+    id: "cult-dan-1",
+    title: "80's Hustle",
+    category: "Cultural",
+    subCategory: "Dance",
+    day: "27 Mar",
+    registration: "250/- per person",
+    prize: "50,000",
+    link: "/event/80s-hustle",
+    description: "Group dance competition in various styles like Bollywood and Hip Hop." 
+  },
+  {
+    id: "cult-dan-2",
+    title: "Beat Drop",
+    category: "Cultural",
+    subCategory: "Dance",
+    day: "28 Mar",
+    registration: "350/- per person",
+    prize: "15,000",
+    link: "/event/beat-drop",
+    description: "Solo dance face-off showcasing unique technique and style." 
+  },
+  {
+    id: "cult-dan-3",
+    title: "Crew Klash",
+    category: "Cultural",
+    subCategory: "Dance",
+    day: "28 Mar",
+    registration: "250/- per person",
+    prize: "24,000",
+    link: "/event/crew-klash",
+    description: "Group dance battle highlighting synchronization and coordination." 
+  },
+  {
+    id: "cult-dan-4",
+    title: "Bhangra Fiesta",
+    category: "Cultural",
+    subCategory: "Dance",
+    day: "29 Mar",
+    registration: "200/- per person",
+    prize: "50,000",
+    link: "/event/bhangra-fiesta",
+    description: "Traditional Punjabi percussion and live Dhol rhythm battle." 
+  },
+
+  // --- PHOTOGRAPHY ---
+  {
+    id: "cult-pho-1",
+    title: "Idrishya",
+    category: "Cultural",
+    subCategory: "Photography",
+    day: "All Day",
+    registration: "NIL",
+    prize: "NIL",
+    link: "/event/idrishya",
+    description: "National photography exhibition highlighting emotions and passion." 
+  },
+  {
+    id: "cult-pho-2",
+    title: "Snap Treasure Hunt",
+    category: "Cultural",
+    subCategory: "Photography",
+    day: "28 Mar",
+    registration: "100/- per team",
+    prize: "6,000",
+    link: "/event/snap-hunt",
+    description: "Campus-wide treasure hunt solving location clues through photography." 
+  },
+  {
+    id: "cult-pho-3",
+    title: "Nazariya",
+    category: "Cultural",
+    subCategory: "Photography",
+    day: "29 Mar",
+    registration: "50/- per person",
+    prize: "6,000",
+    link: "/event/nazariya",
+    description: "Professional photo storytelling competition through a sequence of pictures." 
   },
 
   // --- HINDI SAHITYA ---
@@ -197,7 +394,7 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "3,000",
     link: "/event/vad-vivaad",
-    description: "Hindi debating competition based on TV debate formats."
+    description: "Hindi debating competition based on common man's views and TV formats." 
   },
   {
     id: "cult-hin-2",
@@ -208,16 +405,154 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "3,000",
     link: "/event/mehfil",
-    description: "Poetry competition for original Shayari, Ghazal, and Nazm."
+    description: "Poetry competition for original Shayari, Ghazal, and Nazm in Hindi/Urdu." 
+  },
+  {
+    id: "cult-hin-3",
+    title: "Filmy Sangram",
+    category: "Cultural",
+    subCategory: "Hindi Sahitya",
+    day: "28 Mar",
+    registration: "50/- per person",
+    prize: "3,000",
+    link: "/event/filmy-sangram",
+    description: "Hindi storytelling competition focused on writing finesse and coherence." 
   },
 
   // ==========================
   // TECHNICAL EVENTS
   // ==========================
-  
+
+  // --- AERONAUTICS ---
+  {
+    id: "tech-aer-1",
+    title: "Under the Sky",
+    category: "Technical",
+    subCategory: "Aeronautics",
+    day: "28-03-2026",
+    registration: "N/A",
+    prize: "NIL",
+    link: "/event/under-sky",
+    description: "Star gazing with telescope observation and constellation identification." 
+  },
+
+  // --- BUSINESS ---
+  {
+    id: "tech-bus-1",
+    title: "Pivot Room",
+    category: "Technical",
+    subCategory: "Business",
+    day: "27-03-2026",
+    registration: "200/- per team",
+    prize: "10,000",
+    link: "/event/pivot-room",
+    description: "Decision-making challenge testing adaptability under changing constraints." 
+  },
+  {
+    id: "tech-bus-2",
+    title: "Analyst Edge",
+    category: "Technical",
+    subCategory: "Business",
+    day: "28-03-2026",
+    registration: "100/- per person",
+    prize: "10,000",
+    link: "/event/analyst-edge",
+    description: "Portfolio-building challenge using analysis tools and fixed capital." 
+  },
+  {
+    id: "tech-bus-3",
+    title: "Traders Arena",
+    category: "Technical",
+    subCategory: "Business",
+    day: "27-03-2026",
+    registration: "N/A",
+    prize: "10,000",
+    link: "/event/traders-arena",
+    description: "Live stock exchange simulation with virtual demat accounts." 
+  },
+  {
+    id: "tech-bus-4",
+    title: "Civil Eng. Ideathon",
+    category: "Technical",
+    subCategory: "Business",
+    day: "28-03-2026",
+    registration: "100/- per team",
+    prize: "6,000",
+    link: "/event/civil-ideathon",
+    description: "Presentation of innovative ideas for sustainable infrastructure." 
+  },
+  {
+    id: "tech-bus-5",
+    title: "Consult Corp",
+    category: "Technical",
+    subCategory: "Business",
+    day: "28-03-2026",
+    registration: "300/- per team",
+    prize: "10,000",
+    link: "/event/consult-corp",
+    description: "Competitive managerial and strategy-based event." 
+  },
+  {
+    id: "tech-bus-6",
+    title: "TechBiz Quest",
+    category: "Technical",
+    subCategory: "Business",
+    day: "29-03-2026",
+    registration: "200/- per team",
+    prize: "6,000",
+    link: "/event/techbiz-quest",
+    description: "Blends technology and business concepts through knowledge rounds." 
+  },
+
+  // --- CIRCUITS ---
+  {
+    id: "tech-cir-1",
+    title: "Rapid Wire",
+    category: "Technical",
+    subCategory: "Circuits",
+    day: "27-03-2026",
+    registration: "N/A",
+    prize: "4,500",
+    link: "/event/rapid-wire",
+    description: "Technical event with rounds based on electrical and software logic." 
+  },
+  {
+    id: "tech-cir-2",
+    title: "Grid Collapse",
+    category: "Technical",
+    subCategory: "Circuits",
+    day: "28-03-2026",
+    registration: "120/- per person",
+    prize: "6,000",
+    link: "/event/grid-collapse",
+    description: "Campus-wide treasure hunt solving circuit-based puzzles to restore power." 
+  },
+  {
+    id: "tech-cir-3",
+    title: "Seed Power Arena",
+    category: "Technical",
+    subCategory: "Circuits",
+    day: "29-03-2026",
+    registration: "50/- per person",
+    prize: "4,500",
+    link: "/event/seed-power",
+    description: "Multi-activity engagement zone with interactive individual challenges." 
+  },
+
   // --- CODING ---
   {
     id: "tech-cod-1",
+    title: "Neura Nova",
+    category: "Technical",
+    subCategory: "Coding",
+    day: "29-03-2026",
+    registration: "N/A",
+    prize: "30,000",
+    link: "/event/neura-nova",
+    description: "AI in healthcare debate and mini buildathon." 
+  },
+  {
+    id: "tech-cod-2",
     title: "Root Breach",
     category: "Technical",
     subCategory: "Coding",
@@ -225,10 +560,21 @@ export const eventsData = [
     registration: "150/- per team",
     prize: "95,000",
     link: "/event/root-breach",
-    description: "24-hour national-level Capture The Flag (CTF) cybersecurity challenge."
+    description: "24-hour national CTF competition focused on cybersecurity." 
   },
   {
-    id: "tech-cod-2",
+    id: "tech-cod-3",
+    title: "Hackmol 7.0",
+    category: "Technical",
+    subCategory: "Coding",
+    day: "TBA",
+    registration: "N/A",
+    prize: "TBA",
+    link: "/event/hackmol",
+    description: "Community-focused 36-hour hackathon for beginners and experts." 
+  },
+  {
+    id: "tech-cod-4",
     title: "Debug to Deploy",
     category: "Technical",
     subCategory: "Coding",
@@ -236,21 +582,10 @@ export const eventsData = [
     registration: "500/- per team",
     prize: "31,000",
     link: "/event/debug-deploy",
-    description: "Coding competition with Debug, Coding, and Web Dev rounds."
+    description: "Three-round competition involving debugging, coding, and web development." 
   },
   {
-    id: "tech-cod-3",
-    title: "Neura Nova",
-    category: "Technical",
-    subCategory: "Coding",
-    day: "29-03-2026",
-    registration: "Contact Organizer",
-    prize: "30,000",
-    link: "/event/neura-nova",
-    description: "Two-round event: AI in Healthcare debate and buildathon."
-  },
-  {
-    id: "tech-cod-4",
+    id: "tech-cod-5",
     title: "This Should Work!",
     category: "Technical",
     subCategory: "Coding",
@@ -258,7 +593,90 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "15,000",
     link: "/event/should-work",
-    description: "Logic-based event where you judge code correctness rather than writing it."
+    description: "Logic-based event judging code correctness rather than writing it." 
+  },
+
+  // --- DESIGNING ---
+  {
+    id: "tech-des-1",
+    title: "Steel Arch Making",
+    category: "Technical",
+    subCategory: "Designing",
+    day: "27-03-2026",
+    registration: "50/- per person",
+    prize: "9,000",
+    link: "/event/steel-arch",
+    description: "Constructing a brick arch structure using a steel supporting frame." 
+  },
+  {
+    id: "tech-des-2",
+    title: "Tex Print",
+    category: "Technical",
+    subCategory: "Designing",
+    day: "27-03-2026",
+    registration: "100/- per team",
+    prize: "5,000",
+    link: "/event/tex-print",
+    description: "Block printing event for designing unique T-shirt motifs." 
+  },
+
+  // --- GAMING & MANAGERIAL ---
+  {
+    id: "tech-gam-1",
+    title: "Arena XO",
+    category: "Technical",
+    subCategory: "Gaming",
+    day: "27-29 Mar",
+    registration: "50/- per person",
+    prize: "1,00,000",
+    link: "/event/arena-xo",
+    description: "E-gaming tournament for BGMI, Real Cricket, and Valorant." 
+  },
+  {
+    id: "tech-man-1",
+    title: "Ad-Mad Show",
+    category: "Technical",
+    subCategory: "Managerial",
+    day: "28-03-2026",
+    registration: "N/A",
+    prize: "10,000",
+    link: "/event/ad-mad",
+    description: "Business idea pitching competition for innovative small businesses." 
+  },
+  {
+    id: "tech-man-2",
+    title: "Minute Mayhem",
+    category: "Technical",
+    subCategory: "Managerial",
+    day: "27-29 Mar",
+    registration: "N/A",
+    prize: "10,000",
+    link: "/event/minute-mayhem",
+    description: "Fast-paced obstacle challenge with mini-games under 60 seconds." 
+  },
+
+  // --- FITNESS & QUIZ ---
+  {
+    id: "tech-fit-1",
+    title: "Ultrafit Arena",
+    category: "Technical",
+    subCategory: "Fitness",
+    day: "27-03-2026",
+    registration: "N/A",
+    prize: "3,000",
+    link: "/event/ultrafit-arena",
+    description: "Hybrid challenge testing physical agility and cognitive sharpness." 
+  },
+  {
+    id: "tech-qui-1",
+    title: "Opti-Relay",
+    category: "Technical",
+    subCategory: "Quiz",
+    day: "28-03-2026",
+    registration: "150/- per team",
+    prize: "6,000",
+    link: "/event/opti-relay",
+    description: "Engineering challenge with quizzes and relay-style case solving." 
   },
 
   // --- ROBOTICS ---
@@ -271,21 +689,10 @@ export const eventsData = [
     registration: "250/- per team",
     prize: "30,000",
     link: "/event/sky-rush",
-    description: "Drone navigation through sharp turns and daring obstacles."
+    description: "Drone navigation through courses with sharp turns and obstacles." 
   },
   {
     id: "tech-rob-2",
-    title: "Maze Rush",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "28-03-2026",
-    registration: "300/- per team",
-    prize: "22,000",
-    link: "/event/maze-rush",
-    description: "Remote control bot navigation through a maze in minimum time."
-  },
-  {
-    id: "tech-rob-3",
     title: "Machine Wars",
     category: "Technical",
     subCategory: "Robotics",
@@ -293,65 +700,129 @@ export const eventsData = [
     registration: "350/- per team",
     prize: "18,000",
     link: "/event/machine-wars",
-    description: "Combines Tug of War, Drag Race, and Robo-Sumo."
+    description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo." 
   },
   {
-    id: "tech-rob-4",
-    title: "Gear Butz",
+    id: "tech-rob-3",
+    title: "Gear Blitz",
     category: "Technical",
     subCategory: "Robotics",
     day: "28-03-2026",
     registration: "500/- per team",
     prize: "20,000",
-    link: "/event/gear-butz",
-    description: "RC car racing on tracks testing speed and skill."
-  },
-
-  // --- BUSINESS ---
-  {
-    id: "tech-bus-1",
-    title: "Traders Arena",
-    category: "Technical",
-    subCategory: "Business",
-    day: "27-03-2026",
-    registration: "Contact Organizer",
-    prize: "10,000",
-    link: "/event/traders-arena",
-    description: "Live stock exchange simulation using virtual demat accounts."
+    link: "/event/gear-blitz",
+    description: "RC car racing on tracks testing speed and skill." 
   },
   {
-    id: "tech-bus-2",
-    title: "Pivot Room",
+    id: "tech-rob-4",
+    title: "Maze Rush",
     category: "Technical",
-    subCategory: "Business",
-    day: "27-03-2026",
-    registration: "200/- per team",
-    prize: "10,000",
-    link: "/event/pivot-room",
-    description: "Decision-making challenge testing adaptability under pressure."
-  },
-  {
-    id: "tech-bus-3",
-    title: "Analyst Edge",
-    category: "Technical",
-    subCategory: "Business",
+    subCategory: "Robotics",
     day: "28-03-2026",
-    registration: "Contact Organizer",
-    prize: "10,000",
-    link: "/event/analyst-edge",
-    description: "Portfolio-building challenge strategizing stock investments."
+    registration: "300/- per team",
+    prize: "22,000",
+    link: "/event/maze-rush",
+    description: "Remote controlled bot navigation through a maze in minimum time." 
   },
 
-  // --- GAMING ---
+  // --- STEM ---
   {
-    id: "tech-gam-1",
-    title: "Arena XO",
+    id: "tech-ste-1",
+    title: "React & Resolve",
     category: "Technical",
-    subCategory: "Gaming",
-    day: "27-29 Mar 2026",
-    registration: "50/- per person",
-    prize: "1,00,000",
-    link: "/event/arena-xo",
-    description: "E-gaming tournament for BGMI, Valorant, and Real Cricket."
-  }
+    subCategory: "STEM",
+    day: "29-03-2026",
+    registration: "150/- per team",
+    prize: "15,000",
+    link: "/event/react-resolve",
+    description: "Solving real-world chemical engineering problems before a panel." 
+  },
+  {
+    id: "tech-ste-2",
+    title: "STEM MUN",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "29-03-2026",
+    registration: "200/- per person",
+    prize: "10,000",
+    link: "/event/stem-mun",
+    description: "Diplomatic debate bridging scientific research and policy formulation." 
+  },
+  {
+    id: "tech-ste-3",
+    title: "Mind the Mind",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "28-03-2026",
+    registration: "250/- per team",
+    prize: "10,000",
+    link: "/event/mind-mind",
+    description: "Tech challenge with aptitude thinking and a 4-hour hackathon." 
+  },
+  {
+    id: "tech-ste-4",
+    title: "ChemXplore",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "27-03-2026",
+    registration: "100/- per team",
+    prize: "9,000",
+    link: "/event/chemxplore",
+    description: "Interactive scenarios for chemical engineering problem solving." 
+  },
+  {
+    id: "tech-ste-5",
+    title: "Escape Room",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "27-03-2026",
+    registration: "50/- per team",
+    prize: "NIL",
+    link: "/event/escape-room",
+    description: "Solving critical business challenges to escape within 60 minutes." 
+  },
+  {
+    id: "tech-ste-6",
+    title: "Inside Out",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "27-28 Mar",
+    registration: "50/- per team",
+    prize: "5,000",
+    link: "/event/inside-out",
+    description: "Anatomy-themed treasure hunt following clues across body systems." 
+  },
+  {
+    id: "tech-ste-7",
+    title: "Who Killed the Cell",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "28-03-2026",
+    registration: "50/- per team",
+    prize: "5,000",
+    link: "/event/who-killed-cell",
+    description: "Biology-themed crime scene investigation solving logical clues." 
+  },
+  {
+    id: "tech-ste-8",
+    title: "Enigma",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "28-03-2026",
+    registration: "100/- per team",
+    prize: "3,500",
+    link: "/event/enigma",
+    description: "Logical reasoning competition with buzzer and rapid-fire rounds." 
+  },
+  {
+  id: "tech-ste-9",
+  title: "The Human Hunt",
+  category: "Technical",
+  subCategory: "STEM",
+  day: "27-28 Mar",
+  registration: "50/- per team",
+  prize: "5,000",
+  link: "/event/human-hunt",
+  description: "An anatomy-themed treasure hunt where participants follow clues hidden across organs and body systems, testing logic, observation, and teamwork."
+},
 ];

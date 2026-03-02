@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'; 
-import { ArrowLeft, Search, X } from "lucide-react"; // Added Search and X for the bar
+import { ArrowLeft, Search, X } from "lucide-react";
 import { useTransition } from "../../transition/transitioncontext";
 import { eventsData } from '../../data/eventdata';
 import EventCard from './EventCard';
@@ -8,33 +8,10 @@ export default function Events() {
   const { startTransition } = useTransition();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  
-  // --- 3D HOVER STATE & REF ---
   const bgRef = useRef(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
-    // STOP ROTATION: If a category is selected or user is searching, do nothing
-    if (!bgRef.current || selectedCategory || searchQuery) return;
-
-    const { left, top, width, height } = bgRef.current.getBoundingClientRect();
-    const x = (e.clientX - left) / width;
-    const y = (e.clientY - top) / height;
-    
-    // Rotation intensity (20deg)
-    const rotateX = (y - 0.5) * -20; 
-    const rotateY = (x - 0.5) * 20;
-    
-    setTilt({ x: rotateX, y: rotateY });
-  };
-
-  const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
-  };
-
-  // Logic to reset tilt immediately when a category is clicked
+  // Removed Tilt logic for background
   const selectCategory = (title) => {
-    setTilt({ x: 0, y: 0 }); 
     setSelectedCategory(title);
   };
 
@@ -69,74 +46,87 @@ export default function Events() {
   return (
     <div
       className="min-h-screen relative font-['Permanent_Marker'] overflow-x-hidden bg-black"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       ref={bgRef}
-      style={{ perspective: "1200px" }}
     >
-      {/* 3D BACKGROUND LAYER */}
+      {/* BACKGROUND LAYER - Tilt Removed */}
       <div 
         className="fixed inset-0 bg-cover bg-center transition-transform duration-700 ease-out pointer-events-none"
         style={{ 
           backgroundImage: "url('images/events_bg2.jpg')",
-          // Disable tilt and zoom out slightly when viewing specific results
-          transform: (selectedCategory || searchQuery) 
-            ? `rotateX(0deg) rotateY(0deg) scale(1)` 
-            : `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(1.1)`,
+          transform: "scale(1.1)", // Static scale for depth
           zIndex: 0
         }}
       />
 
       {/* 1. BACK BUTTON */}
       <button
-        onClick={() => selectedCategory ? setSelectedCategory(null) : startTransition("/")}
+        onClick={() => {
+    if (searchQuery) {
+      setSearchQuery(""); // If searching, just clear the search first
+    } else if (selectedCategory) {
+      setSelectedCategory(null); // If a category is picked, go back to the fan/list view
+    } else {
+      startTransition("/"); // Only go home if we are on the main selection screen
+    }
+  }}
         className="absolute left-6 md:left-16 top-6 md:top-10 h-14 w-14 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all z-50"
       >
         <ArrowLeft size={24} strokeWidth={2.5} />
       </button>
 
-      {/* 2. HEADING AT TOP */}
-      <h1 className="absolute top-10 w-full text-center text-white text-5xl md:text-8xl font-black italic uppercase drop-shadow-[8px_8px_0px_#FF0032] z-40 tracking-tighter pointer-events-none">
+      {/* 2. HEADING - Red Shadow Removed */}
+      <h1 className="absolute top-10 w-full text-center text-white text-5xl md:text-8xl font-black italic uppercase drop-shadow-[8px_8px_0px_rgba(0,0,0,0.5)] z-40 tracking-tighter pointer-events-none">
         {selectedCategory ? selectedCategory : "EVENTS"}
       </h1>
 
-      {/* 3. ENHANCED BRUTALIST SEARCH BAR */}
-      <div className="absolute top-40 md:top-44 left-1/2 -translate-x-1/2 w-full max-w-sm px-6 z-50">
-        <div className="relative group">
-          {/* Outer Glow */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-[#FF0032] to-purple-600 rounded-lg blur opacity-20 group-focus-within:opacity-50 transition duration-500"></div>
-          
-          <div className="relative flex items-center bg-black/40 backdrop-blur-xl border border-white/20 rounded-lg px-4 py-3 transition-all duration-300 group-focus-within:border-[#FF0032]/50 group-focus-within:bg-black/70">
-            <Search className="w-5 h-5 text-white/50 group-focus-within:text-[#FF0032] transition-colors" />
-
-            <input 
-              type="text"
-              placeholder="SEARCH EVENTS..."
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                if(e.target.value) setTilt({ x: 0, y: 0 });
-              }}
-              className="w-full bg-transparent ml-3 text-base font-bold uppercase text-white placeholder:text-white/30 outline-none tracking-widest"
-            />
+      {/* 3. SEARCH BAR - Conditional Rendering added */}
+      {(selectedCategory || searchQuery) && (
+        <div className="absolute top-40 md:top-44 left-1/2 -translate-x-1/2 w-full max-w-sm px-6 z-50">
+            <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-purple-600 rounded-lg blur opacity-20 group-focus-within:opacity-50 transition duration-500"></div>
             
-            {searchQuery && (
-              <button 
-                onClick={() => setSearchQuery("")}
-                className="text-white/40 hover:text-white transition-colors"
-              >
-                <X size={18} strokeWidth={3} />
-              </button>
-            )}
-          </div>
+            <div className="relative flex items-center bg-black/40 backdrop-blur-xl border border-white/20 rounded-lg px-4 py-3 transition-all duration-300 group-focus-within:border-white/50 group-focus-within:bg-black/70">
+                <Search className="w-5 h-5 text-white/50 group-focus-within:text-white transition-colors" />
+                <input 
+                type="text"
+                placeholder="SEARCH EVENTS..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-transparent ml-3 text-base font-bold uppercase text-white placeholder:text-white/30 outline-none tracking-widest"
+                />
+                {searchQuery && (
+                <button onClick={() => setSearchQuery("")} className="text-white/40 hover:text-white transition-colors">
+                    <X size={18} strokeWidth={3} />
+                </button>
+                )}
+            </div>
+            </div>
         </div>
-      </div>
+      )}
 
       <div className="relative w-screen min-h-screen overflow-hidden flex flex-col items-center z-10">
         
-        {/* 4. FAN LAYOUT (Visible on main screen only) */}
+        {/* 4. FAN LAYOUT & MOBILE STACK */}
         {!selectedCategory && !searchQuery && (
-          <div className="relative w-full max-w-[1200px] h-screen flex justify-center items-end">
+          <div className="relative w-full max-w-[1200px] h-screen flex flex-col md:flex-row justify-center items-center md:items-end px-4 gap-6 md:gap-0">
+            
+            {/* Mobile View: Simple vertical list */}
+            <div className="md:hidden flex flex-col gap-6 w-full pt-40">
+              {slices.map((slice, index) => (
+                <div 
+                  key={index} 
+                  onClick={() => selectCategory(slice.title)}
+                  className="relative w-full h-48 rounded-xl overflow-hidden border border-white/20"
+                >
+                   <img src={slice.img} className="absolute inset-0 w-full h-full object-cover opacity-60" alt="" />
+                   <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                      <span className={`text-3xl font-bold uppercase ${slice.text}`}>{slice.title}</span>
+                   </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop View: Fan Layout */}
             <div className="hidden md:block relative w-full h-full">
               {slices.map((slice, index) => (
                 <div
@@ -170,11 +160,13 @@ export default function Events() {
           </div>
         )}
 
-        {/* 5. EVENT GRID (Visible when category or search is active) */}
+        {/* 5. EVENT GRID - Increased text size container */}
         {(selectedCategory || searchQuery) && (
-          <div className="w-full max-w-7xl mx-auto px-6 pt-64 pb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
+          <div className="w-full max-w-7xl mx-auto px-6 pt-64 pb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-in fade-in slide-in-from-bottom-10 duration-700 text-xl">
             {filteredEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
+              <div key={event.id} className="text-xl"> {/* Container to force larger font context */}
+                <EventCard event={event} />
+              </div>
             ))}
           </div>
         )}
