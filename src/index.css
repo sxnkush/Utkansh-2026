@@ -87,7 +87,7 @@ html {
 
 @theme {
     /* The new Purple and Lime combo */
-    --color-fest-deep: #3f267d;
+    --color-fest-deep: #180f2a;
     --color-fest-lime: #cef404;
 
     /* Keeping your existing custom values */
@@ -98,8 +98,7 @@ html {
 
 body {
     background-color: var(--color-fest-deep);
-    /* Use the new purple */
-    color: white;
+
 }
 
 /* 1. Import Archivo Black */

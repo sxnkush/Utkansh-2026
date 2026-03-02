@@ -37,7 +37,7 @@ const SprayReveal = ({ trigger }) => {
     const NAV_ITEMS = [
         {
             id: 1, src: "/images/navreveal/schedule.png", link: "/schedule", delay: 200,
-            x: "27%", y: "32%", mobileX: "34%", mobileY: "12%", scale: 1.1
+            x: "26.5%", y: "32%", mobileX: "34%", mobileY: "12%", scale: 1.1
         },
         {
             id: 2, src: "/images/navreveal/accomodations.png", link: "/accomodation", delay: 300,
@@ -49,7 +49,7 @@ const SprayReveal = ({ trigger }) => {
         },
         {
             id: 4, src: "/images/navreveal/team.png", link: "/teams", delay: 500,
-            x: "83%", y: "72%", mobileX: "73%", mobileY: "82.2%", scale: 1.2
+            x: "83%", y: "72%", mobileX: "73%", mobileY: "82.2%", scale: 1.1
         }
     ];
 
@@ -209,7 +209,7 @@ const SprayReveal = ({ trigger }) => {
                     y = pos.y;
                     angle = Math.atan2(p3.y - p0.y, p3.x - p0.x) * (180 / Math.PI);
                     drawSpray(x, y);
-                    state.progress += isMobile ? 0.035 : 0.035;
+                    state.progress += isMobile ? 0.040 : 0.045;
                 }
             } else if (state.phase === "FALL") {
                 state.fallVelocity += 0.8;

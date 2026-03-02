@@ -16,7 +16,7 @@ const Footer = () => {
 
     return (
         <footer
-            className="footer p-10 flex flex-col items-center relative overflow-hidden bg-black"
+            className="footer py-2 px-14 flex flex-col items-center relative overflow-hidden bg-black"
             style={{
                 backgroundImage: 'url("/images/footer/footerbg.jpg")',
                 backgroundSize: "cover",

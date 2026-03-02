@@ -1,15 +1,18 @@
-import Hero from "./pages/components/hero/hero";
-import Sponsers from "./pages/sponsors/sponsors";
-import Footer from "./pages/components/footer/footer";
+import { Suspense, lazy } from "react";
 
-const Home = () => {
+// Lazy load components
+const Hero = lazy(() => import("./pages/components/hero/hero"));
+const Footer = lazy(() => import("./pages/components/footer/footer"));
+
+const Home = ({ introDone }) => {
     return (
         <>
-
-            <Hero />
-            <Footer />
-
-
+            {introDone && (
+                <Suspense fallback={null}>
+                    <Hero introDone={introDone} />
+                    <Footer introDone={introDone} />
+                </Suspense>
+            )}
         </>
     );
 };

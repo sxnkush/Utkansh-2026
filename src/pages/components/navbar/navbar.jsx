@@ -9,7 +9,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowNavbar(true);
-        }, 3000); // 3 seconds delay
+        }, 7900); // 3 seconds delay
 
         return () => clearTimeout(timer);
     }, []);

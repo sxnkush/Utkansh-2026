@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence, useMotionValue, useMotionTemplate } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({ introDone }) => {
     const containerRef = useRef(null);
     const videoRef = useRef(null);
     const playerInstance = useRef(null);
@@ -17,8 +17,16 @@ const Hero = () => {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
     // --- NEW: Effect intensity to control visual entry ---
-    const effectIntensity = useSpring(0, { stiffness: 40, damping: 20 });
-
+    const effectIntensity = useSpring(0, { stiffness: 60, damping: 40 });
+    useEffect(() => {
+        if (introDone && videoRef.current) {
+            videoRef.current.play().then(() => {
+                console.log("Hero video started");
+            }).catch((err) => {
+                console.log("Autoplay prevented:", err);
+            });
+        }
+    }, [introDone]);
     useEffect(() => {
         if (introVideoEnded) {
             effectIntensity.set(1);
@@ -77,7 +85,7 @@ const Hero = () => {
     const yTranslate = useTransform(smoothProgress, [0, 0.35], ["35%", "-35%"]);
 
     const videos = [
-        "https://www.youtube.com/watch?v=IYFe17EnAP8",
+        "https://youtu.be/IYFe17EnAP8?si=39Aj0aNseu9AhVDS",
     ];
 
     const getVideoId = (url) => {
@@ -426,9 +434,9 @@ const Hero = () => {
                                             }}
                                         >
                                             Utkansh-26 at NIT Jalandhar blends culture and technology in perfect harmony.
-                                            Experience electrifying performances like Panache, Megasonic, BDM Night,
+                                            Experience electrifying performances like Panache,BDM Night,
                                             and Star Night, alongside innovative events like Hackathons, RC Racing,
-                                            NIT-yaan, Startup Mela, and Avishkar Exhibitions.This is Utkansh-where brilliance knows no boundaries, and the future takes center stage. Join us for an unforgettable celebration of talent, innovation, and creativity that promises to inspire and entertain.
+                                            NIT-yaan, Startup Mela, and Avishkar Exhibitions. Join us for an unforgettable celebration of talent, innovation, and creativity that promises to inspire and entertain.
 
                                         </p>
                                     </div>
@@ -460,8 +468,9 @@ const Hero = () => {
                             src="https://res.cloudinary.com/dph7ygvuj/video/upload/v1772096483/utkanshbg_zctjyd.mp4" // <-- Replace this with your public URL
                             loop
                             playsInline
-                            muted
                             autoPlay
+                            muted
+
                             className="w-full h-full object-cover bg-black"
                         />
                     </motion.div>
