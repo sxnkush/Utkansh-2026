@@ -12,6 +12,7 @@ import { useTransition } from "./transition/transitioncontext";
 import Events from "./pages/events/events";
 import EventsPage from "./pages/events";
 import Accomodation from "./pages/accomodation/accomodation";
+import EventDetails from "./pages/Schedule/EventDetails";
 
 function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -46,6 +47,7 @@ function App() {
         <Route path="/teams" element={<DevelopersPage />} />
         <Route path="/contact" element={<ContactUsUtkansh26 />} />
         <Route path='/events' element={<EventsPage />} />
+        <Route path='/events/:eventId' element={<EventDetails/>} />
         <Route path='/accomodation' element={<Accomodation/>} />
       </Routes>
       {/* LOADER ON TOP */}

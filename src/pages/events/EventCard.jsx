@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const EventCard = ({ event }) => {
   return (
     <div className="group relative bg-white border-[4px] border-black p-5 flex flex-col shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
@@ -32,12 +32,12 @@ const EventCard = ({ event }) => {
         </p>
 
         <div className="mt-auto grid grid-cols-2 gap-3">
-          <a 
-            href={event.link}
+          <Link 
+            to={`/events/${event.id}`}
             className="flex items-center justify-center bg-white border-2 border-black py-2 font-bold text-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all active:translate-y-0.5 active:shadow-none"
           >
             More Info
-          </a>
+          </Link>
           <a 
             href="https://forms.gle/link"
             target="_blank"
