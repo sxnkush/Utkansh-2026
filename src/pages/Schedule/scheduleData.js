@@ -1,196 +1,317 @@
 export const subCategories = {
-  "Technical": ["Coding", "Robotics", "STEM", "Designing", "Aeronautics", "Business", "Circuits", "Gaming", "Managerial", "Quiz"],
-  "Cultural": ["Arts", "Dance", "Drama", "Music", "Fashion", "Flavours", "Literature", "Hindi Sahitya", "Photography", "Videography", "Quest", "Sanskrit"]
+  Technical: [
+    "Coding",
+    "Robotics",
+    "STEM",
+    "Designing",
+    "Aeronautics",
+    "Business",
+    "Circuits",
+    "Gaming",
+    "Managerial",
+    "Quiz",
+    "Fitness"
+  ],
+  Cultural: [
+    "Fine Arts",
+    "Dance",
+    "Drama",
+    "Music",
+    "Fashion",
+    "Flavours",
+    "Literature",
+    "Hindi Sahitya",
+    "Photography",
+    "Videography",
+    "Quest",
+    "Sanskrit"
+  ]
 };
+
 export const scheduleData = {
+
   "Day 1": {
-    "Technical": {
-      "Coding": [
-        { id: "tech-cod-2", time: "TBA", name: "Root Breach", location: "TBA" },
-        { id: "tech-cod-4", time: "TBA", name: "Debug to Deploy", location: "TBA" },
-        { id: "tech-cod-5", time: "TBA", name: "This Should Work!", location: "TBA" }
+    Date: "27/3/26",
+
+    Technical: {
+
+      Coding: [
+        { id: "tech-cod-0", time: "9:00 AM - 10:00 AM", name: "Hackmol 7.0 (Opening)", location: "VCH" },
+        { id: "tech-cod-1", time: "10:00 AM", name: "Hackmol 7.0", location: "Library" },
+        { id: "tech-cod-2", time: "10:00 AM - 1:30 PM", name: "This Should Work!", location: "SAC 206" },
+        { id: "tech-cod-3", time: "2:00 PM - 5:00 PM", name: "Debug to Deploy", location: "SAC 206" }
       ],
-      "Robotics": [
-        { id: "tech-rob-1", time: "TBA", name: "Sky Rush", location: "TBA" }
+
+      Robotics: [
+        { id: "tech-rob-1", time: "10:00 AM - 3:00 PM", name: "Sky Rush", location: "MBH Ground" }
       ],
-      "STEM": [
-        { id: "tech-ste-4", time: "TBA", name: "ChemXplore", location: "TBA" },
-        { id: "tech-ste-5", time: "TBA", name: "Escape Room", location: "TBA" },
-        { id: "tech-ste-6", time: "TBA", name: "Inside Out", location: "TBA" },
-        { id: "tech-ste-9", time: "TBA", name: "The Human Hunt", location: "TBA" }
+
+      STEM: [
+        { id: "tech-ste-1", time: "9:30 AM", name: "ChemXplore", location: "Chem Dept." },
+        { id: "tech-ste-2", time: "10:00 AM - 2:00 PM", name: "The Human Hunt", location: "BT Department" },
+        { id: "tech-ste-3", time: "11:00 AM - 1:00 PM", name: "Escape Room (Physical Society)", location: "SB 209" },
+        { id: "tech-ste-4", time: "2:00 PM - 5:30 PM", name: "Escape Room (Qmania)", location: "LT 201, 202" }
       ],
-      "Designing": [
-        { id: "tech-des-1", time: "TBA", name: "Steel Arch Making", location: "TBA" },
-        { id: "tech-des-2", time: "TBA", name: "Tex Print", location: "TBA" }
+
+      Designing: [
+        { id: "tech-des-1", time: "10:30 AM - 4:30 PM", name: "Steel Arch Making", location: "Civil Parking" },
+        { id: "tech-des-2", time: "2:00 PM - 4:00 PM", name: "Tex Print", location: "Textile Dept." }
       ],
-      "Aeronautics": [],
-      "Business": [
-        { id: "tech-bus-1", time: "TBA", name: "Pivot Room", location: "TBA" },
-        { id: "tech-bus-3", time: "TBA", name: "Traders Arena", location: "TBA" }
+
+      Aeronautics: [],
+
+      Business: [
+        { id: "tech-bus-1", time: "10:00 AM - 1:30 PM", name: "Pivot Room", location: "LT 201" },
+        { id: "tech-bus-2", time: "10:00 AM - 1:00 PM", name: "Traders Arena", location: "LT 403" },
+        { id: "tech-bus-3", time: "1:00 PM - 8:30 PM", name: "Enactus Event", location: "LT 402" }
       ],
-      "Circuits": [
-        { id: "tech-cir-1", time: "TBA", name: "Rapid Wire", location: "TBA" }
+
+      Circuits: [
+        { id: "tech-cir-1", time: "10:00 AM - 3:00 PM", name: "Rapid Wire", location: "SB-3" }
       ],
-      "Gaming": [
-        { id: "tech-gam-1", time: "TBA", name: "Arena XO", location: "TBA" }
+
+      Gaming: [
+        { id: "tech-gam-1", time: "11:00 AM - 9:00 PM", name: "Arena X", location: "VCH" }
       ],
-      "Fitness":[{ id: "tech-fit-1", time: "TBA", name: "Ultrafit Arena", location: "TBA" }]
+
+      Managerial: [
+        { id: "tech-man-1", time: "10:30 AM - 6:30 PM", name: "Minute Mayn", location: "SB Outside" }
+      ],
+
+      Quiz: [],
+
+      Fitness: [
+        { id: "tech-fit-1", time: "10:00 AM - 1:00 PM", name: "Ultra Fit Arena", location: "LT 103" }
+      ]
 
     },
-    "Cultural": {
-      "Music": [
-        { id: "cult-mus-3", time: "TBA", name: "The Voice", location: "TBA" }
+
+    Cultural: {
+
+      Music: [
+        { id: "cult-mus-1", time: "2:00 PM - 6:30 PM", name: "The Voice", location: "CSH" }
       ],
-      "Dance": [
-        { id: "cult-dan-1", time: "TBA", name: "80's Hustle", location: "TBA" }
+
+      Dance: [
+        { id: "cult-dan-1", time: "9:30 AM - 1:30 PM", name: "808 Hustle", location: "CSH" }
       ],
-      "Drama": [
-        { id: "cult-dra-1", time: "TBA", name: "Asmita", location: "TBA" },
-        { id: "cult-dra-4", time: "TBA", name: "Eklavya", location: "TBA" }
+
+      Drama: [
+        { id: "cult-dra-1", time: "10:00 AM - 3:00 PM", name: "Eklavya", location: "LT 102" },
+        { id: "cult-dra-2", time: "4:00 PM - 7:30 PM", name: "Asmita", location: "Central Lawn" }
       ],
-      "Fashion": [],
+
+      Fashion: [],
+
       "Fine Arts": [
-        { id: "cult-art-1", time: "TBA", name: "Kuchad Kala", location: "TBA" },
-        { id: "cult-art-3", time: "TBA", name: "Inkspire", location: "TBA" },
-        { id: "cult-art-4", time: "TBA", name: "Folded Blooms", location: "TBA" },
-        { id: "cult-art-7", time: "TBA", name: "Art Exhibition", location: "TBA" }
+        { id: "cult-art-1", time: "11:00 AM - 12:00 PM", name: "Kulhad Kala", location: "Drawing Halls" },
+        { id: "cult-art-2", time: "1:00 PM - 2:00 PM", name: "Inkspire", location: "Drawing Halls" },
+        { id: "cult-art-3", time: "2:00 PM - 3:00 PM", name: "Folded Blooms", location: "Drawing Halls" }
       ],
-      "Flavours": [
-        { id: "cult-fla-1", time: "TBA", name: "Spice Wars 8.0", location: "TBA" }
+
+      Flavours: [
+        { id: "cult-fla-1", time: "10:00 AM - 2:30 PM", name: "Spice Wars (Stage 1)", location: "LT 203" }
       ],
-      "Literature": [
-        { id: "cult-lit-2", time: "TBA", name: "The Detective Showdown", location: "TBA" }
+
+      Literature: [
+        { id: "cult-lit-1", time: "10:00 AM - 1:30 PM", name: "Detective Showdown", location: "SB-1" }
       ],
+
       "Hindi Sahitya": [
-        { id: "cult-hin-1", time: "TBA", name: "Vad Vivaad", location: "TBA" }
+        { id: "cult-hin-1", time: "10:00 AM - 12:00 PM", name: "Vaad Vivad", location: "SB-2" }
       ],
-      "Videography": [
-        { id: "cult-vid-2", time: "TBA", name: "Mad Ads", location: "TBA" }
+
+      Photography: [
+        { id: "cult-pho-1", time: "9:00 AM", name: "Drishya", location: "IT Building" }
       ],
-      "Exhibitions": [{
-  id: "cult-pho-1",
-  time: "All Day",
-  name: "Idrishya",
-  location: "TBA"
-}]
+
+      Videography: [
+        { id: "cult-vid-1", time: "11:00 AM - 5:30 PM", name: "Mad Ads", location: "LT 101" }
+      ],
+
+      Quest: [],
+      Sanskrit: []
     }
   },
+
+
   "Day 2": {
-    "Technical": {
-      "Coding": [],
-      "Robotics": [
-        { id: "tech-rob-3", time: "TBA", name: "Gear Blitz", location: "TBA" },
-        { id: "tech-rob-4", time: "TBA", name: "Maze Rush", location: "TBA" }
+    Date: "28/3/26",
+
+    Technical: {
+
+      Coding: [
+        { id: "tech-cod-4", time: "9:00 AM - 1:00 PM", name: "Root Breech (Opening)", location: "CSH" },
+        { id: "tech-cod-5", time: "10:30 AM - 1:00 PM", name: "Hackmol 7.0 (Closing)", location: "VCH" }
       ],
-      "STEM": [
-        { id: "tech-ste-3", time: "TBA", name: "Mind the Mind", location: "TBA" },
-        { id: "tech-ste-7", time: "TBA", name: "Who Killed the Cell", location: "TBA" },
-        { id: "tech-ste-8", time: "TBA", name: "Enigma", location: "TBA" }
+
+      Robotics: [
+        { id: "tech-rob-2", time: "9:30 AM - 1:30 PM", name: "Maze Rush", location: "In front of ICE Building" },
+        { id: "tech-rob-3", time: "10:00 AM - 3:00 PM", name: "Gear Blitz", location: "Main Ground" }
       ],
-      "Designing": [],
-      "Aeronautics": [
-        { id: "tech-aer-1", time: "TBA", name: "Under the Sky", location: "TBA" }
+
+      STEM: [
+        { id: "tech-ste-5", time: "11:00 AM - 4:00 PM", name: "Mind The Mind", location: "LT 404" },
+        { id: "tech-ste-6", time: "10:00 AM - 2:00 PM", name: "Who Killed The Cell", location: "BT Dept." },
+        { id: "tech-ste-7", time: "3:30 PM - 6:00 PM", name: "Enigma '26", location: "ALT" },
+        { id: "tech-ste-8", time: "11:00 AM - 1:00 PM", name: "Treasure Hunt", location: "SB Outside" }
       ],
-      "Business": [
-        { id: "tech-bus-2", time: "TBA", name: "Analyst Edge", location: "TBA" },
-        { id: "tech-bus-4", time: "TBA", name: "Civil Eng. Ideathon", location: "TBA" },
-        { id: "tech-bus-5", time: "TBA", name: "Consult Corp", location: "TBA" }
+
+      Designing: [],
+
+      Aeronautics: [
+        { id: "tech-aer-1", time: "6:00 PM - 10:00 PM", name: "Under The Skyy", location: "Central Lawn" }
       ],
-      "Circuits": [
-        { id: "tech-cir-2", time: "TBA", name: "Grid Collapse", location: "TBA" }
+
+      Business: [
+        { id: "tech-bus-4", time: "11:00 AM - 2:00 PM", name: "Analyst Edge", location: "LT 403" },
+        { id: "tech-bus-5", time: "10:00 AM - 3:00 PM", name: "Civil Engineering Ideathon", location: "Civil Parking" },
+        { id: "tech-bus-6", time: "3:30 PM - 6:30 PM", name: "Consult Corp Challenge", location: "LT 201" }
       ],
-      "Managerial": [
-        { id: "tech-man-1", time: "TBA", name: "Ad-Mad Show", location: "TBA" },
-        { id: "tech-man-2", time: "TBA", name: "Minute Mayhem", location: "TBA" }
+
+      Circuits: [
+        { id: "tech-cir-2", time: "9:00 AM - 7:00 PM", name: "Grid Collapse", location: "LT Front" }
       ],
-      "Quiz": [
-        { id: "tech-qui-1", time: "TBA", name: "Opti-Relay", location: "TBA" }
-      ]
+
+      Gaming: [
+        { id: "tech-gam-2", time: "10:00 AM", name: "Arena X", location: "Library / LT 402" }
+      ],
+
+      Managerial: [
+        { id: "tech-man-2", time: "11:00 AM - 1:00 PM", name: "Ad Mad Show", location: "SB 3rd Floor" },
+        { id: "tech-man-3", time: "10:30 AM - 6:30 PM", name: "Minute Mayn", location: "SB Outside" }
+      ],
+
+      Quiz: [
+        { id: "tech-qui-1", time: "11:30 AM - 2:30 PM", name: "Opti Relay", location: "ALT" }
+      ],
+
+      Fitness: []
     },
-    "Cultural": {
-      "Music": [
-        { id: "cult-mus-1", time: "TBA", name: "Megasonic", location: "TBA" }
+
+    Cultural: {
+
+      Music: [
+        { id: "cult-mus-2", time: "1:30 PM - 6:00 PM", name: "Megasonic", location: "CSH" }
       ],
-      "Dance": [
-        { id: "cult-dan-2", time: "TBA", name: "Beat Drop", location: "TBA" },
-        { id: "cult-dan-3", time: "TBA", name: "Crew Klash", location: "TBA" }
+
+      Dance: [
+        { id: "cult-dan-2", time: "11:00 AM - 1:30 PM", name: "BeatDrop", location: "Snackers" },
+        { id: "cult-dan-3", time: "3:00 PM - 6:00 PM", name: "Crew Klash", location: "Snackers" }
       ],
-      "Drama": [
-        { id: "cult-dra-3", time: "TBA", name: "Halla Bol", location: "TBA" }
+
+      Drama: [
+        { id: "cult-dra-3", time: "2:00 PM - 6:30 PM", name: "Halla Bol", location: "Central Lawn" }
       ],
-      "Fashion": [
-        { id: "cult-fas-1", time: "TBA", name: "Nirvana", location: "TBA" }
+
+      Fashion: [
+        { id: "cult-fas-1", time: "N/A", name: "Nirvana", location: "N/A" }
       ],
+
       "Fine Arts": [
-        { id: "cult-art-5", time: "TBA", name: "The Art Chase", location: "TBA" }
+        { id: "cult-art-4", time: "1:30 PM - 6:30 PM", name: "The Art Chase", location: "Tennis Court" }
       ],
-      "Literature": [
-        { id: "cult-lit-1", time: "TBA", name: "Charter and Change", location: "TBA" },
-        { id: "cult-lit-4", time: "TBA", name: "Diplomacy Battle", location: "TBA" }
+
+      Flavours: [
+        { id: "cult-fla-2", time: "2:00 PM - 9:30 PM", name: "Spice Wars 3.0", location: "Snackers" }
       ],
-      "Quest": [
-        { id: "cult-que-1", time: "TBA", name: "Questopia", location: "TBA" }
+
+      Literature: [
+        { id: "cult-lit-2", time: "1:00 PM - 7:00 PM", name: "Charter and Change", location: "VCH" },
+        { id: "cult-lit-3", time: "10:00 AM - 5:30 PM", name: "Diplomacy Battle", location: "SB 1 & SB 2" }
       ],
-      "Sanskrit": [
-        { id: "cult-san-1", time: "TBA", name: "Cultural Showcase", location: "TBA" },
-        { id: "cult-san-2", time: "TBA", name: "Alfaz", location: "TBA" }
-      ],
-      "Photography": [
-        { id: "cult-pho-2", time: "TBA", name: "Snap Treasure Hunt", location: "TBA" }
-      ],
+
       "Hindi Sahitya": [
-        { id: "cult-hin-3", time: "TBA", name: "Filmy Sangram", location: "TBA" }
+        { id: "cult-hin-2", time: "9:30 AM - 1:00 PM", name: "Mehfil", location: "Dominos" }
       ],
-      "Videography": [
-        { id: "cult-vid-1", time: "TBA", name: "Reel Making", location: "TBA" }
+
+      Photography: [
+        { id: "cult-pho-2", time: "9:30 AM - 1:30 PM", name: "Snap Treasure", location: "IT Building" }
+      ],
+
+      Videography: [
+        { id: "cult-vid-2", time: "1:30 PM - 6:00 PM", name: "Reel Making Competition", location: "LT 101" }
+      ],
+
+      Quest: [
+        { id: "cult-que-1", time: "11:30 AM - 1:30 PM", name: "Questopia", location: "LT 101" }
+      ],
+
+      Sanskrit: [
+        { id: "cult-san-1", time: "9:30 AM - 2:00 PM", name: "Cultural Exhibition", location: "Central Lawn" },
+        { id: "cult-san-2", time: "4:00 PM - 9:00 PM", name: "Alfaaz: The Open Stage", location: "Dominos" }
       ]
     }
   },
+
+
   "Day 3": {
-    "Technical": {
-      "Coding": [
-        { id: "tech-cod-1", time: "TBA", name: "Neura Nova", location: "TBA" }
+    Date: "29/3/26",
+
+    Technical: {
+
+      Coding: [
+        { id: "tech-cod-6", time: "9:00 AM - 12:00 PM", name: "Root Breech (Closing)", location: "CS 208/303" },
+        { id: "tech-cod-7", time: "10:00 AM - 12:00 PM", name: "Neura Nova", location: "CS 204" }
       ],
-      "Robotics": [
-        { id: "tech-rob-2", time: "TBA", name: "Machine Wars", location: "TBA" }
+
+      Robotics: [
+        { id: "tech-rob-4", time: "10:00 AM - 4:00 PM", name: "Machine Wars", location: "Snackers" }
       ],
-      "STEM": [
-        { id: "tech-ste-1", time: "TBA", name: "React & Resolve", location: "TBA" },
-        { id: "tech-ste-2", time: "TBA", name: "STEM MUN", location: "TBA" }
+
+      STEM: [
+        { id: "tech-ste-9", time: "9:30 AM", name: "STEM MUN", location: "VCH" },
+        { id: "tech-ste-10", time: "10:00 AM", name: "React and Resolve (Online)", location: "Online" }
       ],
-      "Business": [
-        { id: "tech-bus-6", time: "TBA", name: "TechBiz Quest", location: "TBA" }
+
+      Business: [
+        { id: "tech-bus-7", time: "10:30 AM - 12:30 PM", name: "TechBiz Quest 2.0", location: "LT 101" }
       ],
-      "Circuits": [
-        { id: "tech-cir-3", time: "TBA", name: "Seed Power Arena", location: "TBA" }
+
+      Circuits: [
+        { id: "tech-cir-3", time: "9:00 AM - 7:00 PM", name: "Power Arena", location: "CSH" }
+      ],
+
+      Gaming: [
+        { id: "tech-gam-3", time: "9:00 AM", name: "Arena X", location: "New Library" }
       ]
     },
-    "Cultural": {
-      "Music": [
-        { id: "cult-mus-2", time: "TBA", name: "Raporiot", location: "TBA" }
+
+    Cultural: {
+
+      Music: [
+        { id: "cult-mus-3", time: "1:30 PM - 5:00 PM", name: "Rap Riot", location: "Tennis Court" }
       ],
-      "Dance": [
-        { id: "cult-dan-4", time: "TBA", name: "Bhangra Fiesta", location: "TBA" }
+
+      Dance: [
+        { id: "cult-dan-4", time: "1:30 PM - 6:30 PM", name: "Bhangra Fiesta", location: "CSH" }
       ],
-      "Drama": [
-        { id: "cult-dra-2", time: "TBA", name: "Rangmanch", location: "TBA" }
+
+      Drama: [
+        { id: "cult-dra-4", time: "9:30 AM - 1:30 PM", name: "Rangmanch", location: "CSH" }
       ],
+
       "Fine Arts": [
-        { id: "cult-art-2", time: "TBA", name: "Manga Muse", location: "TBA" },
-        { id: "cult-art-6", time: "TBA", name: "Kintsugi Workshop", location: "TBA" }
+        { id: "cult-art-5", time: "11:00 AM - 12:00 PM", name: "Manga Muse", location: "Drawing Halls" },
+        { id: "cult-art-6", time: "1:00 PM - 2:00 PM", name: "Kintsugi Workshop", location: "Drawing Halls" }
       ],
-      "Literature": [
-        { id: "cult-lit-3", time: "TBA", name: "Word Poem", location: "TBA" }
+
+      Literature: [
+        { id: "cult-lit-4", time: "9:30 AM - 12:30 PM", name: "Word Poem", location: "SB 1" }
       ],
+
       "Hindi Sahitya": [
-        { id: "cult-hin-2", time: "TBA", name: "Mehfil", location: "TBA" }
+        { id: "cult-hin-3", time: "11:30 AM - 2:00 PM", name: "Filmy Sangram", location: "SB 2" }
       ],
-      "Photography": [
-        { id: "cult-pho-3", time: "TBA", name: "Nazariya", location: "TBA" }
+
+      Photography: [
+        { id: "cult-pho-3", time: "11:00 AM", name: "Nazariya (Online)", location: "Online" }
       ],
-      "Videography": [
-        { id: "cult-vid-3", time: "TBA", name: "Short Film", location: "TBA" }
+
+      Videography: [
+        { id: "cult-vid-3", time: "N/A", name: "SFM (Online)", location: "Online" }
       ]
     }
   }
+
 };
