@@ -40,8 +40,8 @@ const SprayReveal = ({ trigger }) => {
             x: "26.5%", y: "32%", mobileX: "34%", mobileY: "12%", scale: 1.1
         },
         {
-            id: 2, src: "/images/navreveal/accomodations.png", link: "/accomodation", delay: 300,
-            x: "45.5%", y: "80%", mobileX: "73%", mobileY: "31.5%", scale: 1.1
+            id: 2, src: "/images/navreveal/passes.png", link: "/accomodation", delay: 300,
+            x: "46%", y: "79%", mobileX: "73%", mobileY: "31.5%", scale: 1.2
         },
         {
             id: 3, src: "/images/navreveal/gallery.png", link: "/gallery", delay: 400,

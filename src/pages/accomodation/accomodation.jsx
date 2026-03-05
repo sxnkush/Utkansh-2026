@@ -11,8 +11,8 @@ const sections = [
 ];
 
 function Accommodation() {
-    const { startTransition } = useTransition();
-    
+  const { startTransition } = useTransition();
+
   return (
     <div
       className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black"
@@ -21,20 +21,20 @@ function Accommodation() {
 
       <div className="flex flex-col items-center px-6 mt-20">
         <button
-        onClick={() => startTransition("/")}
-        className="absolute left-6 md:left-16 top-6 md:top-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 z-50"
-      >
-        <ArrowLeft size={24} strokeWidth={2.5} />
-      </button>
+          onClick={() => startTransition("/")}
+          className="absolute left-6 md:left-16 top-6 md:top-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 z-50"
+        >
+          <ArrowLeft size={24} strokeWidth={2.5} />
+        </button>
         <h1
           className="text-white text-center mb-16"
           style={{
             fontFamily: "Permanent Marker",
-            fontSize: "3vw",
+            fontSize: "4vw",
             margin: "0",
           }}
         >
-          Accommodation
+          Passes
         </h1>
 
         <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pb-20 mt-10">
