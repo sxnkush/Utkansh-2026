@@ -25,6 +25,8 @@ const Footer = () => {
                 fontFamily: '"Bangers", "Permanent Marker", "Arial Black", sans-serif',
             }}
         >
+            {/* Top fade transition */}
+            <div className="absolute top-0 left-0 w-full h-17 bg-gradient-to-b from-black to-transparent z-[1]"></div>
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/60 z-0"></div>
 
