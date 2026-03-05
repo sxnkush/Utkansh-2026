@@ -100,7 +100,7 @@ const ContactUsUtkansh26 = () => {
       {/* Background Graffiti */}
       <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/images/ContactusBG.png')` }}
+        style={{ backgroundImage: `url('/images/eventbg1.jpg')` }}
       >
         <div className="absolute inset-0 bg-black/25" />
       </div>

@@ -1,13 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar/navbar.jsx";
 import Footer from "../components/footer/footer.jsx";
 import { useTransition } from "../../transition/transitioncontext";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Check, X } from "lucide-react";
 
 const sections = [
-  { id: 1, pack: "One Day Pack", cost: "300", duration: "1 Day" },
-  { id: 2, pack: "Two Day Pack", cost: "500", duration: "2 Days" },
-  { id: 3, pack: "Three Day Pack", cost: "700", duration: "3 Days" },
+  {
+    id: 1,
+    pack: "Full Fest Pass",
+    cost: "3500",
+    features: [
+      { text: "Access to all Club Events.", included: true },
+      { text: "Accommodation provided for all 3 days.", included: true },
+      { text: "Participation in any ONE Flagship Event.", included: true }
+    ]
+  },
+  {
+    id: 2,
+    pack: "Day 1 Accommodation Pass",
+    cost: "1500",
+    features: [
+      { text: "Accommodation provided for Day 1", included: true },
+      { text: "Access to all Club Events (Day 1).", included: true }
+    ]
+  },
+  {
+    id: 3,
+    pack: "Day 2 + Day 3 Accommodation Pass",
+    cost: "2800",
+    features: [
+      { text: "Accommodation for Day 2 & Day 3.", included: true },
+      { text: "Access to all Club Events (Both days)", included: true },
+      { text: "Participation in any ONE Flagship Event.", included: true }
+    ]
+  },
+  {
+    id: 4,
+    pack: "Club Events Day Pass",
+    cost: "300",
+    features: [
+      { text: "Access to all Club Events.", included: true },
+      { text: "Valid for any ONE selected day", included: true },
+      { text: "No accommodation.", included: false }
+    ]
+  },
+  {
+    id: 5,
+    pack: "Day 1 Event Pass",
+    cost: "700",
+    features: [
+      { text: "Access to all Club Events.", included: true },
+      { text: "Participation in any ONE Flagship Event.", included: true },
+      { text: "No accommodation.", included: false }
+    ]
+  },
+  {
+    id: 6,
+    pack: "Day 2 Event Pass",
+    cost: "850",
+    features: [
+      { text: "Access to all Club Events.", included: true },
+      { text: "Participation in any ONE Flagship Event.", included: true },
+      { text: "No accommodation.", included: false }
+    ]
+  },
+  {
+    id: 7,
+    pack: "Day 3 Event Pass",
+    cost: "1000",
+    features: [
+      { text: "Access to all Club Events.", included: true },
+      { text: "Participation in any ONE Flagship Event.", included: true },
+      { text: "No accommodation.", included: false }
+    ]
+  },
 ];
 
 function Accommodation() {
@@ -15,97 +81,86 @@ function Accommodation() {
 
   return (
     <div
-      className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black"
+      className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black pb-10"
       style={{ backgroundImage: `url('/images/accomodation 2.jpg')` }}
     >
-
-      <div className="flex flex-col items-center px-6 mt-20">
+      <div className="flex flex-col items-center px-6 mt-12 relative z-10">
         <button
           onClick={() => startTransition("/")}
-          className="absolute left-6 md:left-16 top-6 md:top-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 z-50"
+          className="absolute left-6 md:left-16 top-0 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 z-50"
         >
           <ArrowLeft size={24} strokeWidth={2.5} />
         </button>
+
         <h1
-          className="text-white text-center mb-16"
+          className="text-white text-center mb-12 drop-shadow-[0_4px_10px_rgba(0,0,0,1)]"
           style={{
             fontFamily: "Permanent Marker",
-            fontSize: "4vw",
+            fontSize: "clamp(3rem, 6vw, 5rem)",
             margin: "0",
           }}
         >
           Passes
         </h1>
 
-        <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pb-20 mt-10">
+        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 pb-20 justify-items-center mt-10">
           {sections.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-white border-[4px] border-black p-5 flex flex-col shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+              className={`relative w-full max-w-[360px] ${item.id === 7 ? "md:col-span-2 lg:col-start-2 lg:col-span-1" : ""
+                }`}
             >
-              {/* Top Visual Block */}
-              <div className="relative w-full aspect-square bg-black border-2 border-black overflow-hidden mb-5">
-                <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                  <span className="text-white font-black text-3xl italic uppercase">
-                    UTK26
-                  </span>
-                </div>
-
-                {/* Hover Price Reveal */}
-                <div className="absolute inset-0 bg-yellow-400 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20 border-t-2 border-black">
-                  <p className="font-black text-black text-[10px] border border-black px-2 bg-white mb-1 uppercase">
-                    Price
-                  </p>
-                  <p className="text-4xl font-black text-black italic">
-                    ₹{item.cost}
-                  </p>
-                  <p className="text-xs font-bold text-black">/ Person</p>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="bg-black text-white px-2 py-0.5 text-[10px] font-black uppercase whitespace-nowrap">
-                    Combined Rooms
-                  </span>
-                  <span className="font-black text-[10px] text-black border-b border-black">
-                    {item.duration}
-                  </span>
-                </div>
-
-                <h3 className="text-3xl font-black text-black uppercase leading-none mb-3 group-hover:text-[#FF0032] transition-colors">
+              {/* Top Banner - Changed to Lime Green with Black Text */}
+              <div
+                className="absolute -top-6 left-1/2 -translate-x-1/2 z-20 w-[110%] bg-[#cef404] py-2 px-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-[3px] border-black"
+                style={{ clipPath: 'polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%)' }}
+              >
+                <h3 className="text-center font-black text-black italic uppercase text-lg leading-tight tracking-wider">
                   {item.pack}
                 </h3>
+              </div>
 
-                <p className="text-black font-bold text-xs mb-8 leading-tight">
-                  Affordable shared accommodation with essential facilities,
-                  safe campus environment, and comfortable stay during the fest.
-                </p>
+              {/* Main Card - Changed to White Background with Thick Black Border */}
+              <div className="bg-white border-[4px] border-black p-6 pt-10 flex flex-col shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden h-full">
+                <div className="absolute inset-0 opacity-5 pointer-events-none mix-blend-multiply bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')]"></div>
 
-                {/* Buttons */}
-                <div className="mt-auto grid grid-cols-2 gap-3">
-                  <a
-                    href="#"
-                    className="flex items-center justify-center bg-white border-2 border-black py-2 font-bold text-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all active:translate-y-0.5 active:shadow-none"
-                  >
-                    Details
-                  </a>
-                  <a
-                    href="https://forms.gle/link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center bg-[#00E676] border-2 border-black py-2 font-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all active:translate-y-0.5 active:shadow-none"
-                  >
-                    Book Now
-                  </a>
+                <div className="flex items-baseline gap-1 mb-6 mt-2">
+                  <span className="text-4xl font-black text-black">
+                    ₹{item.cost}
+                  </span>
+                  <span className="text-black/60 font-black text-sm tracking-tighter italic">/PERSON</span>
+                </div>
+
+                <div className="flex flex-col gap-3 mb-8">
+                  {item.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      {feature.included ? (
+                        <div className="bg-[#cef404] border-2 border-black p-0.5 rounded-sm">
+                          <Check className="text-black shrink-0" size={16} strokeWidth={4} />
+                        </div>
+                      ) : (
+                        <X className="text-red-500 shrink-0 mt-1" size={20} strokeWidth={3} />
+                      )}
+                      <p className={`font-black text-sm italic leading-tight ${feature.included ? 'text-black' : 'text-gray-400 line-through'}`}>
+                        {feature.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-auto pt-4">
+                  <button className="relative group/btn w-full block">
+                    <div className="absolute inset-0 bg-black translate-x-1.5 translate-y-1.5"></div>
+                    <div className="relative bg-[#cef404] border-[3px] border-black py-3 font-black text-black text-sm uppercase italic transition-all duration-100 group-hover/btn:translate-x-0.5 group-hover/btn:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5 text-center shadow-none">
+                      Register Now
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
     </div>
   );
 }
