@@ -10,7 +10,7 @@ const Footer = () => {
     // Navigation links
     const links = [
         { name: "Event", link: "/events" },
-        { name: "Passes", link: "/accommodation" },
+        { name: "Passes", link: "/accomodation" },
         { name: "Schedule", link: "/schedule" },
         { name: "Gallery", link: "/gallery" },
     ];

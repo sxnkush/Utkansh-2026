@@ -3,6 +3,7 @@ import Navbar from "../components/navbar/navbar.jsx";
 import Footer from "../components/footer/footer.jsx";
 import { useTransition } from "../../transition/transitioncontext";
 import { ArrowLeft, Check, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const sections = [
   {
@@ -151,9 +152,11 @@ function Accommodation() {
                 <div className="mt-auto pt-4">
                   <button className="relative group/btn w-full block">
                     <div className="absolute inset-0 bg-black translate-x-1.5 translate-y-1.5"></div>
-                    <div className="relative bg-[#cef404] border-[3px] border-black py-3 font-black text-black text-sm uppercase italic transition-all duration-100 group-hover/btn:translate-x-0.5 group-hover/btn:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5 text-center shadow-none">
-                      Register Now
-                    </div>
+                    <Link to="">
+                      <div className="relative bg-[#cef404] border-[3px] border-black py-3 font-black text-black text-sm uppercase italic transition-all duration-100 group-hover/btn:translate-x-0.5 group-hover/btn:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5 text-center shadow-none">
+                        Register Now
+                      </div>
+                    </Link>
                   </button>
                 </div>
               </div>
