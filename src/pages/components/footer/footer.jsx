@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTransition } from "../../../transition/transitioncontext";
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
     // Navigation links
     const links = [
         { name: "Event", link: "/events" },
-        { name: "Accommodation", link: "/accommodation" },
+        { name: "Passes", link: "/accommodation" },
         { name: "Schedule", link: "/schedule" },
         { name: "Gallery", link: "/gallery" },
     ];
@@ -32,23 +33,23 @@ const Footer = () => {
                 <div className="flex flex-col items-center md:items-start w-full md:w-auto">
                     <img
                         src="/images/footer/mainLogo.png"
-                        alt="UTKANSH '25 Logo"
-                        className="w-48 h-auto mb-2 drop-shadow-[0_0_10px_#d1f903]"
+                        alt="UTKANSH '26 Logo"
+                        className="w-48 h-auto mb-2 mt-9"
                     />
                 </div>
 
                 {/* Center Section: Navigation & Socials */}
                 <div className="flex flex-col items-center gap-6 md:mt-12">
-                    <a
-                        href="/marketing-brochure"
+                    <Link
+                        href=""
                         className="border-b-2 uppercase tracking-widest hover:text-white transition-all transform hover:-rotate-0"
                         style={{ color: neonColor, borderColor: neonColor }}
                     >
                         Marketing Brochure
-                    </a>
+                    </Link>
 
                     {/* Navigation Links (with WallTransition) */}
-                    <nav className="flex flex-wrap justify-center gap-5 text-xl font-black uppercase tracking-widest pt-4">
+                    <nav className="flex flex-wrap justify-center gap-10 text-2xl font-black uppercase tracking-widest pt-4">
                         {links.map((item) => (
                             <button
                                 key={item.name}
@@ -114,7 +115,7 @@ const Footer = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={neonColor}>
                             <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929l11.444 9.215 11.444-9.215h-22.888zm13.154 10.641l2.364 1.902 2.364-1.902 5.614 6.929h-15.955l5.613-6.929zm5.741-2.712l4.623-3.746v9.458l-4.623-5.712z" />
                         </svg>
-                        <a href="mailto:nitj.utk.accounts@nitj.ac.in" className="text-sm md:text-base hover:brightness-125 transition-all" style={{ color: neonColor }}>
+                        <a href="mailto:nitj.utk.accounts@nitj.ac.in" className="text-sm md:text-base hover:brightness-125 transition-all lowercase" style={{ color: neonColor }}>
                             nitj.utk.accounts@nitj.ac.in
                         </a>
                     </div>
@@ -133,9 +134,16 @@ const Footer = () => {
             </div>
 
             {/* Bottom Footer Credits */}
-            <div className="w-full max-w-6xl mt-12 pt-6 border-t-2 text-center relative z-10" style={{ borderColor: `${neonColor}44` }}>
+            <div className="w-full max-w-6xl mt-6 pt-6 border-t-2 text-center relative z-10" style={{ borderColor: `${neonColor}44` }}>
                 <p className="text-sm uppercase tracking-widest" style={{ color: neonColor }}>
-                    Created with 🤍 by Developers
+                    Created with 🤍 by{" "}
+                    <Link
+                        to="/teams"
+                        className="no-underline hover:brightness-125"
+                        style={{ color: neonColor }}
+                    >
+                        Developers
+                    </Link>
                 </p>
             </div>
         </footer>
