@@ -15,6 +15,8 @@ const CARD_LAYOUT = [
     { top: "20%", left: "62%", rotate: "0deg", className: "w-[26rem] md:w-[26rem]" },
     { top: "55%", left: "40%", rotate: "2deg", className: "w-[23rem] md:w-[23rem]" },
     { top: "50%", left: "48%", rotate: "0deg", className: "w-[24rem] md:w-[24rem]" },
+    { top: "50%", left: "48%", rotate: "0deg", className: "w-[24rem] md:w-[24rem]" },
+    { top: "50%", left: "48%", rotate: "0deg", className: "w-[24rem] md:w-[24rem]" },
 ];
 
 const images = [
@@ -27,6 +29,9 @@ const images = [
     "/images/gallery/gallery-11.jpg",
     "/images/gallery/gallery-10.jpg",
     "/images/gallery/gallery-1.heic",
+    "/images/gallery/gallery-12.JPG",
+    "/images/gallery/gallery-13.JPG",
+
 ];
 
 /* ================= MAIN COMPONENT ================= */

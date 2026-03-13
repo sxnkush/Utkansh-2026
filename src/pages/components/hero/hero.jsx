@@ -261,7 +261,7 @@ const Hero = ({ introDone }) => {
                         ref={videoRef}
                         src="/videos/herobg.mp4"
                         autoPlay muted playsInline
-                        onLoadedMetadata={() => { if (videoRef.current) videoRef.current.playbackRate = 1.1; }}
+                        onLoadedMetadata={() => { if (videoRef.current) videoRef.current.playbackRate = 1.3; }}
                         onEnded={() => setIntroVideoEnded(true)}
                         className="w-full h-full object-cover object-center scale-[1.7] md:scale-[1.6]"
                         style={{

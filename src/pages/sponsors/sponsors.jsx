@@ -41,7 +41,7 @@ const sponsors = [
 
 export default function Sponsors() {
     return (
-        <div className="w-full flex flex-col items-center justify-center relative z-50">
+        <div className="w-full flex flex-col items-center justify-center relative z-10">
 
             {/* Top fade overlapping previous section */}
             <div className="absolute -top-24 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none"></div>
