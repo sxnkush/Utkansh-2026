@@ -35,36 +35,7 @@ const sections = [
       { text: "Participation in any ONE Flagship Event.", included: true }
     ]
   },
-  {
-    id: 4,
-    pack: "Club Events Day Pass",
-    cost: "300",
-    features: [
-      { text: "Access to all Club Events.", included: true },
-      { text: "Valid for any ONE selected day", included: true },
-      { text: "No accommodation.", included: false }
-    ]
-  },
-  {
-    id: 5,
-    pack: "Day 1 Event Pass",
-    cost: "700",
-    features: [
-      { text: "Access to all Club Events.", included: true },
-      { text: "Participation in any ONE Flagship Event.", included: true },
-      { text: "No accommodation.", included: false }
-    ]
-  },
-  {
-    id: 6,
-    pack: "Day 2 Event Pass",
-    cost: "850",
-    features: [
-      { text: "Access to all Club Events.", included: true },
-      { text: "Participation in any ONE Flagship Event.", included: true },
-      { text: "No accommodation.", included: false }
-    ]
-  },
+
   {
     id: 7,
     pack: "Day 3 Event Pass",
@@ -97,21 +68,34 @@ function Accommodation() {
           className="text-white text-center mb-12 drop-shadow-[0_4px_10px_rgba(0,0,0,1)]"
           style={{
             fontFamily: "Permanent Marker",
-            fontSize: "clamp(3rem, 6vw, 5rem)",
+            fontSize: "clamp(3rem, 6vw, 4rem)",
             margin: "0",
           }}
         >
-          Passes
+          Accomodation
         </h1>
 
-        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 pb-20 justify-items-center mt-10">
+        {/* Coming Soon Section */}
+        <div className="flex items-center justify-center w-full h-[60vh]">
+          <h2
+            className="text-white text-center drop-shadow-[0_4px_10px_rgba(0,0,0,1)]"
+            style={{
+              fontFamily: "Permanent Marker",
+              fontSize: "clamp(3rem,6vw,5rem)",
+            }}
+          >
+            Coming Soon
+          </h2>
+        </div>
+
+        {/*<div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 pb-20 justify-items-center mt-10">
           {sections.map((item) => (
             <div
               key={item.id}
               className={`relative w-full max-w-[360px] ${item.id === 7 ? "md:col-span-2 lg:col-start-2 lg:col-span-1" : ""
                 }`}
             >
-              {/* Top Banner - Changed to Lime Green with Black Text */}
+              
               <div
                 className="absolute -top-6 left-1/2 -translate-x-1/2 z-20 w-[110%] bg-[#cef404] py-2 px-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-[3px] border-black"
                 style={{ clipPath: 'polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%)' }}
@@ -121,7 +105,7 @@ function Accommodation() {
                 </h3>
               </div>
 
-              {/* Main Card - Changed to White Background with Thick Black Border */}
+             
               <div className="bg-white border-[4px] border-black p-6 pt-10 flex flex-col shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden h-full">
                 <div className="absolute inset-0 opacity-5 pointer-events-none mix-blend-multiply bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')]"></div>
 
@@ -162,7 +146,7 @@ function Accommodation() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

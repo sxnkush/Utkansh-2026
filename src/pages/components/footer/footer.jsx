@@ -10,7 +10,7 @@ const Footer = () => {
     // Navigation links
     const links = [
         { name: "Event", link: "/events" },
-        { name: "Passes", link: "/accomodation" },
+        { name: "Accomodation", link: "/accomodation" },
         { name: "Schedule", link: "/schedule" },
         { name: "Gallery", link: "/gallery" },
     ];
@@ -123,7 +123,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-start w-full mt-0 text-lg tracking-widest" style={{ color: neonColor }}>
-                        {["+917726983748"].map((num) => (
+                        {["+918976208173"].map((num) => (
                             <div key={num} className="flex items-center gap-2 ml-15">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.509-8.954.058-.028 2.022-1.01 2.022-1.011l-3.522-6.872s-2.149 1.066-2.152 1.068c-1.468.74-2.257 2.115-2.257 3.737 0 3.702 1.636 7.643 4.864 12.016 3.018 4.075 6.069 5.86 9.471 5.86 1.487 0 3.016-.279 3.568-1.523.003-.004 2.142-1.066 2.142-1.068z" />

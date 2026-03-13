@@ -127,7 +127,7 @@ const ContactUsUtkansh26 = () => {
           <motion.h1
             initial={{ scale: 0.9, opacity: 0 }}
             animate={isLoaded ? { scale: 1, opacity: 1 } : {}}
-            className="text-4xl md:text-6xl lg:text-7xl font-black text-[#FFD700] text-center tracking-wide italic uppercase leading-none"
+            className="text-4xl md:text-6xl lg:text-7xl font-black text-white text-center tracking-wide italic uppercase leading-none"
             style={{
               fontFamily: "'Permanent Marker', cursive",
             }}
@@ -282,12 +282,7 @@ const ContactUsUtkansh26 = () => {
         Utkansh '26 • NIT Jalandhar
       </div>
 
-      <style>{`
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 5px; }
-        body { background-color: black; margin: 0; padding: 0; overflow-y: hidden; }
-      `}</style>
+
     </div>
   );
 };
