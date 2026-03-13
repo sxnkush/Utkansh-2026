@@ -28,12 +28,20 @@ const Schedule = () => {
             <ArrowLeft size={24} strokeWidth={2.5} />
           </button>
 
-          {/* Centered Title with Brutalist Shadow */}
-          <div className="bg-white px-8 py-3 md:px-16 md:py-4 text-center shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
-            <h1 className="text-black text-3xl md:text-5xl font-black tracking-tighter uppercase">
-              SCHEDULE
-            </h1>
-          </div>
+          {/* THE CLEAN WHITE FONT SCHEDULE TITLE */}
+          <h1
+            className="text-white text-6xl md:text-8xl font-black italic uppercase tracking-tighter z-40"
+            style={{
+              fontFamily: '"Permanent Marker", opacity-100', // Matches the brush style in image_4cf5a4.png
+              /* Replicates the thick, hard-edged black shadow from image_4c946a.png */
+              filter: 'drop-shadow(6px 6px 0px rgba(0,0,0,1))',
+              letterSpacing: "0.01em",
+              transform: 'skewX(-6deg) scale(0.8)',
+              WebkitTextStroke: '1px rgba(255,255,255,0.1)' // Adds slight crispness to the white edges
+            }}
+          >
+            SCHEDULE
+          </h1>
         </header>
 
         {/* 2. Scaled-up Day Selection: Centered flexbox */}
