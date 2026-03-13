@@ -10,7 +10,18 @@ const IntroLoader = ({ onLoaded, audioControl }) => {
     const { cursorChangeHandler } = useContext(MouseContext);
     const commonRef = useRef({});
     const timerRef = useRef(null);
+    const [skipLoader, setSkipLoader] = useState(false);
 
+
+    useEffect(() => {
+        const alreadyLoaded = sessionStorage.getItem("introPlayed");
+
+        if (alreadyLoaded) {
+            setSkipLoader(true);
+            document.body.classList.add("page-loaded");
+            onLoaded();
+        }
+    }, [onLoaded]);
     // Function to create the "Particle Burst" effect
     const createParticles = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -58,6 +69,7 @@ const IntroLoader = ({ onLoaded, audioControl }) => {
     useEffect(() => {
         if (loading === 100) {
             setTimeout(() => {
+                sessionStorage.setItem("introPlayed", "true"); // save session
                 document.body.classList.add("page-loaded");
                 onLoaded();
             }, 1200);
@@ -71,7 +83,7 @@ const IntroLoader = ({ onLoaded, audioControl }) => {
             transformOrigin: "0% 50% -50", ease: "back", stagger: 0.01,
         }).fromTo(commonRef.current["brandLogo"], { opacity: 0 }, { opacity: 1 }, "-=.5");
     };
-
+    if (skipLoader) return null;
     return (
         <div
             className={`fixed inset-0 z-50 flex h-screen w-full items-center justify-center overflow-hidden bg-black text-center
