@@ -37,7 +37,7 @@ const SprayReveal = ({ trigger }) => {
     const NAV_ITEMS = [
         {
             id: 1, src: "/images/navreveal/schedule.png", link: "/schedule", delay: 200,
-            x: "26.5%", y: "32%", mobileX: "34%", mobileY: "12%", scale: 1.1
+            x: "26.5%", y: "32%", mobileX: "46.5%", mobileY: "13%", scale: 1.1
         },
         {
             id: 2, src: "/images/navreveal/accomodations.png", link: "/accomodation", delay: 300,
