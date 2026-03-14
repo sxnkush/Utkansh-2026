@@ -18,7 +18,7 @@ const EventDetails = () => {
   return (
     <div
       className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black"
-      style={{ backgroundImage: `url('/images/accomodation 2.jpg')` }}
+      style={{ backgroundImage: `url('/images/accomodation 2.webp')` }}
     >
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
