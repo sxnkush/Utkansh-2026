@@ -29,7 +29,7 @@ export default function Events() {
   return (
     <div
       className="min-h-screen bg-cover bg-center relative font-['Permanent_Marker']"
-      style={{ backgroundImage: "url('images/events_bg2.webp')" }}
+      style={{ backgroundImage: "url('images/events_bg2.jpg')" }}
     >
       {/*  BACK BUTTON */}
       <button
