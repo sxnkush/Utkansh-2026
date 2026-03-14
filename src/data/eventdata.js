@@ -13,7 +13,8 @@ export const eventsData = [
     registration: "150/- per person",
     prize: "6,500",
     link: "/event/kuchad-kala",
-    description: "Painting decorative pillars with cultural motifs, modern patterns, or abstract designs." 
+    description:
+      "Painting decorative pillars with cultural motifs, modern patterns, or abstract designs.",
   },
   {
     id: "cult-art-2",
@@ -24,7 +25,8 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "6,500",
     link: "/event/manga-muse",
-    description: "Platform to express passion for anime through character creation and animation styles." 
+    description:
+      "Platform to express passion for anime through character creation and animation styles.",
   },
   {
     id: "cult-art-3",
@@ -35,7 +37,8 @@ export const eventsData = [
     registration: "150/- per person",
     prize: "5,000",
     link: "/event/inkspire",
-    description: "Creative competition focused on original tattoo designs on paper." 
+    description:
+      "Creative competition focused on original tattoo designs on paper.",
   },
   {
     id: "cult-art-4",
@@ -46,7 +49,8 @@ export const eventsData = [
     registration: "150/- per person",
     prize: "6,500",
     link: "/event/folded-blooms",
-    description: "Origami competition highlighting precision in creating paper bouquets." 
+    description:
+      "Origami competition highlighting precision in creating paper bouquets.",
   },
   {
     id: "cult-art-5",
@@ -57,7 +61,8 @@ export const eventsData = [
     registration: "300/- per team",
     prize: "12,000",
     link: "/event/art-chase",
-    description: "Interactive event following clues and solving art-based tasks." 
+    description:
+      "Interactive event following clues and solving art-based tasks.",
   },
   {
     id: "cult-art-6",
@@ -68,7 +73,8 @@ export const eventsData = [
     registration: "250/- per team",
     prize: "NIL",
     link: "/event/kintsugi",
-    description: "Traditional Japanese art of repairing broken pottery with gold-inspired detailing." 
+    description:
+      "Traditional Japanese art of repairing broken pottery with gold-inspired detailing.",
   },
   {
     id: "cult-art-7",
@@ -79,7 +85,8 @@ export const eventsData = [
     registration: "NIL",
     prize: "NIL",
     link: "/event/art-exhibition",
-    description: "Display and sale of artworks including face painting and customized artifacts." 
+    description:
+      "Display and sale of artworks including face painting and customized artifacts.",
   },
 
   // --- DRAMA ---
@@ -92,7 +99,8 @@ export const eventsData = [
     registration: "149/- per team",
     prize: "6,000",
     link: "/event/asmita",
-    description: "Spontaneous performance art creating unscripted scenes and stories." 
+    description:
+      "Spontaneous performance art creating unscripted scenes and stories.",
   },
   {
     id: "cult-dra-2",
@@ -103,7 +111,8 @@ export const eventsData = [
     registration: "2500/- per team",
     prize: "40,000",
     link: "/event/rangmanch",
-    description: "Stage play competition focused on living a character on stage." 
+    description:
+      "Stage play competition focused on living a character on stage.",
   },
   {
     id: "cult-dra-3",
@@ -114,7 +123,8 @@ export const eventsData = [
     registration: "2500/- per team",
     prize: "32,000",
     link: "/event/halla-bol",
-    description: "Street play competition addressing social issues for positive change." 
+    description:
+      "Street play competition addressing social issues for positive change.",
   },
   {
     id: "cult-dra-4",
@@ -125,7 +135,8 @@ export const eventsData = [
     registration: "120/- per person",
     prize: "14,500",
     link: "/event/eklavya",
-    description: "Solo theatrical performance portraying multiple characters through voice modulation." 
+    description:
+      "Solo theatrical performance portraying multiple characters through voice modulation.",
   },
 
   // --- FASHION & FLAVOURS ---
@@ -138,7 +149,7 @@ export const eventsData = [
     registration: "300/- per person",
     prize: "61,000",
     link: "/event/nirvana",
-    description: "Fashion parade featuring talented models and designers." 
+    description: "Fashion parade featuring talented models and designers.",
   },
   {
     id: "cult-fla-1",
@@ -149,7 +160,8 @@ export const eventsData = [
     registration: "150/- per team",
     prize: "3,000",
     link: "/event/spice-wars",
-    description: "Culinary competition to create flavor-packed spice-infused dishes." 
+    description:
+      "Culinary competition to create flavor-packed spice-infused dishes.",
   },
 
   // --- LITERATURE ---
@@ -162,7 +174,8 @@ export const eventsData = [
     registration: "200/- per person",
     prize: "9,000",
     link: "/event/charter-change",
-    description: "Parliamentary committee simulation drafting fundamental laws for a new nation." 
+    description:
+      "Parliamentary committee simulation drafting fundamental laws for a new nation.",
   },
   {
     id: "cult-lit-2",
@@ -173,7 +186,8 @@ export const eventsData = [
     registration: "120/- per person",
     prize: "NIL",
     link: "/event/detective-showdown",
-    description: "Mystery solving through analysis of clues like text messages and photos." 
+    description:
+      "Mystery solving through analysis of clues like text messages and photos.",
   },
   {
     id: "cult-lit-3",
@@ -184,7 +198,7 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "NIL",
     link: "/event/word-poem",
-    description: "Spontaneous poetry writing on the spot using given themes." 
+    description: "Spontaneous poetry writing on the spot using given themes.",
   },
   {
     id: "cult-lit-4",
@@ -195,7 +209,8 @@ export const eventsData = [
     registration: "600/- per team",
     prize: "15,000",
     link: "/event/diplomacy-battle",
-    description: "High-stakes MUN-style showdown with fierce debate and resolution drafting." 
+    description:
+      "High-stakes MUN-style showdown with fierce debate and resolution drafting.",
   },
 
   // --- MUSIC ---
@@ -208,7 +223,7 @@ export const eventsData = [
     registration: "2500/- per team",
     prize: "30,000",
     link: "/event/megasonic",
-    description: "Western and Eastern Rock Band competition finals." 
+    description: "Western and Eastern Rock Band competition finals.",
   },
   {
     id: "cult-mus-2",
@@ -219,7 +234,7 @@ export const eventsData = [
     registration: "250/- per person",
     prize: "12,000",
     link: "/event/raporiot",
-    description: "Lyrical mastery and creativity competition for rappers." 
+    description: "Lyrical mastery and creativity competition for rappers.",
   },
   {
     id: "cult-mus-3",
@@ -230,7 +245,7 @@ export const eventsData = [
     registration: "300/- per person",
     prize: "15,000",
     link: "/event/the-voice",
-    description: "Solo singing competition ranging from folk to filmy songs." 
+    description: "Solo singing competition ranging from folk to filmy songs.",
   },
 
   // --- QUEST & SANSKRIT ---
@@ -243,7 +258,8 @@ export const eventsData = [
     registration: "100/- per team",
     prize: "5,000",
     link: "/event/questopia",
-    description: "General quiz covering history, science, literature, and sports." 
+    description:
+      "General quiz covering history, science, literature, and sports.",
   },
   {
     id: "cult-san-1",
@@ -254,7 +270,8 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "3,000",
     link: "/event/cultural-showcase",
-    description: "Representation of unique cultural backgrounds through creative expression." 
+    description:
+      "Representation of unique cultural backgrounds through creative expression.",
   },
   {
     id: "cult-san-2",
@@ -265,7 +282,8 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "XXXXX",
     link: "/event/alfaz",
-    description: "Open stage talent event for singing, poetry, and traditional performances." 
+    description:
+      "Open stage talent event for singing, poetry, and traditional performances.",
   },
 
   // --- VIDEOGRAPHY ---
@@ -278,7 +296,8 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "8,000",
     link: "/event/reel-making",
-    description: "Capture and edit powerful short stories to inspire the audience." 
+    description:
+      "Capture and edit powerful short stories to inspire the audience.",
   },
   {
     id: "cult-vid-2",
@@ -289,7 +308,8 @@ export const eventsData = [
     registration: "199/- per person",
     prize: "10,000",
     link: "/event/mad-ads",
-    description: "Creative event judging advertisement preparation for proposed products." 
+    description:
+      "Creative event judging advertisement preparation for proposed products.",
   },
   {
     id: "cult-vid-3",
@@ -300,7 +320,8 @@ export const eventsData = [
     registration: "199/- per person",
     prize: "10,000",
     link: "/event/short-film",
-    description: "Original 2 to 15-minute film competition based on a revealed theme." 
+    description:
+      "Original 2 to 15-minute film competition based on a revealed theme.",
   },
 
   // --- DANCE ---
@@ -313,7 +334,8 @@ export const eventsData = [
     registration: "250/- per person",
     prize: "50,000",
     link: "/event/80s-hustle",
-    description: "Group dance competition in various styles like Bollywood and Hip Hop." 
+    description:
+      "Group dance competition in various styles like Bollywood and Hip Hop.",
   },
   {
     id: "cult-dan-2",
@@ -324,7 +346,7 @@ export const eventsData = [
     registration: "350/- per person",
     prize: "15,000",
     link: "/event/beat-drop",
-    description: "Solo dance face-off showcasing unique technique and style." 
+    description: "Solo dance face-off showcasing unique technique and style.",
   },
   {
     id: "cult-dan-3",
@@ -335,7 +357,8 @@ export const eventsData = [
     registration: "250/- per person",
     prize: "24,000",
     link: "/event/crew-klash",
-    description: "Group dance battle highlighting synchronization and coordination." 
+    description:
+      "Group dance battle highlighting synchronization and coordination.",
   },
   {
     id: "cult-dan-4",
@@ -346,7 +369,7 @@ export const eventsData = [
     registration: "200/- per person",
     prize: "50,000",
     link: "/event/bhangra-fiesta",
-    description: "Traditional Punjabi percussion and live Dhol rhythm battle." 
+    description: "Traditional Punjabi percussion and live Dhol rhythm battle.",
   },
 
   // --- PHOTOGRAPHY ---
@@ -359,7 +382,8 @@ export const eventsData = [
     registration: "NIL",
     prize: "NIL",
     link: "/event/idrishya",
-    description: "National photography exhibition highlighting emotions and passion." 
+    description:
+      "National photography exhibition highlighting emotions and passion.",
   },
   {
     id: "cult-pho-2",
@@ -370,7 +394,8 @@ export const eventsData = [
     registration: "100/- per team",
     prize: "6,000",
     link: "/event/snap-hunt",
-    description: "Campus-wide treasure hunt solving location clues through photography." 
+    description:
+      "Campus-wide treasure hunt solving location clues through photography.",
   },
   {
     id: "cult-pho-3",
@@ -381,7 +406,8 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "6,000",
     link: "/event/nazariya",
-    description: "Professional photo storytelling competition through a sequence of pictures." 
+    description:
+      "Professional photo storytelling competition through a sequence of pictures.",
   },
 
   // --- HINDI SAHITYA ---
@@ -394,7 +420,8 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "3,000",
     link: "/event/vad-vivaad",
-    description: "Hindi debating competition based on common man's views and TV formats." 
+    description:
+      "Hindi debating competition based on common man's views and TV formats.",
   },
   {
     id: "cult-hin-2",
@@ -405,7 +432,8 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "3,000",
     link: "/event/mehfil",
-    description: "Poetry competition for original Shayari, Ghazal, and Nazm in Hindi/Urdu." 
+    description:
+      "Poetry competition for original Shayari, Ghazal, and Nazm in Hindi/Urdu.",
   },
   {
     id: "cult-hin-3",
@@ -416,13 +444,61 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "3,000",
     link: "/event/filmy-sangram",
-    description: "Hindi storytelling competition focused on writing finesse and coherence." 
+    description:
+      "Hindi storytelling competition focused on writing finesse and coherence.",
   },
 
   // ==========================
   // TECHNICAL EVENTS
   // ==========================
 
+  // --- ROBOTICS ---
+  {
+    id: "tech-rob-4",
+    title: "Maze Rush",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "28-03-2026",
+    registration: "300/- per team",
+    prize: "22,000",
+    link: "/event/maze-rush",
+    description:
+      "Remote controlled bot navigation through a maze in minimum time.",
+  },
+  {
+    id: "tech-rob-1",
+    title: "Sky Rush",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "27-03-2026",
+    registration: "250/- per team",
+    prize: "30,000",
+    link: "/event/sky-rush",
+    description:
+      "Drone navigation through courses with sharp turns and obstacles.",
+  },
+  {
+    id: "tech-rob-2",
+    title: "Machine Wars",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "29-03-2026",
+    registration: "350/- per team",
+    prize: "18,000",
+    link: "/event/machine-wars",
+    description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo.",
+  },
+  {
+    id: "tech-rob-3",
+    title: "Gear Blitz",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "28-03-2026",
+    registration: "500/- per team",
+    prize: "20,000",
+    link: "/event/gear-blitz",
+    description: "RC car racing on tracks testing speed and skill.",
+  },
   // --- AERONAUTICS ---
   {
     id: "tech-aer-1",
@@ -433,7 +509,8 @@ export const eventsData = [
     registration: "N/A",
     prize: "NIL",
     link: "/event/under-sky",
-    description: "Star gazing with telescope observation and constellation identification." 
+    description:
+      "Star gazing with telescope observation and constellation identification.",
   },
 
   // --- BUSINESS ---
@@ -446,7 +523,8 @@ export const eventsData = [
     registration: "200/- per team",
     prize: "10,000",
     link: "/event/pivot-room",
-    description: "Decision-making challenge testing adaptability under changing constraints." 
+    description:
+      "Decision-making challenge testing adaptability under changing constraints.",
   },
   {
     id: "tech-bus-2",
@@ -457,7 +535,8 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "10,000",
     link: "/event/analyst-edge",
-    description: "Portfolio-building challenge using analysis tools and fixed capital." 
+    description:
+      "Portfolio-building challenge using analysis tools and fixed capital.",
   },
   {
     id: "tech-bus-3",
@@ -468,7 +547,7 @@ export const eventsData = [
     registration: "N/A",
     prize: "10,000",
     link: "/event/traders-arena",
-    description: "Live stock exchange simulation with virtual demat accounts." 
+    description: "Live stock exchange simulation with virtual demat accounts.",
   },
   {
     id: "tech-bus-4",
@@ -479,7 +558,8 @@ export const eventsData = [
     registration: "100/- per team",
     prize: "6,000",
     link: "/event/civil-ideathon",
-    description: "Presentation of innovative ideas for sustainable infrastructure." 
+    description:
+      "Presentation of innovative ideas for sustainable infrastructure.",
   },
   {
     id: "tech-bus-5",
@@ -490,7 +570,7 @@ export const eventsData = [
     registration: "300/- per team",
     prize: "10,000",
     link: "/event/consult-corp",
-    description: "Competitive managerial and strategy-based event." 
+    description: "Competitive managerial and strategy-based event.",
   },
   {
     id: "tech-bus-6",
@@ -501,7 +581,8 @@ export const eventsData = [
     registration: "200/- per team",
     prize: "6,000",
     link: "/event/techbiz-quest",
-    description: "Blends technology and business concepts through knowledge rounds." 
+    description:
+      "Blends technology and business concepts through knowledge rounds.",
   },
 
   // --- CIRCUITS ---
@@ -514,7 +595,8 @@ export const eventsData = [
     registration: "N/A",
     prize: "4,500",
     link: "/event/rapid-wire",
-    description: "Technical event with rounds based on electrical and software logic." 
+    description:
+      "Technical event with rounds based on electrical and software logic.",
   },
   {
     id: "tech-cir-2",
@@ -525,7 +607,8 @@ export const eventsData = [
     registration: "120/- per person",
     prize: "6,000",
     link: "/event/grid-collapse",
-    description: "Campus-wide treasure hunt solving circuit-based puzzles to restore power." 
+    description:
+      "Campus-wide treasure hunt solving circuit-based puzzles to restore power.",
   },
   {
     id: "tech-cir-3",
@@ -536,7 +619,8 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "4,500",
     link: "/event/seed-power",
-    description: "Multi-activity engagement zone with interactive individual challenges." 
+    description:
+      "Multi-activity engagement zone with interactive individual challenges.",
   },
 
   // --- CODING ---
@@ -549,7 +633,7 @@ export const eventsData = [
     registration: "N/A",
     prize: "30,000",
     link: "/event/neura-nova",
-    description: "AI in healthcare debate and mini buildathon." 
+    description: "AI in healthcare debate and mini buildathon.",
   },
   {
     id: "tech-cod-2",
@@ -560,7 +644,7 @@ export const eventsData = [
     registration: "150/- per team",
     prize: "95,000",
     link: "/event/root-breach",
-    description: "24-hour national CTF competition focused on cybersecurity." 
+    description: "24-hour national CTF competition focused on cybersecurity.",
   },
   {
     id: "tech-cod-3",
@@ -571,7 +655,8 @@ export const eventsData = [
     registration: "N/A",
     prize: "TBA",
     link: "/event/hackmol",
-    description: "Community-focused 36-hour hackathon for beginners and experts." 
+    description:
+      "Community-focused 36-hour hackathon for beginners and experts.",
   },
   {
     id: "tech-cod-4",
@@ -582,7 +667,8 @@ export const eventsData = [
     registration: "500/- per team",
     prize: "31,000",
     link: "/event/debug-deploy",
-    description: "Three-round competition involving debugging, coding, and web development." 
+    description:
+      "Three-round competition involving debugging, coding, and web development.",
   },
   {
     id: "tech-cod-5",
@@ -593,7 +679,8 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "15,000",
     link: "/event/should-work",
-    description: "Logic-based event judging code correctness rather than writing it." 
+    description:
+      "Logic-based event judging code correctness rather than writing it.",
   },
 
   // --- DESIGNING ---
@@ -606,7 +693,8 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "9,000",
     link: "/event/steel-arch",
-    description: "Constructing a brick arch structure using a steel supporting frame." 
+    description:
+      "Constructing a brick arch structure using a steel supporting frame.",
   },
   {
     id: "tech-des-2",
@@ -617,7 +705,7 @@ export const eventsData = [
     registration: "100/- per team",
     prize: "5,000",
     link: "/event/tex-print",
-    description: "Block printing event for designing unique T-shirt motifs." 
+    description: "Block printing event for designing unique T-shirt motifs.",
   },
 
   // --- GAMING & MANAGERIAL ---
@@ -630,7 +718,7 @@ export const eventsData = [
     registration: "50/- per person",
     prize: "1,00,000",
     link: "/event/arena-xo",
-    description: "E-gaming tournament for BGMI, Real Cricket, and Valorant." 
+    description: "E-gaming tournament for BGMI, Real Cricket, and Valorant.",
   },
   {
     id: "tech-man-1",
@@ -641,7 +729,8 @@ export const eventsData = [
     registration: "N/A",
     prize: "10,000",
     link: "/event/ad-mad",
-    description: "Business idea pitching competition for innovative small businesses." 
+    description:
+      "Business idea pitching competition for innovative small businesses.",
   },
   {
     id: "tech-man-2",
@@ -652,7 +741,8 @@ export const eventsData = [
     registration: "N/A",
     prize: "10,000",
     link: "/event/minute-mayhem",
-    description: "Fast-paced obstacle challenge with mini-games under 60 seconds." 
+    description:
+      "Fast-paced obstacle challenge with mini-games under 60 seconds.",
   },
 
   // --- FITNESS & QUIZ ---
@@ -665,7 +755,8 @@ export const eventsData = [
     registration: "N/A",
     prize: "3,000",
     link: "/event/ultrafit-arena",
-    description: "Hybrid challenge testing physical agility and cognitive sharpness." 
+    description:
+      "Hybrid challenge testing physical agility and cognitive sharpness.",
   },
   {
     id: "tech-qui-1",
@@ -676,53 +767,8 @@ export const eventsData = [
     registration: "150/- per team",
     prize: "6,000",
     link: "/event/opti-relay",
-    description: "Engineering challenge with quizzes and relay-style case solving." 
-  },
-
-  // --- ROBOTICS ---
-  {
-    id: "tech-rob-1",
-    title: "Sky Rush",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "27-03-2026",
-    registration: "250/- per team",
-    prize: "30,000",
-    link: "/event/sky-rush",
-    description: "Drone navigation through courses with sharp turns and obstacles." 
-  },
-  {
-    id: "tech-rob-2",
-    title: "Machine Wars",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "29-03-2026",
-    registration: "350/- per team",
-    prize: "18,000",
-    link: "/event/machine-wars",
-    description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo." 
-  },
-  {
-    id: "tech-rob-3",
-    title: "Gear Blitz",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "28-03-2026",
-    registration: "500/- per team",
-    prize: "20,000",
-    link: "/event/gear-blitz",
-    description: "RC car racing on tracks testing speed and skill." 
-  },
-  {
-    id: "tech-rob-4",
-    title: "Maze Rush",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "28-03-2026",
-    registration: "300/- per team",
-    prize: "22,000",
-    link: "/event/maze-rush",
-    description: "Remote controlled bot navigation through a maze in minimum time." 
+    description:
+      "Engineering challenge with quizzes and relay-style case solving.",
   },
 
   // --- STEM ---
@@ -735,7 +781,8 @@ export const eventsData = [
     registration: "150/- per team",
     prize: "15,000",
     link: "/event/react-resolve",
-    description: "Solving real-world chemical engineering problems before a panel." 
+    description:
+      "Solving real-world chemical engineering problems before a panel.",
   },
   {
     id: "tech-ste-2",
@@ -746,7 +793,8 @@ export const eventsData = [
     registration: "200/- per person",
     prize: "10,000",
     link: "/event/stem-mun",
-    description: "Diplomatic debate bridging scientific research and policy formulation." 
+    description:
+      "Diplomatic debate bridging scientific research and policy formulation.",
   },
   {
     id: "tech-ste-3",
@@ -757,7 +805,8 @@ export const eventsData = [
     registration: "250/- per team",
     prize: "10,000",
     link: "/event/mind-mind",
-    description: "Tech challenge with aptitude thinking and a 4-hour hackathon." 
+    description:
+      "Tech challenge with aptitude thinking and a 4-hour hackathon.",
   },
   {
     id: "tech-ste-4",
@@ -768,7 +817,8 @@ export const eventsData = [
     registration: "100/- per team",
     prize: "9,000",
     link: "/event/chemxplore",
-    description: "Interactive scenarios for chemical engineering problem solving." 
+    description:
+      "Interactive scenarios for chemical engineering problem solving.",
   },
   {
     id: "tech-ste-5",
@@ -779,7 +829,8 @@ export const eventsData = [
     registration: "50/- per team",
     prize: "NIL",
     link: "/event/escape-room",
-    description: "Solving critical business challenges to escape within 60 minutes." 
+    description:
+      "Solving critical business challenges to escape within 60 minutes.",
   },
   {
     id: "tech-ste-6",
@@ -790,7 +841,8 @@ export const eventsData = [
     registration: "50/- per team",
     prize: "5,000",
     link: "/event/inside-out",
-    description: "Anatomy-themed treasure hunt following clues across body systems." 
+    description:
+      "Anatomy-themed treasure hunt following clues across body systems.",
   },
   {
     id: "tech-ste-7",
@@ -801,7 +853,8 @@ export const eventsData = [
     registration: "50/- per team",
     prize: "5,000",
     link: "/event/who-killed-cell",
-    description: "Biology-themed crime scene investigation solving logical clues." 
+    description:
+      "Biology-themed crime scene investigation solving logical clues.",
   },
   {
     id: "tech-ste-8",
@@ -812,17 +865,19 @@ export const eventsData = [
     registration: "100/- per team",
     prize: "3,500",
     link: "/event/enigma",
-    description: "Logical reasoning competition with buzzer and rapid-fire rounds." 
+    description:
+      "Logical reasoning competition with buzzer and rapid-fire rounds.",
   },
   {
-  id: "tech-ste-9",
-  title: "The Human Hunt",
-  category: "Technical",
-  subCategory: "STEM",
-  day: "27-28 Mar",
-  registration: "50/- per team",
-  prize: "5,000",
-  link: "/event/human-hunt",
-  description: "An anatomy-themed treasure hunt where participants follow clues hidden across organs and body systems, testing logic, observation, and teamwork."
-},
+    id: "tech-ste-9",
+    title: "The Human Hunt",
+    category: "Technical",
+    subCategory: "STEM",
+    day: "27-28 Mar",
+    registration: "50/- per team",
+    prize: "5,000",
+    link: "/event/human-hunt",
+    description:
+      "An anatomy-themed treasure hunt where participants follow clues hidden across organs and body systems, testing logic, observation, and teamwork.",
+  },
 ];
