@@ -65,8 +65,8 @@ function Accommodation() {
         </button>
 
         <h1
-          className="text-white text-center mb-12 drop-shadow-[0_4px_10px_rgba(0,0,0,1)] 
-  text-3xl sm:text-5xl md:text-6xl lg:text-6xl"
+          className="text-white text-center mb-12 drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+text-3xl sm:text-5xl md:text-6xl lg:text-6xl translate-x-9 md:translate-x-0"
           style={{
             fontFamily: "Permanent Marker",
             margin: "0",

@@ -30,7 +30,7 @@ const Schedule = () => {
 
           {/* THE CLEAN WHITE FONT SCHEDULE TITLE */}
           <h1
-            className="text-white text-6xl md:text-8xl font-black italic uppercase tracking-tighter z-40"
+            className="text-white text-6xl md:text-8xl font-black italic uppercase tracking-tighter z-40 ml-14 md:ml-0"
             style={{
               fontFamily: '"Permanent Marker", opacity-100', // Matches the brush style in image_4cf5a4.png
               /* Replicates the thick, hard-edged black shadow from image_4c946a.png */

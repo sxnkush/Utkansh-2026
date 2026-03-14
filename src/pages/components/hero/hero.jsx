@@ -327,8 +327,8 @@ const Hero = ({ introDone }) => {
                             initial={{ opacity: 0, scale: 0.5, z: -400, filter: "blur(20px)" }}
                             animate={introVideoEnded ? {
                                 opacity: 1,
-                                scale: 1.6,
-                                marginLeft:0,
+                                scale: isMobile ? 1.3 : 1.6,   // mobile size
+                                marginLeft: 0,
                                 z: 250,
                                 filter: "blur(0px)"
                             } : {}}
@@ -423,7 +423,7 @@ const Hero = ({ introDone }) => {
                                     <img src="/images/aboutus/abtus.png" alt="About Us Card" className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center p-[10%]">
                                         <p
-                                            className="text-[15px] md:text-[clamp(8px,1.5vw,25px)]"
+                                            className="text-[12.5px] md:text-[clamp(8px,1.5vw,25px)]"
                                             style={{
                                                 color: "#1a1a1a",
                                                 width: "90%",
