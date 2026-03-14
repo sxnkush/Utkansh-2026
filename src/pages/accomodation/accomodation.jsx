@@ -54,7 +54,7 @@ function Accommodation() {
   return (
     <div
       className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-x-hidden selection:bg-[#cef404] selection:text-black pb-10"
-      style={{ backgroundImage: `url('/images/accomodation 2.jpg')` }}
+      style={{ backgroundImage: `url('/images/accomodation 2.webp')` }}
     >
       <div className="flex flex-col items-center px-6 mt-12 relative z-10">
         <button

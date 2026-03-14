@@ -42,7 +42,8 @@ const faculty = [
     position: "ADSW-I",
     rank: "Convener",
     image: "https://nitj.ac.in/files/1757757569769-Indu-Photo%20(1).jpg",
-    profile: "https://departments.nitj.ac.in/dept/ece/Faculty/6430445538bff038a7805caf",
+    profile:
+      "https://departments.nitj.ac.in/dept/ece/Faculty/6430445538bff038a7805caf",
   },
   {
     id: "fac-2",
@@ -50,14 +51,16 @@ const faculty = [
     position: "ADSW-II",
     rank: "Convener",
     image: "https://www.nitj.ac.in/images/faculty/22092713867.jpg",
-    profile: "https://departments.nitj.ac.in/dept/bt/Faculty/6430446038bff038a7807202",
+    profile:
+      "https://departments.nitj.ac.in/dept/bt/Faculty/6430446038bff038a7807202",
   },
   {
     id: "fac-3",
     name: "Dr. Nitai Basak",
     position: "ADRC-I",
     rank: "Convener",
-    profile: "https://departments.nitj.ac.in/dept/bt/Faculty/6430445038bff038a78046a4",
+    profile:
+      "https://departments.nitj.ac.in/dept/bt/Faculty/6430445038bff038a78046a4",
     image: "https://www.nitj.ac.in/images/faculty/16061460015.JPG",
   },
   {
@@ -65,7 +68,8 @@ const faculty = [
     name: "Dr. Anurag Tiwari",
     position: "ADRC-II",
     rank: "Convener",
-    profile: "https://departments.nitj.ac.in/dept/ch/Faculty/6430446838bff038a7807d7f",
+    profile:
+      "https://departments.nitj.ac.in/dept/ch/Faculty/6430446838bff038a7807d7f",
     image: "https://nitj.ac.in/files/1724257451890-Picture1.jpg",
   },
   {
@@ -73,23 +77,26 @@ const faculty = [
     name: "Dr. Afzal Sikander",
     position: "",
     rank: "Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/ice/Faculty/6430446838bff038a7807deb",
+    profile:
+      "https://departments.nitj.ac.in/dept/ice/Faculty/6430446838bff038a7807deb",
     image: "https://nitj.ac.in/files/1768233764657-Afzal-pp25.png",
   },
   {
     id: "fac-6",
-    name: "Dr. Ashish Raman",
+    name: "Dr. Prashant Kumar",
     position: "",
     rank: "Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/ece/Faculty/6430445538bff038a7805aea",
-    image: "https://www.nitj.ac.in/images/faculty/23022129330.JPG",
+    profile:
+      "https://departments.nitj.ac.in/dept/cse/Faculty/6430446d38bff038a78088bb",
+    image: "https://www.nitj.ac.in/images/faculty/20112211529.jpg",
   },
   {
     id: "fac-7",
     name: "Dr. Sumit Sharma",
     position: "",
     rank: "Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/me/Faculty/6430446738bff038a7807cbb",
+    profile:
+      "https://departments.nitj.ac.in/dept/me/Faculty/6430446738bff038a7807cbb",
     image: "https://nitj.ac.in/files/1752666445121-_16A0510%20-%20Copy.JPG",
   },
   {
@@ -97,7 +104,8 @@ const faculty = [
     name: "Dr. Narendra Kumar",
     position: "",
     rank: "Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/ipe/Faculty/6430446d38bff038a780895c",
+    profile:
+      "https://departments.nitj.ac.in/dept/ipe/Faculty/6430446d38bff038a780895c",
     image: "https://v1.nitj.ac.in/nitj_files/links/Photo_69247.jpeg",
   },
   {
@@ -105,7 +113,8 @@ const faculty = [
     name: "Dr. Arvind Kumar",
     position: "",
     rank: "Co-Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/ph/Faculty/6430445b38bff038a7806bc5",
+    profile:
+      "https://departments.nitj.ac.in/dept/ph/Faculty/6430445b38bff038a7806bc5",
     image: "https://www.nitj.ac.in/images/faculty/19080476425.jpg",
   },
   {
@@ -113,25 +122,55 @@ const faculty = [
     name: "Dr. Jaspal Kaur",
     position: "",
     rank: "Co-Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/it/Faculty/65938d96633ad4665fa38509",
+    profile:
+      "https://departments.nitj.ac.in/dept/it/Faculty/65938d96633ad4665fa38509",
     image: "https://nitj.ac.in/files/1708510831263-unnamed.jpg",
   },
   {
     id: "fac-11",
-    name: "Dr. Neelam Rani",
+    name: "Dr. Bikas Kumar",
     position: "",
     rank: "Co-Coordinator",
     image:
-      "https://nitj.ac.in/files/1752737883183-c9117487-5079-411b-be99-3f53cd94622a.jpg",
-    profile: "https://departments.nitj.ac.in/dept/ce/Faculty/6430446d38bff038a7808929",
+      "https://www.nitj.ac.in/images/faculty/23020236541.jpg",
+    profile:
+      "https://departments.nitj.ac.in/dept/ipe/Faculty/6430447438bff038a7808f6b",
   },
   {
     id: "fac-12",
     name: "Dr. Priyanka Gupta",
     position: "",
     rank: "Co-Coordinator",
-    profile: "https://departments.nitj.ac.in/dept/tt/Faculty/65602b97d02be846b64e7b6c",
+    profile:
+      "https://departments.nitj.ac.in/dept/tt/Faculty/65602b97d02be846b64e7b6c",
     image: "https://nitj.ac.in/files/1709620892714-Priyanka.jpg",
+  },
+  {
+    id: "fac-13",
+    name: "Prof. Shailendra Bajpai",
+    position: "",
+    rank: "Discipline Committee",
+    profile:
+      "https://departments.nitj.ac.in/dept/ch/Faculty/6430445138bff038a7804c3a",
+    image: "https://nitj.ac.in/files/1708596109985-Self%20pic.jpg",
+  },
+  {
+    id: "fac-14",
+    name: "Dr. Kiran Singh",
+    position: "",
+    rank: "Discipline Committee",
+    profile:
+      "https://departments.nitj.ac.in/dept/ph/Faculty/6430446b38bff038a7808521",
+    image: "https://www.nitj.ac.in/images/faculty/23022234663.jpeg",
+  },
+  {
+    id: "fac-15",
+    name: "Dr. Vinod Ashokan",
+    position: "",
+    rank: "Discipline Committee",
+    profile:
+      "https://departments.nitj.ac.in/dept/ph/Faculty/6430446a38bff038a7808230",
+    image: "https://nitj.ac.in/files/1759293109544-Vinod2.jpg",
   },
 ];
 
@@ -142,22 +181,16 @@ const facultySenior = [
     position: "Director, NITJ",
     rank: "Patron",
     image: "https://nitj.ac.in/files/1715231314602-Director1.jpg",
-    profile: "https://departments.nitj.ac.in/dept/ece/Faculty/6430446f38bff038a7808ab6"
-  },
-  {
-    id: "facs-2",
-    name: "Prof. Ajay Bansal",
-    position: "Registrar, NITJ",
-    rank: "Patron",
-    profile: "https://departments.nitj.ac.in/dept/cee/Faculty/6430445038bff038a780495f",
-    image: "https://nitj.ac.in/files/1717741345401-Passport%20Pic.jpg",
+    profile:
+      "https://departments.nitj.ac.in/dept/ece/Faculty/6430446f38bff038a7808ab6",
   },
   {
     id: "facs-3",
     name: "Prof. Anish Sachdeva",
     position: "DSW",
     rank: "Chairperson",
-    profile: "https://departments.nitj.ac.in/dept/ipe/Faculty/6430445738bff038a780609d",
+    profile:
+      "https://departments.nitj.ac.in/dept/ipe/Faculty/6430445738bff038a780609d",
     image: "https://www.nitj.ac.in/images/faculty/18030537513.jpg",
   },
   {
@@ -165,7 +198,8 @@ const facultySenior = [
     name: "Prof. Rohit Mehra",
     position: "DRC",
     rank: "Chairperson",
-    profile: "https://departments.nitj.ac.in/dept/ph/Faculty/6430445b38bff038a7806a5a",
+    profile:
+      "https://departments.nitj.ac.in/dept/ph/Faculty/6430445b38bff038a7806a5a",
     image: "https://www.nitj.ac.in/images/faculty/20050251101.jpg",
   },
 ];
@@ -211,7 +245,7 @@ const HangingCard = ({
       <div className="relative flex flex-col items-center">
         {/* WOODEN STICK */}
         <div
-          className="sm:w-92 w-full h-10 z-20 rounded-full"
+          className="w-full h-10 z-20 rounded-full"
           style={{
             backgroundImage: "url('/images/woodenStick.png')",
             backgroundSize: "cover",
@@ -265,7 +299,7 @@ const HangingCard = ({
           />
 
           {/* POLAROID FRAME */}
-          <div className="p-4 pb-8 flex flex-col items-center justify-center">
+          <div className="w-full p-4 pb-8 flex flex-col items-center justify-center">
             {/* PHOTO */}
             <div className="w-[200px] h-[200px] rounded-full overflow-hidden flex items-center justify-center">
               <img
@@ -322,12 +356,19 @@ export default function DevelopersPage() {
       : selectedCategory === "team"
         ? team
         : faculty;
+  const director = facultySenior.find((f) => f.rank === "Patron");
 
+  const chairpersons = facultySenior.filter((f) => f.rank === "Chairperson");
+
+  const conveners = faculty.filter((f) => f.rank === "Convener");
+  const coordinators = faculty.filter((f) => f.rank === "Coordinator");
+  const coCoordinators = faculty.filter((f) => f.rank === "Co-Coordinator");
+  const disCom = faculty.filter((f) => f.rank === "Discipline Committee")
   return (
     <div className="relative z-50 min-h-screen bg-cover bg-center p-8 font-['Permanent_Marker']">
       <div
         className="fixed top-0 left-0 w-full -z-10 min-h-screen bg-cover bg-center"
-        style={{ backgroundImage: "url('images/team_bg.jpg')" }}
+        style={{ backgroundImage: "url('images/team_bg.webp')" }}
       ></div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
@@ -370,27 +411,117 @@ export default function DevelopersPage() {
           <p className="text-center text-5xl text-white">COMING SOON...</p>
         ) : (
           <div className="space-y-32">
-            {selectedCategory === "faculty" &&
-              Array.from({ length: Math.ceil(facultySenior.length / 2) }).map(
-                (_, row) => (
-                  <div key={`senior-${row}`}>
-                    <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-y-20 items-center justify-center">
-                      {facultySenior.slice(row * 2, row * 2 + 2).map((item) => (
-                        <HangingCard
-                          key={`senior-${item.id}`}
-                          image={item.image || "/avatar.jpeg"}
-                          title={item.name}
-                          description={item.role}
-                          position={item.position}
-                          rank={item.rank}
-                          icon1={<FaUser />}
-                        />
-                      ))}
-                    </div>
+            {selectedCategory === "faculty" && (
+              <div className="space-y-32">
+                {/* DIRECTOR */}
+                <div className="flex justify-center">
+                  <HangingCard
+                    image={director.image}
+                    title={director.name}
+                    position={director.position}
+                    rank={director.rank}
+                    profile={director.profile}
+                    icon1={<FaUser />}
+                  />
+                </div>
+
+                {/* CHAIRPERSONS */}
+                <div className="grid md:grid-cols-2 gap-x-12 gap-y-20 max-w-4xl mx-auto">
+                  {chairpersons.map((item) => (
+                    <HangingCard
+                      key={item.id}
+                      image={item.image}
+                      title={item.name}
+                      position={item.position}
+                      rank={item.rank}
+                      profile={item.profile}
+                      icon1={<FaUser />}
+                    />
+                  ))}
+                </div>
+
+                {/* CONVENERS */}
+                <div>
+                  <h2 className="text-center text-white text-3xl mb-10">
+                    Conveners
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-x-12 gap-y-20 max-w-6xl mx-auto">
+                    {conveners.map((item) => (
+                      <HangingCard
+                        key={item.id}
+                        image={item.image}
+                        title={item.name}
+                        position={item.position}
+                        rank={item.rank}
+                        profile={item.profile}
+                        icon1={<FaUser />}
+                      />
+                    ))}
                   </div>
-                ),
-              )}
-            {Array.from({ length: Math.ceil(data.length / 3) }).map(
+                </div>
+
+                {/* COORDINATORS */}
+                <div>
+                  <h2 className="text-center text-white text-3xl mb-10">
+                    Coordinators
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-x-12 gap-y-20 max-w-6xl mx-auto">
+                    {coordinators.map((item) => (
+                      <HangingCard
+                        key={item.id}
+                        image={item.image}
+                        title={item.name}
+                        position={item.position}
+                        rank={item.rank}
+                        profile={item.profile}
+                        icon1={<FaUser />}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* CO-COORDINATORS */}
+                <div>
+                  <h2 className="text-center text-white text-3xl mb-10">
+                    Co-Coordinators
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-x-12 gap-y-20 max-w-6xl mx-auto">
+                    {coCoordinators.map((item) => (
+                      <HangingCard
+                        key={item.id}
+                        image={item.image}
+                        title={item.name}
+                        position={item.position}
+                        rank={item.rank}
+                        profile={item.profile}
+                        icon1={<FaUser />}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/*Discipline Committee*/ }
+                <div>
+                  <h2 className="text-center text-white text-3xl mb-10">
+                    Discipline Committee
+                  </h2>
+                  <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-12 gap-y-20 max-w-6xl mx-auto">
+                    {disCom.map((item) => (
+                      <HangingCard
+                        key={item.id}
+                        image={item.image}
+                        title={item.name}
+                        position={item.position}
+                        rank={item.rank}
+                        profile={item.profile}
+                        icon1={<FaUser />}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+            {selectedCategory !== "faculty" && Array.from({ length: Math.ceil(data.length / 3) }).map(
               (_, row) => (
                 <div key={row}>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20 max-w-6xl mx-auto items-center justify-center">

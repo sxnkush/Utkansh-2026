@@ -3,7 +3,7 @@ const SprayCan = ({ x, y, angle, visible }) => {
 
     return (
         <img
-            src="/images/navreveal/spraybottle.png"
+            src="/images/navreveal/spraybottle.webp"
             draggable="false"
             alt="spray can"
             className="fixed z-[9999] pointer-events-none select-none w-[90px]"

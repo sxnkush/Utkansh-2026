@@ -20,17 +20,17 @@ const CARD_LAYOUT = [
 ];
 
 const images = [
-    "/images/gallery/gallery-3.heic",
-    "/images/gallery/gallery-6.JPG",
-    "/images/gallery/gallery-7.JPG",
-    "/images/gallery/gallery-9.JPG",
-    "/images/gallery/gallery-4.jpg",
-    "/images/gallery/gallery-5.jpg",
-    "/images/gallery/gallery-11.jpg",
-    "/images/gallery/gallery-10.jpg",
-    "/images/gallery/gallery-1.heic",
-    "/images/gallery/gallery-12.JPG",
-    "/images/gallery/gallery-13.JPG",
+    "/images/gallery/gallery-3.webp",
+    "/images/gallery/gallery-6.webp",
+    "/images/gallery/gallery-7.webp",
+    "/images/gallery/gallery-9.webp",
+    "/images/gallery/gallery-4.webp",
+    "/images/gallery/gallery-5.webp",
+    "/images/gallery/gallery-11.webp",
+    "/images/gallery/gallery-10.webp",
+    "/images/gallery/gallery-1.webp",
+    "/images/gallery/gallery-12.webp",
+    "/images/gallery/gallery-13.webp",
 
 ];
 
@@ -52,7 +52,7 @@ const Gallery = () => {
     return (
         <div
             className="relative z-50 w-full min-h-screen bg-cover bg-center bg-no-repeat font-['Permanent_Marker']"
-            style={{ backgroundImage: "url('images/gallery/gallery.jpg')" }}
+            style={{ backgroundImage: "url('images/gallery/gallery.webp')" }}
         >
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
@@ -129,6 +129,7 @@ const Card = ({ src, index, containerRef, onOpen }) => {
             dragElastic={0.6}
             onMouseDown={() => setZIndex(9999)}
             onDoubleClick={onOpen}
+            loading="lazy"
             className={`absolute ${layout.className} bg-neutral-200 p-1 pb-4 cursor-grab`}
             style={{ zIndex }}
             initial={{ top: "40%", left: "45%", rotate: 0, scale: 0.9, opacity: 0 }}

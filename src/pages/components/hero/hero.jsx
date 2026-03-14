@@ -217,7 +217,7 @@ const Hero = ({ introDone }) => {
 
     // --- NEW: Logo scroll transitions (Move to top right and shrink) ---
     const logoScale = useTransform(smoothProgress, [0, 0.3], [1, isMobile ? 0.35 : 0.22]);
-    const logoXPos = useTransform(smoothProgress, [0, 0.3], ["0%", isMobile ? "34%" : "44%"]);
+    const logoXPos = useTransform(smoothProgress, [0, 0.3], ["0%", isMobile ? "34%" : "42%"]);
     const logoYPos = useTransform(smoothProgress, [0, 0.3], ["0%", isMobile ? "-43%" : "-42%"]);
     const logoOpacity = useTransform(smoothProgress, [0, 0.1], [1, 1]);
     useEffect(() => {
@@ -300,7 +300,7 @@ const Hero = ({ introDone }) => {
                         className="w-[80%] md:w-[45%] max-w-[900px]"
                     >
                         {/* Rotating Ring with shimmer */}
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, scale: 0.6, rotate: -180, z: -200 }}
                             animate={introVideoEnded ? {
                                 opacity: 1,
@@ -317,7 +317,7 @@ const Hero = ({ introDone }) => {
                                 className="w-full h-full object-contain"
                                 style={{ filter: "drop-shadow(0 20px 50px rgba(255,255,255,0.5))" }}
                             />
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* Utkansh Logo */}
                         <motion.img
@@ -328,7 +328,7 @@ const Hero = ({ introDone }) => {
                             animate={introVideoEnded ? {
                                 opacity: 1,
                                 scale: 1.6,
-                                marginLeft: isMobile ? 0 : 30,
+                                marginLeft:0,
                                 z: 250,
                                 filter: "blur(0px)"
                             } : {}}
