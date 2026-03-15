@@ -154,7 +154,7 @@ export const eventsData = [
   },
   {
     id: "cult-fla-1",
-    title: "Spice Wars 8.0",
+    title: "Spice Wars 3.0",
     category: "Cultural",
     subCategory: "Flavours",
     day: "27 Mar",
@@ -162,7 +162,7 @@ export const eventsData = [
     prize: "3,000",
     link: "/event/spice-wars",
     description: "Culinary competition to create flavor-packed spice-infused dishes.",
-    image: "/images/cultural/spicewars80.jpeg"
+    image: "/images/cultural/spicewars3.0.jpeg"
   },
 
   // --- LITERATURE ---
@@ -340,7 +340,7 @@ export const eventsData = [
     prize: "50,000",
     link: "/event/80s-hustle",
     description: "Group dance competition in various styles like Bollywood and Hip Hop.",
-    image: "/images/cultural/80shustle.jpeg"
+    image: "/images/cultural/808hustle.jpeg"
   },
   {
     id: "cult-dan-2",
@@ -382,15 +382,15 @@ export const eventsData = [
   // --- PHOTOGRAPHY ---
   {
     id: "cult-pho-1",
-    title: "Idrishya",
+    title: "Drishya",
     category: "Cultural",
     subCategory: "Photography",
     day: "All Day",
     registration: "NIL",
     prize: "NIL",
-    link: "/event/idrishya",
+    link: "/event/drishya",
     description: "National photography exhibition highlighting emotions and passion.",
-    image: "/images/cultural/idrishya.jpeg"
+    image: "/images/cultural/drishya.jpeg"
   },
   {
     id: "cult-pho-2",
@@ -402,7 +402,7 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/snap-hunt",
     description: "Campus-wide treasure hunt solving location clues through photography.",
-    image: "/images/cultural/snaptreasurehunt.jpeg"
+    image: "/images/cultural/snaptreasure.jpeg"
   },
   {
     id: "cult-pho-3",
