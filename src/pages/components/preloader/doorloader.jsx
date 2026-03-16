@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 
-import WallLeft from "/images/loader/left.jpg";   // your image
-import WallRight from "/images/loader/right.jpg"; // your image
+import WallLeft from "/images/loader/left.webp";   // your image
+import WallRight from "/images/loader/right.webp"; // your image
 import CloseSound from "/sounds/door-close.mp3"; // optional
 
 const START = {
