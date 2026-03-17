@@ -53,10 +53,10 @@ const EventDetails = () => {
               {foundEvent.title}
             </h1>
 
-            {/* Subtitle */}
-            {foundEvent.subtitle && (
+            {/* subCategory */}
+            {foundEvent.subCategory && (
               <p className="text-xl md:text-2xl font-bold italic text-yellow-300 mb-10 max-w-3xl">
-                {foundEvent.subtitle}
+                {foundEvent.subCategory}
               </p>
             )}
 
