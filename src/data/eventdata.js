@@ -317,18 +317,7 @@ export const eventsData = [
     description: "Creative event judging advertisement preparation for proposed products.",
     image: "/images/cultural/madads.jpeg"
   },
-  {
-    id: "cult-vid-3",
-    title: "Short Film",
-    category: "Cultural",
-    subCategory: "Videography",
-    day: "29 Mar",
-    registration: "199/- per person",
-    prize: "10,000",
-    link: "/event/short-film",
-    description: "Original 2 to 15-minute film competition based on a revealed theme.",
-    image: "/images/cultural/shortfilm.jpeg"
-  },
+  
 
   // --- DANCE ---
   {
@@ -864,7 +853,7 @@ export const eventsData = [
   },
   {
     id: "tech-ste-6",
-    title: "Inside Out",
+    title: "Inside Out The Human Hunt",
     category: "Technical",
     subCategory: "STEM",
     day: "27-28 Mar",
@@ -897,17 +886,5 @@ export const eventsData = [
     link: "/event/enigma",
     description: "Logical reasoning competition with buzzer and rapid-fire rounds.",
     image: "/images/technical/enigma.jpeg"
-  },
-  {
-    id: "tech-ste-9",
-    title: "The Human Hunt",
-    category: "Technical",
-    subCategory: "STEM",
-    day: "27-28 Mar",
-    registration: "50/- per team",
-    prize: "5,000",
-    link: "/event/human-hunt",
-    description: "An anatomy-themed treasure hunt where participants follow clues hidden across organs and body systems.",
-    image: "/images/technical/thehumanhunt.jpeg"
   },
 ];
