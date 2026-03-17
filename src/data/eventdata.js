@@ -332,7 +332,7 @@ export const eventsData = [
   // --- DANCE ---
   {
     id: "cult-dan-1",
-    title: "80's Hustle",
+    title: "808 Hustle",
     category: "Cultural",
     subCategory: "Dance",
     day: "27 Mar",
