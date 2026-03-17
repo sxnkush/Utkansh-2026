@@ -468,8 +468,8 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Aeronautics",
     day: "28-03-2026",
-    registration: "50/- per person",
-    prize: "NIL",
+    registration: "100/- per person",
+    prize: "50, 000",
     link: "/event/under-sky",
     description: "Star gazing with telescope observation and constellation identification.",
     image: "/images/technical/underthesky.jpeg"
@@ -810,9 +810,9 @@ export const eventsData = [
     subCategory: "STEM",
     day: "29-03-2026",
     registration: "200/- per person",
-    prize: "10,000",
+    prize: "100,000",
     link: "/event/stem-mun",
-    description: "Diplomatic debate bridging scientific research and policy formulation.",
+    description: "STEM and business based MUN style Debate and Merger Competition",
     image: "/images/technical/stemmun.jpeg"
   },
   {

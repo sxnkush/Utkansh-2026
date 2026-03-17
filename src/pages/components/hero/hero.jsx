@@ -337,9 +337,9 @@ const Hero = ({ introDone }) => {
             }}
           />
         </div>
-        {/* <button className="absolute bottom-5 right-5 w-24 h-5 z-50">
-          <img src="/images/register.png" alt="" />
-        </button> */}
+        {/* <a className="absolute bottom-5 sm:right-5 sm:flex hidden w-52 h-32 z-50 hover:cursor-pointer" target="_blank" href="https://v1.nitj.ac.in/events_registration/utkansh_2026/login">
+          <img src="/images/register.png" alt="" className="hover:cursor-pointer"/>
+        </a> */}
         <motion.div
           className="pointer-events-none absolute inset-0"
           style={{ background: glowBackground, mixBlendMode: "screen" }}
