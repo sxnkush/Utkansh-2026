@@ -405,12 +405,12 @@ const Hero = ({ introDone }) => {
               animate={
                 introVideoEnded
                   ? {
-                      opacity: 1,
-                      scale: isMobile ? 1.3 : 1.6, // mobile size
-                      marginLeft: 0,
-                      z: 250,
-                      filter: "blur(0px)",
-                    }
+                    opacity: 1,
+                    scale: isMobile ? 1.3 : 1.6, // mobile size
+                    marginLeft: 0,
+                    z: 250,
+                    filter: "blur(0px)",
+                  }
                   : {}
               }
               transition={{
@@ -601,7 +601,7 @@ const Hero = ({ introDone }) => {
                   }}
                 >
                   <img
-                    src="/images/aboutus/abtus.png"
+                    src="/images/aboutus/abtus.webp"
                     alt="About Us Card"
                     className="w-full h-full object-cover"
                   />
@@ -652,7 +652,7 @@ const Hero = ({ introDone }) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <image
-                    href="/images/aboutus/aboutustext.png"
+                    href="/images/aboutus/aboutustext.webp"
                     x="44%"
                     y="-10%"
                     width="700"
