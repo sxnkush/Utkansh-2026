@@ -15,7 +15,7 @@ const Schedule = () => {
   return (
     <div
       className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-y-auto overflow-x-hidden selection:bg-[#cef404] selection:text-black"
-      style={{ backgroundImage: `url('/images/schedule.png')` }}
+      style={{ backgroundImage: `url('/images/schedule.jpg')` }}
     >
       {/* 1. Main Wrapper: Centers all content horizontally */}
       <div className="w-full flex flex-col items-center p-4 md:p-8">
