@@ -307,7 +307,7 @@ const Hero = ({ introDone }) => {
     <div
       id="hero-container"
       ref={containerRef}
-      className="relative h-[500vh] bg-slate-900"
+      className="relative h-[700vh] bg-slate-900"
     >
       <motion.div
         className="fixed inset-0 z-0 bg-black overflow-hidden"
