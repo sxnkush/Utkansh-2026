@@ -4,7 +4,7 @@ import { useTransition } from "../../../transition/transitioncontext";
 
 const Footer = () => {
     // Neon color
-    const neonColor = "#d1f903";
+    const neonColor = "#71E560";
     const { startTransition } = useTransition();
 
     // Navigation links
@@ -42,13 +42,15 @@ const Footer = () => {
 
                 {/* Center Section: Navigation & Socials */}
                 <div className="flex flex-col items-center gap-6 md:mt-12">
-                    <Link
-                        href=""
+                    <a
+                        href="https://drive.google.com/file/d/1JqbtCVo7Q0XlSowSTQcJEUoyn6KrRpSs/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="border-b-2 uppercase tracking-widest hover:text-white transition-all transform hover:-rotate-0"
                         style={{ color: neonColor, borderColor: neonColor }}
                     >
                         Marketing Brochure
-                    </Link>
+                    </a>
 
                     {/* Navigation Links (with WallTransition) */}
                     <nav className="flex flex-wrap justify-center gap-10 text-2xl font-black uppercase tracking-widest pt-4">
