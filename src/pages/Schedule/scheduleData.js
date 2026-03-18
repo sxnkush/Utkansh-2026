@@ -107,8 +107,8 @@ export const scheduleData = {
     Date: "28/3/26",
     Technical: {
       Coding: [
-        { id: "tech-cod-4", time: "9:00 AM - 1:00 PM", name: "Root Breech (Opening)", location: "CSH" },
-        { id: "tech-cod-5", time: "10:00 AM - EOD", name: "Root Breech", location: "IT Buildings" },
+        { id: "tech-cod-4", time: "9:00 AM - 1:00 PM", name: "Root Breach (Opening)", location: "CSH" },
+        { id: "tech-cod-5", time: "10:00 AM - EOD", name: "Root Breach", location: "IT Buildings" },
         { id: "tech-cod-6", time: "8:00 AM - 10:30 AM", name: "Hackmol 7.0 (Opening)", location: "VCH" },
         { id: "tech-cod-7", time: "10:30 AM - EOD", name: "Hackmol 7.0", location: "Library" }
       ],
@@ -151,7 +151,8 @@ export const scheduleData = {
         { id: "cult-mus-2", time: "1:30 PM - 6:00 PM", name: "Megasonic", location: "CSH" }
       ],
       Dance: [
-        { id: "cult-dan-3", time: "11:00 AM - 1:30 PM", name: "BeatDrop", location: "Snackers" }
+        { id: "cult-dan-3", time: "11:00 AM - 1:30 PM", name: "BeatDrop", location: "Snackers" },
+        { id: "cult-dan-4", time: "1:30 PM - 6:30 PM", name: "Bhangra Fiesta", location: "CSH" }
       ],
       Drama: [
         { id: "cult-dra-3", time: "2:00 PM - 6:30 PM", name: "Halla Bol", location: "Central Lawn" }
@@ -191,7 +192,7 @@ export const scheduleData = {
     Date: "29/3/26",
     Technical: {
       Coding: [
-        { id: "tech-cod-8", time: "9:00 AM - 12:00 PM", name: "Root Breech (Closing)", location: "CS 208/303" },
+        { id: "tech-cod-8", time: "9:00 AM - 12:00 PM", name: "Root Breach (Closing)", location: "CS 208/303" },
         { id: "tech-cod-9", time: "10:00 AM - 12:00 PM", name: "Neura Nova", location: "CS 204" }
       ],
       Robotics: [
@@ -214,9 +215,6 @@ export const scheduleData = {
     Cultural: {
       Music: [
         { id: "cult-mus-3", time: "1:30 PM - 5:00 PM", name: "Rap Riot", location: "Tennis Court" }
-      ],
-      Dance: [
-        { id: "cult-dan-4", time: "1:30 PM - 6:30 PM", name: "Bhangra Fiesta", location: "CSH" }
       ],
       Drama: [
         { id: "cult-dra-4", time: "9:30 AM - 1:30 PM", name: "Rangmanch", location: "CSH" }

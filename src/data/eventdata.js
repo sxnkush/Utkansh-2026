@@ -15,7 +15,7 @@ export const eventsData = [
     link: "/event/kuchad-kala",
     description: "Painting decorative pillars with cultural motifs, modern patterns, or abstract designs.",
     image: "/images/cultural/kuchadkala.jpeg",
-    rules:[],
+    rules: [],
   },
   {
     id: "cult-art-2",
@@ -159,7 +159,7 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Flavours",
     day: "27 Mar",
-    registration: "150/- per team",
+    registration: "200/- per team",
     prize: "3,000",
     link: "/event/spice-wars",
     description: "Culinary competition to create flavor-packed spice-infused dishes.",
@@ -299,7 +299,7 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Videography",
     day: "28 Mar",
-    registration: "100/- per person",
+    registration: "100/- per team",
     prize: "8,000",
     link: "/event/reel-making",
     description: "Capture and edit powerful short stories to inspire the audience.",
@@ -311,13 +311,13 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Videography",
     day: "27 Mar",
-    registration: "200/- per person",
+    registration: "200/- per team",
     prize: "10,000",
     link: "/event/mad-ads",
     description: "Creative event judging advertisement preparation for proposed products.",
     image: "/images/cultural/madads.jpeg"
   },
-  
+
 
   // --- DANCE ---
   {
@@ -606,8 +606,8 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Coding",
     day: "27-03-2026",
-    registration: "150/- per team",
-    prize: "95,000",
+    registration: "300/- per team",
+    prize: "10,00,000+",
     link: "/event/root-breach",
     description: "24-hour national CTF competition focused on cybersecurity.",
     image: "/images/technical/rootbreach.jpeg"
@@ -642,7 +642,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Coding",
     day: "27-03-2026",
-    registration: "200/- per person",
+    registration: "200/- per team",
     prize: "15,000",
     link: "/event/should-work",
     description: "Logic-based event judging code correctness rather than writing it.",
@@ -751,11 +751,11 @@ export const eventsData = [
     link: "/event/sky-rush",
     description: "Drone navigation through courses with sharp turns and obstacles.",
     image: "/images/technical/skyrush.jpeg",
-    rules:[]
+    rules: []
   },
   {
     id: "tech-rob-2",
-    title: "Machine Wars",
+    title: "Machine Wars - pick and place edition",
     category: "Technical",
     subCategory: "Robotics",
     day: "29-03-2026",
@@ -821,7 +821,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "STEM",
     day: "28-03-2026",
-    registration: "250/- per team",
+    registration: "200/- per team",
     prize: "10,000",
     link: "/event/mind-mind",
     description: "Tech challenge with aptitude thinking and a 4-hour hackathon.",
