@@ -139,6 +139,19 @@ export const eventsData = [
     description: "Solo theatrical performance portraying multiple characters through voice modulation.",
     image: "/images/cultural/eklavya.jpeg"
   },
+  // --- GUEST LECTURE(NEW) ---
+  {
+    id: "cult-guest-1",
+    title: "Guest Talk",
+    category: "Cultural",
+    subCategory: "Guest lecture",
+    day: "27 Mar",
+    registration: "NIL ",
+    prize: "GOODIES",
+    link: "/event/guest",
+    description: "Interactive Learning with Camera Professional and Hands on Workshop with Sony Alpha Cameras",
+    image: "/images/cultural/guest.jpg"
+  },
 
   // --- FASHION & FLAVOURS ---
   {
@@ -159,7 +172,7 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Flavours",
     day: "27 Mar",
-    registration: "200/- per team",
+    registration: "150/- per team",
     prize: "3,000",
     link: "/event/spice-wars",
     description: "Culinary competition to create flavor-packed spice-infused dishes.",
@@ -173,7 +186,7 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Literature",
     day: "28 Mar",
-    registration: "200/- per person",
+    registration: "200/- per team",
     prize: "9,000",
     link: "/event/charter-change",
     description: "Parliamentary committee simulation drafting fundamental laws for a new nation.",
@@ -231,7 +244,7 @@ export const eventsData = [
   },
   {
     id: "cult-mus-2",
-    title: "Raporiot",
+    title: "Rapriot",
     category: "Cultural",
     subCategory: "Music",
     day: "29 Mar",
@@ -400,7 +413,7 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Photography",
     day: "29 Mar",
-    registration: "20/- per person",
+    registration: "50/- per person",
     prize: "6,000",
     link: "/event/nazariya",
     description: "Professional photo storytelling competition through a sequence of pictures.",
@@ -468,7 +481,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Aeronautics",
     day: "28-03-2026",
-    registration: "100/- per person",
+    registration: "50/- per person",
     prize: "50, 000",
     link: "/event/under-sky",
     description: "Star gazing with telescope observation and constellation identification.",
@@ -606,7 +619,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Coding",
     day: "27-03-2026",
-    registration: "300/- per team",
+    registration: "150/- per team",
     prize: "10,00,000+",
     link: "/event/root-breach",
     description: "24-hour national CTF competition focused on cybersecurity.",
@@ -821,7 +834,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "STEM",
     day: "28-03-2026",
-    registration: "200/- per team",
+    registration: "250/- per team",
     prize: "10,000",
     link: "/event/mind-mind",
     description: "Tech challenge with aptitude thinking and a 4-hour hackathon.",
