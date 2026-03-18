@@ -15,7 +15,7 @@ export const eventsData = [
     link: "/event/kuchad-kala",
     description: "Painting decorative pillars with cultural motifs, modern patterns, or abstract designs.",
     image: "/images/cultural/kuchadkala.jpeg",
-    rules: [],
+    rulebook: "https://drive.google.com/file/d/1ij79GZDegSSRupCnsshmb-yega000Ras/view?usp=sharing",
   },
   {
     id: "cult-art-2",
@@ -27,7 +27,8 @@ export const eventsData = [
     prize: "6,500",
     link: "/event/manga-muse",
     description: "Platform to express passion for anime through character creation and animation styles.",
-    image: "/images/cultural/mangamuse.jpeg"
+    image: "/images/cultural/mangamuse.jpeg",
+    rulebook: "https://drive.google.com/file/d/1kzB_pIdcjdF6zDNMQbzxw4LYXzww31SG/view?usp=sharing",
   },
   {
     id: "cult-art-3",
@@ -39,7 +40,8 @@ export const eventsData = [
     prize: "5,000",
     link: "/event/inkspire",
     description: "Creative competition focused on original tattoo designs on paper.",
-    image: "/images/cultural/inkspire.jpeg"
+    image: "/images/cultural/inkspire.jpeg",
+    rulebook: "https://drive.google.com/file/d/16GVxz7E3EgCCL03Qthm6IbDEObZnNmK6/view?usp=sharing",
   },
   {
     id: "cult-art-4",
@@ -51,7 +53,8 @@ export const eventsData = [
     prize: "6,500",
     link: "/event/folded-blooms",
     description: "Origami competition highlighting precision in creating paper bouquets.",
-    image: "/images/cultural/foldedblooms.jpeg"
+    image: "/images/cultural/foldedblooms.jpeg",
+    rulebook: "https://drive.google.com/file/d/1m_7qIEXRFplmTGsCaIy8QEBMF5mfxAqZ/view?usp=sharing",
   },
   {
     id: "cult-art-5",
@@ -63,7 +66,8 @@ export const eventsData = [
     prize: "12,000",
     link: "/event/art-chase",
     description: "Interactive event following clues and solving art-based tasks.",
-    image: "/images/cultural/theartchase.jpeg"
+    image: "/images/cultural/theartchase.jpeg",
+    rulebook: "https://drive.google.com/file/d/1qki33RH9nBReL6aCn1YQwyM-AhMwrUER/view?usp=sharing",
   },
   {
     id: "cult-art-6",
@@ -101,7 +105,8 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/asmita",
     description: "Spontaneous performance art creating unscripted scenes and stories.",
-    image: "/images/cultural/asmita.jpeg"
+    image: "/images/cultural/asmita.jpeg",
+    rulebook: "https://drive.google.com/file/d/1eBlvslf0rzhFGPMCS7xCFxJgt09fdzRo/view?usp=sharing",
   },
   {
     id: "cult-dra-2",
@@ -113,7 +118,8 @@ export const eventsData = [
     prize: "40,000",
     link: "/event/rangmanch",
     description: "Stage play competition focused on living a character on stage.",
-    image: "/images/cultural/rangmanch.jpeg"
+    image: "/images/cultural/rangmanch.jpeg",
+    rulebook: "https://drive.google.com/file/d/1i6Mmd-vKCFsMe3ynoKOrxEa4Mhe4nIxd/view?usp=sharing",
   },
   {
     id: "cult-dra-3",
@@ -125,7 +131,8 @@ export const eventsData = [
     prize: "32,000",
     link: "/event/halla-bol",
     description: "Street play competition addressing social issues for positive change.",
-    image: "/images/cultural/hallabol.jpeg"
+    image: "/images/cultural/hallabol.jpeg",
+    rulebook: "https://drive.google.com/file/d/1dE_xRBx-EzxeG2FHRgK5KSEuCAZq4akx/view?usp=sharing",
   },
   {
     id: "cult-dra-4",
@@ -137,7 +144,8 @@ export const eventsData = [
     prize: "14,500",
     link: "/event/eklavya",
     description: "Solo theatrical performance portraying multiple characters through voice modulation.",
-    image: "/images/cultural/eklavya.jpeg"
+    image: "/images/cultural/eklavya.jpeg",
+    rulebook: "https://drive.google.com/file/d/1quNz81MLHhbT3iM8aGIwaX_YiSopP-fW/view?usp=sharing",
   },
   // --- GUEST LECTURE(NEW) ---
   {
@@ -164,7 +172,8 @@ export const eventsData = [
     prize: "61,000",
     link: "/event/nirvana",
     description: "Fashion parade featuring talented models and designers.",
-    image: "/images/cultural/nirvana.jpeg"
+    image: "/images/cultural/nirvana.jpeg",
+    rulebook: "https://drive.google.com/file/d/19TyEwfuPaKvbgm8AHG5gJQf0zDDoKriF/view?usp=sharing",
   },
   {
     id: "cult-fla-1",
@@ -176,7 +185,8 @@ export const eventsData = [
     prize: "3,000",
     link: "/event/spice-wars",
     description: "Culinary competition to create flavor-packed spice-infused dishes.",
-    image: "/images/cultural/spicewars3.0.jpeg"
+    image: "/images/cultural/spicewars3.0.jpeg",
+    rulebook: "https://drive.google.com/file/d/1HW1sfuJJUMfUGxzt0Mu0sN588YI8CaM_/view?usp=sharing",
   },
 
   // --- LITERATURE ---
@@ -190,7 +200,8 @@ export const eventsData = [
     prize: "9,000",
     link: "/event/charter-change",
     description: "Parliamentary committee simulation drafting fundamental laws for a new nation.",
-    image: "/images/cultural/charterandchange.jpeg"
+    image: "/images/cultural/charterandchange.jpeg",
+    rulebook: "https://drive.google.com/file/d/1ddk8FPVbZpZAMGM9_hU94IHR8bFUZrr9/view?usp=sharing",
   },
   {
     id: "cult-lit-2",
@@ -202,7 +213,8 @@ export const eventsData = [
     prize: "NIL",
     link: "/event/detective-showdown",
     description: "Mystery solving through analysis of clues like text messages and photos.",
-    image: "/images/cultural/thedetectiveshowdown.jpeg"
+    image: "/images/cultural/thedetectiveshowdown.jpeg",
+    rulebook: "https://drive.google.com/file/d/1G_R0sst-C7LNOyRWxMyWnlakjhSqxNlC/view?usp=sharing",
   },
   {
     id: "cult-lit-3",
@@ -237,14 +249,15 @@ export const eventsData = [
     subCategory: "Music",
     day: "28 Mar",
     registration: "2500/- per team",
-    prize: "30,000",
+    prize: "40,000",
     link: "/event/megasonic",
     description: "Western and Eastern Rock Band competition finals.",
-    image: "/images/cultural/megasonic.jpeg"
+    image: "/images/cultural/megasonic.jpeg",
+    rulebook: "https://drive.google.com/file/d/1hZb5rEG7YPQAXKCt-R1PCtX2DDlNl-gM/view?usp=sharing",
   },
   {
     id: "cult-mus-2",
-    title: "Raporiot",
+    title: "Rapriot",
     category: "Cultural",
     subCategory: "Music",
     day: "29 Mar",
@@ -252,7 +265,8 @@ export const eventsData = [
     prize: "12,000",
     link: "/event/raporiot",
     description: "Lyrical mastery and creativity competition for rappers.",
-    image: "/images/cultural/raporiot.jpeg"
+    image: "/images/cultural/raporiot.jpeg",
+    rulebook: "https://drive.google.com/file/d/1KQYvV_nophBnrvCaDaFSA-7Sxf2kAb4n/view?usp=sharing",
   },
   {
     id: "cult-mus-3",
@@ -264,7 +278,8 @@ export const eventsData = [
     prize: "15,000",
     link: "/event/the-voice",
     description: "Solo singing competition ranging from folk to filmy songs.",
-    image: "/images/cultural/thevoice.jpeg"
+    image: "/images/cultural/thevoice.jpeg",
+    rulebook: "https://drive.google.com/file/d/1TB8YDUteZUVhIGfKNFbGq7i__jVwrc-R/view?usp=sharing",
   },
 
   // --- QUEST & SANSKRIT ---
@@ -328,7 +343,8 @@ export const eventsData = [
     prize: "10,000",
     link: "/event/mad-ads",
     description: "Creative event judging advertisement preparation for proposed products.",
-    image: "/images/cultural/madads.jpeg"
+    image: "/images/cultural/madads.jpeg",
+    rulebook: "https://drive.google.com/file/d/1ymcCTSRj9dNZFUcvHb_TXu20nkQwgULa/view?usp=sharing",
   },
 
 
@@ -343,7 +359,8 @@ export const eventsData = [
     prize: "50,000",
     link: "/event/80s-hustle",
     description: "Group dance competition in various styles like Bollywood and Hip Hop.",
-    image: "/images/cultural/808hustle.jpeg"
+    image: "/images/cultural/808hustle.jpeg",
+    rulebook: "https://drive.google.com/file/d/1A4HJuTAfLtpQNGgvBmL5rt5q4K-XPBDs/view?usp=sharing",
   },
   {
     id: "cult-dan-2",
@@ -355,7 +372,8 @@ export const eventsData = [
     prize: "15,000",
     link: "/event/beat-drop",
     description: "Solo dance face-off showcasing unique technique and style.",
-    image: "/images/cultural/beatdrop.jpeg"
+    image: "/images/cultural/beatdrop.jpeg",
+    rulebook: "https://drive.google.com/file/d/1Z9ZjB8Pfl-T82OzmsSjx3nKIyu2-3laD/view?usp=sharing",
   },
   {
     id: "cult-dan-3",
@@ -367,7 +385,8 @@ export const eventsData = [
     prize: "24,000",
     link: "/event/crew-klash",
     description: "Group dance battle highlighting synchronization and coordination.",
-    image: "/images/cultural/crewklash.jpeg"
+    image: "/images/cultural/crewklash.jpeg",
+    rulebook: "https://drive.google.com/file/d/1DqhZCiKDBtvz2MqDdqz2i3pPdOCle1x3/view?usp=sharing",
   },
   {
     id: "cult-dan-4",
@@ -379,7 +398,8 @@ export const eventsData = [
     prize: "50,000",
     link: "/event/bhangra-fiesta",
     description: "Traditional Punjabi percussion and live Dhol rhythm battle.",
-    image: "/images/cultural/bhangrafiesta.jpeg"
+    image: "/images/cultural/bhangrafiesta.jpeg",
+    rulebook: "https://drive.google.com/file/d/1165vJ2rJ-cBxfcvSFHo-jn0RrnUkZfM7/view?usp=sharing",
   },
 
   // --- PHOTOGRAPHY ---
@@ -393,7 +413,8 @@ export const eventsData = [
     prize: "NIL",
     link: "/event/drishya",
     description: "National photography exhibition highlighting emotions and passion.",
-    image: "/images/cultural/drishya.jpeg"
+    image: "/images/cultural/drishya.jpeg",
+    rulebook: "https://drive.google.com/file/d/1GxzBJ5T5SHTFrtZ8hqZ31vIbrqNnc2fI/view?usp=sharing",
   },
   {
     id: "cult-pho-2",
@@ -405,7 +426,8 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/snap-hunt",
     description: "Campus-wide treasure hunt solving location clues through photography.",
-    image: "/images/cultural/snaptreasure.jpeg"
+    image: "/images/cultural/snaptreasure.jpeg",
+    rulebook: "https://drive.google.com/file/d/1rax2AijxOdqPmp83q_xfn56h2pHgN9Ud/view?usp=sharing",
   },
   {
     id: "cult-pho-3",
@@ -417,7 +439,8 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/nazariya",
     description: "Professional photo storytelling competition through a sequence of pictures.",
-    image: "/images/cultural/nazariya.jpeg"
+    image: "/images/cultural/nazariya.jpeg",
+    rulebook: "https://drive.google.com/file/d/1Ay_f4rZW0wU-t9QQCPfjptbwpAp96xEC/view?usp=sharing",
   },
 
   // --- HINDI SAHITYA ---
@@ -467,7 +490,8 @@ export const eventsData = [
     prize: "10, 000",
     link: "/event/filmy-sangram",
     description: "Showcase your storytelling in our short film competition! Create a 2 to 15-minute film based on a theme revealed on Instagram. Films can be in any language, but must include English subtitles if necessary. Only original content is allowed. Judging criteria include editing, cinematography, script quality, acting, and sound design.",
-    image: "/images/cultural/onlinesfm.jpeg"
+    image: "/images/cultural/onlinesfm.jpeg",
+    rulebook: "https://drive.google.com/file/d/1Y1YfBRNoKfeOWvs3XxjxketPMjIO97nb/view?usp=sharing",
   },
 
   // ==========================
@@ -485,7 +509,8 @@ export const eventsData = [
     prize: "50, 000",
     link: "/event/under-sky",
     description: "Star gazing with telescope observation and constellation identification.",
-    image: "/images/technical/underthesky.jpeg"
+    image: "/images/technical/underthesky.jpeg",
+    rulebook: "https://drive.google.com/file/d/1xE-wUFQ6AojeQt_WZSB1RpP0bHuHu4eA/view?usp=sharing",
   },
 
   // --- BUSINESS ---
@@ -499,7 +524,8 @@ export const eventsData = [
     prize: "10,000",
     link: "/event/pivot-room",
     description: "Decision-making challenge testing adaptability under changing constraints.",
-    image: "/images/technical/pivotroom.jpeg"
+    image: "/images/technical/pivotroom.jpeg",
+    rulebook: "https://drive.google.com/file/d/1MGAbcCjoS4-BDDbHUwrIQqDp6HIuiOFO/view?usp=sharing",
   },
   {
     id: "tech-bus-2",
@@ -535,7 +561,8 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/civil-ideathon",
     description: "Presentation of innovative ideas for sustainable infrastructure.",
-    image: "/images/technical/civilengideathon.jpeg"
+    image: "/images/technical/civilengideathon.jpeg",
+    rulebook: "https://drive.google.com/file/d/1UplgI0ZZJbwULpDZ7sB1fW3JlN1fz68J/view?usp=sharing",
   },
   {
     id: "tech-bus-5",
@@ -572,6 +599,7 @@ export const eventsData = [
     link: "/event/the-midas-touch",
     description: "A two-round strategy and social innovation challenge blending business acumen with impact-driven thinking. Round 1 features a quiz on SDGs and social entrepreneurship, followed by a case presentation for shortlisted teams.",
     image: "/images/technical/midastouch.jpeg",
+    rulebook: "https://drive.google.com/file/d/1BO7QQh8N5O5Z8mlxbjA6e92RcK99SJJ1/view?usp=sharing",
     rules: [
       "Participation: 2 members per team.",
       "Round 1: Quiz-based screening on SDGs, current affairs, and social entrepreneurship.",
@@ -593,7 +621,8 @@ export const eventsData = [
     prize: "4,500",
     link: "/event/rapid-wire",
     description: "Technical event with rounds based on electrical and software logic.",
-    image: "/images/technical/rapidwire.jpeg"
+    image: "/images/technical/rapidwire.jpeg",
+    rulebook: "https://drive.google.com/file/d/1nCI-kAdghXnMssfKXwv7ksho_8qTnqMF/view?usp=sharing",
   },
   {
     id: "tech-cir-2",
@@ -605,7 +634,8 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/grid-collapse",
     description: "Campus-wide treasure hunt solving circuit-based puzzles to restore power.",
-    image: "/images/technical/gridcollapse.jpeg"
+    image: "/images/technical/gridcollapse.jpeg",
+    rulebook: "https://drive.google.com/file/d/12VQT4xiz6RjtOMI16SCHgmEiZDLO2R0J/view?usp=sharing",
   },
   {
     id: "tech-cir-3",
@@ -617,7 +647,8 @@ export const eventsData = [
     prize: "4,500",
     link: "/event/seed-power",
     description: "Multi-activity engagement zone with interactive individual challenges.",
-    image: "/images/technical/seedpowerarena.jpeg"
+    image: "/images/technical/seedpowerarena.jpeg",
+    rulebook: "https://drive.google.com/file/d/1lOjvgANK4MaOJwIJdKkjeYCxmkurfjdF/view?usp=sharing",
   },
 
   // --- CODING ---
@@ -643,19 +674,22 @@ export const eventsData = [
     prize: "10,00,000+",
     link: "/event/root-breach",
     description: "24-hour national CTF competition focused on cybersecurity.",
-    image: "/images/technical/rootbreach.jpeg"
+    image: "/images/technical/rootbreach.jpeg",
+    rulebook: "https://drive.google.com/file/d/1hJWkDaCWtPTF4oIJdhZWCmj8l9158YIj/view?usp=sharing",
+
   },
   {
     id: "tech-cod-3",
     title: "Hackmol 7.0",
     category: "Technical",
     subCategory: "Coding",
-    day: "TBA",
+    day: "",
     registration: "300/- per person",
-    prize: "TBA",
+    prize: "4,00,00,000+",
     link: "/event/hackmol",
-    description: "Community-focused 36-hour hackathon for beginners and experts.",
-    image: "/images/technical/hackmol7.0.jpeg"
+    description: "Community-focused 24-hour hackathon for beginners and experts.",
+    image: "/images/technical/hackmol7.0.jpeg",
+    rulebook: "https://drive.google.com/file/d/1-ugTNk-lm-qkKfvuZJB7LruExWq0N72r/view?usp=sharing",
   },
   {
     id: "tech-cod-4",
@@ -667,7 +701,8 @@ export const eventsData = [
     prize: "31,000",
     link: "/event/debug-deploy",
     description: "Three-round competition involving debugging, coding, and web development.",
-    image: "/images/technical/debugtodeploy.jpeg"
+    image: "/images/technical/debugtodeploy.jpeg",
+    rulebook: "https://drive.google.com/file/d/1dW2H9XnRSXuV5gyLSF5dXTFUYZ0Vgqz4/view?usp=sharing",
   },
   {
     id: "tech-cod-5",
@@ -679,7 +714,8 @@ export const eventsData = [
     prize: "15,000",
     link: "/event/should-work",
     description: "Logic-based event judging code correctness rather than writing it.",
-    image: "/images/technical/thisshouldwork.jpeg"
+    image: "/images/technical/thisshouldwork.jpeg",
+    rulebook: "https://drive.google.com/file/d/1f76Nx9C50Jo5GVibpbEkHi1M35OgnwVa/view?usp=sharing",
   },
 
   // --- DESIGNING ---
@@ -693,7 +729,8 @@ export const eventsData = [
     prize: "9,000",
     link: "/event/steel-arch",
     description: "Constructing a brick arch structure using a steel supporting frame.",
-    image: "/images/technical/steelarchmakingcompetition.jpeg"
+    image: "/images/technical/steelarchmakingcompetition.jpeg",
+    rulebook: "https://drive.google.com/file/d/1KoXQ4I2AmgHvSkzd7PY2tqGmvpLpxalK/view?usp=sharing",
   },
   {
     id: "tech-des-2",
@@ -705,7 +742,8 @@ export const eventsData = [
     prize: "5,000",
     link: "/event/tex-print",
     description: "Block printing event for designing unique T-shirt motifs.",
-    image: "/images/technical/texprint.jpeg"
+    image: "/images/technical/texprint.jpeg",
+    rulebook: "https://drive.google.com/file/d/1VZeUakNQKuYgT7GvqW_yNLeSYaVqWh3Y/view?usp=sharing",
   },
 
   // --- GAMING & MANAGERIAL ---
@@ -743,7 +781,8 @@ export const eventsData = [
     prize: "10,000",
     link: "/event/minute-mayhem",
     description: "Fast-paced obstacle challenge with mini-games under 60 seconds.",
-    image: "/images/technical/minutemayhem.jpeg"
+    image: "/images/technical/minutemayhem.jpeg",
+    rulebook: "https://drive.google.com/file/d/1fGeVobOy5uGiKZp7N6tPiml9GDuMC2J1/view?usp=sharing",
   },
 
   // --- FITNESS & QUIZ ---
@@ -757,7 +796,8 @@ export const eventsData = [
     prize: "3,000",
     link: "/event/ultrafit-arena",
     description: "Hybrid challenge testing physical agility and cognitive sharpness.",
-    image: "/images/technical/ultrafitarena.jpeg"
+    image: "/images/technical/ultrafitarena.jpeg",
+    rulebook: "https://drive.google.com/file/d/1NhiVlzhUHRZ77meT6V_CKuwJ9XSn7jEI/view?usp=sharing",
   },
   {
     id: "tech-qui-1",
@@ -769,7 +809,8 @@ export const eventsData = [
     prize: "6,000",
     link: "/event/opti-relay",
     description: "Engineering challenge with quizzes and relay-style case solving.",
-    image: "/images/technical/optirelay.jpeg"
+    image: "/images/technical/optirelay.jpeg",
+    rulebook: "https://drive.google.com/file/d/1ZNNI5-MSstlXza3huErFuSMiiEg0dgZ5/view?usp=sharing",
   },
 
   // --- ROBOTICS ---
@@ -784,7 +825,8 @@ export const eventsData = [
     link: "/event/sky-rush",
     description: "Drone navigation through courses with sharp turns and obstacles.",
     image: "/images/technical/skyrush.jpeg",
-    rules: []
+    rulebook: "https://drive.google.com/file/d/1Ro47TzveDOvTdvwWvJlEqsUafZdYw2jE/view?usp=sharing",
+
   },
   {
     id: "tech-rob-2",
@@ -796,7 +838,8 @@ export const eventsData = [
     prize: "18,000",
     link: "/event/machine-wars",
     description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo.",
-    image: "/images/technical/machinewars.jpeg"
+    image: "/images/technical/machinewars.jpeg",
+    rulebook: "https://drive.google.com/file/d/1D4a2LO98AiT8b3NrqYMd83JIVAK0cOB4/view?usp=sharing",
   },
   {
     id: "tech-rob-3",
@@ -808,7 +851,8 @@ export const eventsData = [
     prize: "20,000",
     link: "/event/gear-blitz",
     description: "RC car racing on tracks testing speed and skill.",
-    image: "/images/technical/gearblitz.jpeg"
+    image: "/images/technical/gearblitz.jpeg",
+    rulebook: "https://drive.google.com/file/d/1GCI1tD6t5BlqwYQFbC-bHp7ovADZRnlk/view?usp=sharing",
   },
   {
     id: "tech-rob-4",
@@ -820,7 +864,8 @@ export const eventsData = [
     prize: "22,000",
     link: "/event/maze-rush",
     description: "Remote controlled bot navigation through a maze in minimum time.",
-    image: "/images/technical/mazerush.jpeg"
+    image: "/images/technical/mazerush.jpeg",
+    rulebook: "https://drive.google.com/file/d/1I8C2Y1rb0Vw_U4jl4Np7UlmV0ca0vF3n/view?usp=sharing",
   },
 
   // --- STEM ---
@@ -846,7 +891,8 @@ export const eventsData = [
     prize: "100,000",
     link: "/event/stem-mun",
     description: "STEM and business based MUN style Debate and Merger Competition",
-    image: "/images/technical/stemmun.jpeg"
+    image: "/images/technical/stemmun.jpeg",
+    rulebook: "https://drive.google.com/file/d/1I_mndjgMHfsFV_fw7JQndCQY84XFwT41/view?usp=sharing",
   },
   {
     id: "tech-ste-3",
@@ -858,7 +904,8 @@ export const eventsData = [
     prize: "10,000",
     link: "/event/mind-mind",
     description: "Tech challenge with aptitude thinking and a 4-hour hackathon.",
-    image: "/images/technical/mindthemind.jpeg"
+    image: "/images/technical/mindthemind.jpeg",
+    rulebook: "https://drive.google.com/file/d/1kUqjDMZbnJ7NxJQpWXRbH7ejOxoVqqYg/view?usp=sharing",
   },
   {
     id: "tech-ste-4",
@@ -879,10 +926,11 @@ export const eventsData = [
     subCategory: "STEM",
     day: "27-03-2026",
     registration: "50/- per person",
-    prize: "NIL",
+    prize: "6000",
     link: "/event/escape-room",
     description: "Solving critical business challenges to escape within 60 minutes.",
-    image: "/images/technical/escaperoom.jpeg"
+    image: "/images/technical/escaperoom.jpeg",
+    rulebook: "https://drive.google.com/file/d/1GH--o6kMbpNTt_AqOWBqhs7etB9hqifM/view?usp=sharing",
   },
   {
     id: "tech-ste-6",
@@ -894,7 +942,8 @@ export const eventsData = [
     prize: "5,000",
     link: "/event/inside-out",
     description: "Anatomy-themed treasure hunt following clues across body systems.",
-    image: "/images/technical/insideout.jpeg"
+    image: "/images/technical/insideout.jpeg",
+    rulebook: "https://drive.google.com/file/d/1conq1oNjOdq3aj9-LHvLsjmmpBRCP3t-/view?usp=sharing",
   },
   {
     id: "tech-ste-7",
@@ -906,7 +955,8 @@ export const eventsData = [
     prize: "5,000",
     link: "/event/who-killed-cell",
     description: "Biology-themed crime scene investigation solving logical clues.",
-    image: "/images/technical/whokilledthecell.jpeg"
+    image: "/images/technical/whokilledthecell.jpeg",
+    rulebook: "https://drive.google.com/file/d/1tVtZQUN2-2bvhBLnK4WqYmreuQ1VsYGG/view?usp=sharing",
   },
   {
     id: "tech-ste-8",
@@ -918,6 +968,7 @@ export const eventsData = [
     prize: "3,500",
     link: "/event/enigma",
     description: "Logical reasoning competition with buzzer and rapid-fire rounds.",
-    image: "/images/technical/enigma.jpeg"
+    image: "/images/technical/enigma.jpeg",
+    rulebook: "https://drive.google.com/file/d/11L6XG0JCFO13xQZ8xbXaihOKDRdW2nNk/view?usp=sharing",
   },
 ];

@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { Context } from "../Context/Context";
 import { useTransition } from "../../transition/transitioncontext";
 import { ArrowLeft } from "lucide-react";
+import { useState } from "react";
 
 const EventDetails = () => {
   const { eventId } = useParams();
+  const [showRulebook, setShowRulebook] = useState(false);
   const { eventsData } = useContext(Context);
   const { startTransition } = useTransition();
 
@@ -46,6 +48,14 @@ const EventDetails = () => {
                   {foundEvent.day}
                 </span>
               )}
+              {foundEvent.rulebook && (
+                <button
+                  onClick={() => setShowRulebook(true)}
+                  className="absolute top-4 right-4 flex items-center justify-center bg-yellow-300 border-2 border-black px-5 py-2.5 font-black text-xs uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all"
+                >
+                  Rulebook
+                </button>
+              )}
             </div>
 
             {/* TITLE (Graffiti style impact) */}
@@ -70,6 +80,7 @@ const EventDetails = () => {
               </div>
             )}
           </div>
+
         </section>
 
         {/* ================= ABOUT + INFO ================= */}
@@ -169,6 +180,28 @@ const EventDetails = () => {
           </div>
         )}
       </div>
+      {showRulebook && (
+        <div className="fixed inset-0 bg-black/90 z-[999] flex items-center justify-center p-4">
+
+          <div className="w-full max-w-5xl h-[85vh] bg-white relative border-[4px] border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
+
+            {/* CLOSE BUTTON */}
+            <button
+              onClick={() => setShowRulebook(false)}
+              className="absolute top-3 right-3 bg-black text-white px-4 py-2 font-black text-sm border-2 border-black hover:bg-red-500 transition-all z-10"
+            >
+              CLOSE
+            </button>
+
+            {/* PDF VIEWER */}
+            <iframe
+              src={foundEvent.rulebook?.replace("/view", "/preview")}
+              className="w-full h-full"
+              title="Rulebook"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
