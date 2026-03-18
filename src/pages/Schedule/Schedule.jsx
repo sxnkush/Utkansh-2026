@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DaySelector from './DaySelector';
 import CategoryHeader from './CategoryHeader';
 import SubCategoryList from './SubCategoryList';
@@ -12,6 +12,14 @@ const Schedule = () => {
   const [subCat, setSubCat] = useState("Coding");
   const { startTransition } = useTransition();
 
+  // Ensure a subcategory is always selected when day/category changes
+  useEffect(() => {
+  if (category === "Technical") {
+    setSubCat("Coding");
+  } else if (category === "Cultural") {
+    setSubCat("Fine Arts");
+  }
+}, [selectedDay, category]);
   return (
     <div
       className="fixed inset-0 z-50 min-h-screen w-full bg-fixed bg-cover bg-center font-archivo overflow-y-auto overflow-x-hidden selection:bg-[#cef404] selection:text-black"
@@ -28,33 +36,32 @@ const Schedule = () => {
             <ArrowLeft size={24} strokeWidth={2.5} />
           </button>
 
-          {/* THE CLEAN WHITE FONT SCHEDULE TITLE */}
           <h1
             className="text-white text-6xl md:text-8xl font-black italic uppercase tracking-tighter z-40 ml-14 md:ml-0"
             style={{
-              fontFamily: '"Permanent Marker", opacity-100', // Matches the brush style in image_4cf5a4.png
-              /* Replicates the thick, hard-edged black shadow from image_4c946a.png */
+              fontFamily: '"Permanent Marker", opacity-100',
               filter: 'drop-shadow(6px 6px 0px rgba(0,0,0,1))',
               letterSpacing: "0.01em",
               transform: 'skewX(-6deg) scale(0.8)',
-              WebkitTextStroke: '1px rgba(255,255,255,0.1)' // Adds slight crispness to the white edges
+              WebkitTextStroke: '1px rgba(255,255,255,0.1)'
             }}
           >
             SCHEDULE
           </h1>
         </header>
 
-        {/* 2. Scaled-up Day Selection: Centered flexbox */}
+        {/* Day Selection */}
         <div className="w-full max-w-4xl mb-12 flex justify-center">
           <DaySelector activeDay={selectedDay} setDay={setSelectedDay} />
         </div>
 
-        {/* 3. Main Content Grid: Balanced centering */}
+        {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 w-full max-w-7xl items-start">
 
-          {/* Side Navigation: Category and Subcategory filters */}
+          {/* Sidebar */}
           <aside className="lg:col-span-3 space-y-8 lg:sticky lg:top-10">
             <CategoryHeader activeCat={category} setCat={setCategory} />
+
             <SubCategoryList
               activeDay={selectedDay}
               activeMainCat={category}
@@ -63,7 +70,7 @@ const Schedule = () => {
             />
           </aside>
 
-          {/* Timeline: Centered Event Cards */}
+          {/* Timeline */}
           <main className="lg:col-span-9 flex flex-col items-center">
             <div className="w-full flex justify-center">
               <Timeline
@@ -73,6 +80,7 @@ const Schedule = () => {
               />
             </div>
           </main>
+
         </div>
       </div>
     </div>
