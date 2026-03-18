@@ -18,7 +18,8 @@ const Hero = ({ introDone }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [introVideoEnded, setIntroVideoEnded] = useState(false);
-  const [showButton, setShowButton] = useState(true);
+  const bgVideoRef = useRef(null);
+  const revealVideoRef = useRef(null);
 
   // --- RESPONSIVE HANDLER ---
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
@@ -43,19 +44,6 @@ const Hero = ({ introDone }) => {
     }
   }, [introVideoEnded, effectIntensity]);
 
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY < 100) {
-        setShowButton(true);   // 👉 near top → show
-      } else {
-        setShowButton(false);  // 👉 scrolled → hide
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   // Tilt only background video
   const bgRotateX = useMotionValue(0);
   const bgRotateY = useMotionValue(0);
@@ -332,7 +320,7 @@ const Hero = ({ introDone }) => {
           style={{ perspective: "1900px" }}
         >
           <motion.video
-            ref={videoRef}
+            ref={bgVideoRef}
             src="/videos/herobg.mp4"
             autoPlay
             muted
@@ -440,34 +428,7 @@ const Hero = ({ introDone }) => {
 
           </motion.div>
         </motion.div>
-        <AnimatePresence>
-          {introVideoEnded && (
-            <motion.a
-              href="https://v1.nitj.ac.in/events_registration/utkansh_2026/login"
-              className="fixed bottom-0  right-1 z-[9999] w-56 sm:w-80 cursor-pointer pointer-events-auto"
 
-              initial={{ opacity: 0, scale: 0.7, x: 100 }}
-              animate={{
-                opacity: showButton ? 1 : 0,
-                scale: showButton ? 1 : 0.8,
-                x: showButton ? 0 : 120, // 👉 moves right when hidden
-                y: showButton ? 50 : 60,
-              }}
-              exit={{ opacity: 0, scale: 0.6, x: 120 }}
-
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <img
-                src="/images/register.png"
-                alt="Register"
-                className="w-full h-auto select-none"
-              />
-            </motion.a>
-          )}
-        </AnimatePresence>
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
           <defs>
             <filter id="paint-drizzle">
@@ -720,7 +681,7 @@ const Hero = ({ introDone }) => {
             }}
           >
             <video
-              ref={videoRef}
+              ref={revealVideoRef}
               src="https://res.cloudinary.com/dph7ygvuj/video/upload/v1772096483/utkanshbg_zctjyd.mp4" // <-- Replace this with your public URL
               loop
               playsInline
