@@ -669,7 +669,7 @@ export const eventsData = [
     title: "Root Breach",
     category: "Technical",
     subCategory: "Coding",
-    day: "27-03-2026",
+    day: "28-03-2026",
     registration: "300/- per team",
     prize: "10,00,000+",
     link: "/event/root-breach",
@@ -769,7 +769,8 @@ export const eventsData = [
     prize: "10,000",
     link: "/event/ad-mad",
     description: "Business idea pitching competition for innovative small businesses.",
-    image: "/images/technical/admadshow.jpeg"
+    image: "/images/technical/admadshow.jpeg",
+    rulebook: "https://drive.google.com/file/d/1w3NVwPakt0y4FZKJ0K_Q3zvWoEjloi3b/view?usp=sharing",
   },
   {
     id: "tech-man-2",
@@ -888,7 +889,7 @@ export const eventsData = [
     subCategory: "STEM",
     day: "29-03-2026",
     registration: "200/- per person",
-    prize: "100,000",
+    prize: "10,000",
     link: "/event/stem-mun",
     description: "STEM and business based MUN style Debate and Merger Competition",
     image: "/images/technical/stemmun.jpeg",
@@ -930,7 +931,7 @@ export const eventsData = [
     link: "/event/escape-room",
     description: "Solving critical business challenges to escape within 60 minutes.",
     image: "/images/technical/escaperoom.jpeg",
-    rulebook: "https://drive.google.com/file/d/1GH--o6kMbpNTt_AqOWBqhs7etB9hqifM/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/19LJLD4uIHEwqhMEXhK8uRmcKNIXruwOZ/view?usp=sharing",
   },
   {
     id: "tech-ste-6",
