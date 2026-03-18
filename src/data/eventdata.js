@@ -244,7 +244,7 @@ export const eventsData = [
   },
   {
     id: "cult-mus-2",
-    title: "Rapriot",
+    title: "Raporiot",
     category: "Cultural",
     subCategory: "Music",
     day: "29 Mar",
@@ -619,7 +619,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Coding",
     day: "27-03-2026",
-    registration: "150/- per team",
+    registration: "300/- per team",
     prize: "10,00,000+",
     link: "/event/root-breach",
     description: "24-hour national CTF competition focused on cybersecurity.",
