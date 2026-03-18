@@ -548,6 +548,26 @@ export const eventsData = [
     description: "Blends technology and business concepts through knowledge rounds.",
     image: "/images/technical/techbizquest.jpeg"
   },
+  {
+    id: "tech-bus-7",
+    title: "The Midas Touch",
+    category: "Technical",
+    subCategory: "Business",
+    day: "NIL",
+    registration: "200/- per team",
+    prize: "Prizes for Top 3 Teams",
+    link: "/event/the-midas-touch",
+    description: "A two-round strategy and social innovation challenge blending business acumen with impact-driven thinking. Round 1 features a quiz on SDGs and social entrepreneurship, followed by a case presentation for shortlisted teams.",
+    image: "/images/technical/midastouch.jpeg",
+    rules: [
+      "Participation: 2 members per team.",
+      "Round 1: Quiz-based screening on SDGs, current affairs, and social entrepreneurship.",
+      "Round 2: Shortlisted teams analyze a real-world problem and propose a socially sustainable solution[cite: 7].",
+      "Preparation: Teams get 30 minutes to prepare a solution and a 3-5 slide presentation[cite: 11, 12].",
+      "Presentation: 10 minutes total, including a Q&A session with the judges[cite: 13].",
+      "Judging: Evaluation is based on entrepreneurial action and meaningful impact. Decisions are final and binding[cite: 8, 15]."
+    ],
+  },
 
   // --- CIRCUITS ---
   {
