@@ -194,7 +194,7 @@ const ContactUsUtkansh26 = () => {
               <TiltCard onClick={() => window.location.href = 'tel:+918529083160'} position="top-right" delay={0.2}>
                 <Phone className="w-5 h-5 text-[#C4B5FD] mb-2" />
                 <span className="text-white font-black text-[12px] md:text-base tracking-tighter">+91-9041522905</span>
-                <span className="text-white font-black text-[12px] md:text-base tracking-tighter">+91-8976208173</span>
+                <span className="text-white font-black text-[12px] md:text-base tracking-tighter">+91-7978147562</span>
               </TiltCard>
             </div>
 
