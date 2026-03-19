@@ -93,7 +93,20 @@ export const eventsData = [
     description: "Display and sale of artworks including face painting and customized artifacts.",
     image: "/images/cultural/artexhibition.jpeg"
   },
-
+  // --- HACKMOL ---
+  {
+    id: "cult-cod-3",
+    title: "Hackmol 7.0",
+    category: "Cultural",
+    subCategory: "Coding",
+    day: "28-29 MAR",
+    registration: "300/- per person",
+    prize: "4,00,00,000+",
+    link: "/event/hackmol",
+    description: "Community-focused 24-hour hackathon for beginners and experts.",
+    image: "/images/technical/hackmol7.0.jpeg",
+    rulebook: "https://drive.google.com/file/d/1-ugTNk-lm-qkKfvuZJB7LruExWq0N72r/view?usp=sharing",
+  },
   // --- DRAMA ---
   {
     id: "cult-dra-1",
@@ -776,19 +789,7 @@ export const eventsData = [
     rulebook: "https://drive.google.com/file/d/1hJWkDaCWtPTF4oIJdhZWCmj8l9158YIj/view?usp=sharing",
 
   },
-  {
-    id: "tech-cod-3",
-    title: "Hackmol 7.0",
-    category: "Technical",
-    subCategory: "Coding",
-    day: "",
-    registration: "300/- per person",
-    prize: "4,00,00,000+",
-    link: "/event/hackmol",
-    description: "Community-focused 24-hour hackathon for beginners and experts.",
-    image: "/images/technical/hackmol7.0.jpeg",
-    rulebook: "https://drive.google.com/file/d/1-ugTNk-lm-qkKfvuZJB7LruExWq0N72r/view?usp=sharing",
-  },
+
   {
     id: "tech-cod-4",
     title: "Debug to Deploy",
