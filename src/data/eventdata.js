@@ -237,7 +237,7 @@ export const eventsData = [
     registration: "600/- per team",
     prize: "15,000",
     link: "/event/diplomacy-battle",
-    description: "High-stakes MUN-style showdown with fierce debate and resolution drafting.",
+    description: "High Stakes MUN style showdown with Fierce debate and resolution drafting(All participants will be asked for their countries preference personally)",
     image: "/images/cultural/diplomacybattle.jpeg"
   },
 
