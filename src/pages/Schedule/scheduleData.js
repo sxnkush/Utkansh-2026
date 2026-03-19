@@ -157,7 +157,7 @@ export const scheduleData = {
         { id: "cult-dra-3", time: "2:00 PM - 6:30 PM", name: "Halla Bol (DRAMATICS)", location: "Central Lawn" }
       ],
       Fashion: [
-        { id: "cult-fas-1", time: "9:00 AM - EOD", name: "NIRVANA (FASHION)", location: "CSH" }
+        { id: "cult-fas-1", time: "8:00 PM - EOD", name: "NIRVANA (FASHION)", location: "MBH Ground" }
       ],
       "Fine Arts": [
         { id: "cult-art-4", time: "1:30 PM - 6:30 PM", name: "The Art Chase (FAS)", location: "TENNIS COURT" }
