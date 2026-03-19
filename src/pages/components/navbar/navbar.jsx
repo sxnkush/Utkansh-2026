@@ -135,7 +135,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                                     {link.name === "ABOUT US" ? (
                                         <span
                                             onClick={scrollToAboutSection}
-                                            className="cursor-pointer relative inline-block text-[#d4ff00] text-2xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
+                                            className="cursor-pointer relative inline-block text-[#d4ff00] text-2xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1"
                                         >
                                             {link.name}
                                             <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />
@@ -143,7 +143,7 @@ const Navbar = ({ onHamburgerClick, menuOpen }) => {
                                     ) : (
                                         <button
                                             onClick={() => startTransition(link.path)}
-                                            className="relative inline-block text-[#d4ff00] text-xl lg:text-3xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1 bg-transparent border-none"
+                                            className="relative inline-block text-[#d4ff00] text-xl lg:text-2xl tracking-wider italic transition-all duration-300 ease-out -skew-x-12 hover:skew-x-0 hover:-translate-y-2 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(212,255,0,0.9)] active:scale-90 active:translate-y-1 bg-transparent border-none"
                                         >
                                             {link.name}
                                             <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[#d4ff00] transition-all duration-300 group-hover:w-full shadow-[0_0_8px_#d4ff00]" />

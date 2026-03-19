@@ -498,6 +498,61 @@ export const eventsData = [
   // TECHNICAL EVENTS
   // ==========================
 
+  // --- ROBOTICS ---
+  {
+    id: "tech-rob-4",
+    title: "Maze Rush",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "28-03-2026",
+    registration: "300/- per team",
+    prize: "22,000",
+    link: "/event/maze-rush",
+    description: "Remote controlled bot navigation through a maze in minimum time.",
+    image: "/images/technical/mazerush.jpeg",
+    rulebook: "https://drive.google.com/file/d/1I8C2Y1rb0Vw_U4jl4Np7UlmV0ca0vF3n/view?usp=sharing",
+  },
+  {
+    id: "tech-rob-1",
+    title: "Sky Rush",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "27-03-2026",
+    registration: "250/- per team",
+    prize: "30,000",
+    link: "/event/sky-rush",
+    description: "Drone navigation through courses with sharp turns and obstacles.",
+    image: "/images/technical/skyrush.jpeg",
+    rulebook: "https://drive.google.com/file/d/1Ro47TzveDOvTdvwWvJlEqsUafZdYw2jE/view?usp=sharing",
+
+  },
+  {
+    id: "tech-rob-2",
+    title: "Machine Wars - pick and place edition",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "29-03-2026",
+    registration: "350/- per team",
+    prize: "18,000",
+    link: "/event/machine-wars",
+    description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo.",
+    image: "/images/technical/machinewars.jpeg",
+    rulebook: "https://drive.google.com/file/d/1D4a2LO98AiT8b3NrqYMd83JIVAK0cOB4/view?usp=sharing",
+  },
+  {
+    id: "tech-rob-3",
+    title: "Gear Blitz",
+    category: "Technical",
+    subCategory: "Robotics",
+    day: "28-03-2026",
+    registration: "500/- per team",
+    prize: "20,000",
+    link: "/event/gear-blitz",
+    description: "RC car racing on tracks testing speed and skill.",
+    image: "/images/technical/gearblitz.jpeg",
+    rulebook: "https://drive.google.com/file/d/1GCI1tD6t5BlqwYQFbC-bHp7ovADZRnlk/view?usp=sharing",
+  },
+
   // --- AERONAUTICS ---
   {
     id: "tech-aer-1",
