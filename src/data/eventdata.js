@@ -232,7 +232,7 @@ export const eventsData = [
     id: "cult-lit-4",
     title: "Diplomacy Battle",
     category: "Cultural",
-    subCategory: "Literature",
+    subCategory: "Literature (Team Event)",
     day: "28 Mar",
     registration: "600/- per team",
     prize: "15,000",
