@@ -186,7 +186,7 @@ export const eventsData = [
     link: "/event/nirvana",
     description: "Fashion parade featuring talented models and designers.",
     image: "/images/cultural/nirvana.jpeg",
-    rulebook: "https://drive.google.com/file/d/19TyEwfuPaKvbgm8AHG5gJQf0zDDoKriF/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1pqAI4-7zXRVwmK3aU7ecPp9hs0ucenCV/view?usp=sharing",
   },
   {
     id: "cult-fla-1",
