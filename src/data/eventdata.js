@@ -234,7 +234,7 @@ export const eventsData = [
     category: "Cultural",
     subCategory: "Literature (Solo Event)",
     day: "28 Mar",
-    registration: "600/- per team",
+    registration: "600/- per person",
     prize: "15,000",
     link: "/event/diplomacy-battle",
     description: "High Stakes MUN style showdown with Fierce debate and resolution drafting(All participants will be asked for their countries preference personally)",
