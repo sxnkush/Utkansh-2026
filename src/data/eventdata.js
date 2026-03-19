@@ -346,8 +346,8 @@ export const eventsData = [
     image: "/images/cultural/madads.jpeg",
     rulebook: "https://drive.google.com/file/d/1ymcCTSRj9dNZFUcvHb_TXu20nkQwgULa/view?usp=sharing",
   },
-{
-    id: "cult-vid-2",
+  {
+    id: "cult-vid-3",
     title: "Creator's Cut",
     category: "Cultural",
     subCategory: "Videography",
@@ -687,7 +687,7 @@ export const eventsData = [
     link: "/event/techbiz-quest",
     description: "The General Quiz for the inquisitive minds to answer the questions about anything under the sun or even beyond. With questions ranging from History, Physics, Literature, Science, Business, Sports and much more, Quest Saga is the General Quiz to pacify your hunger for knowledge.",
     image: "https://www.google.com/imgres?q=people%20having%20papers%20in%20hand%20images&imgurl=https%3A%2F%2Fspectrum.ieee.org%2Fmedia-library%2Fhand-grading-school-work-with-an-a.jpg%3Fid%3D25576639%26width%3D400%26height%3D300&imgrefurl=https%3A%2F%2Fspectrum.ieee.org%2Fnew-website-shows-lists-which-mobile-apps-are-worst-privacy-offenders&docid=94cIjRUCuZRSnM&tbnid=RRLjpFXdyX47FM&vet=12ahUKEwi5zc-ppKyTAxXV-TgGHcKgBjoQnPAOegQIJxAB..i&w=400&h=300&hcb=2&ved=2ahUKEwi5zc-ppKyTAxXV-TgGHcKgBjoQnPAOegQIJxAB",
-    rulebook:"https://drive.google.com/file/d/1JdIbDgN8IRVqC4bU3Tdj4ckvoh8PsZiX/view?usp=sharing"
+    rulebook: "https://drive.google.com/file/d/1JdIbDgN8IRVqC4bU3Tdj4ckvoh8PsZiX/view?usp=sharing"
   },
 
   {
@@ -961,61 +961,6 @@ export const eventsData = [
     rulebook: "https://drive.google.com/file/d/1ZNNI5-MSstlXza3huErFuSMiiEg0dgZ5/view?usp=sharing",
   },
 
-  // --- ROBOTICS ---
-  {
-    id: "tech-rob-1",
-    title: "Sky Rush",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "27-03-2026",
-    registration: "250/- per team",
-    prize: "30,000",
-    link: "/event/sky-rush",
-    description: "Drone navigation through courses with sharp turns and obstacles.",
-    image: "/images/technical/skyrush.jpeg",
-    rulebook: "https://drive.google.com/file/d/1Ro47TzveDOvTdvwWvJlEqsUafZdYw2jE/view?usp=sharing",
-
-  },
-  {
-    id: "tech-rob-2",
-    title: "Machine Wars - pick and place edition",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "29-03-2026",
-    registration: "350/- per team",
-    prize: "18,000",
-    link: "/event/machine-wars",
-    description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo.",
-    image: "/images/technical/machinewars.jpeg",
-    rulebook: "https://drive.google.com/file/d/1D4a2LO98AiT8b3NrqYMd83JIVAK0cOB4/view?usp=sharing",
-  },
-  {
-    id: "tech-rob-3",
-    title: "Gear Blitz",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "28-03-2026",
-    registration: "500/- per team",
-    prize: "20,000",
-    link: "/event/gear-blitz",
-    description: "RC car racing on tracks testing speed and skill.",
-    image: "/images/technical/gearblitz.jpeg",
-    rulebook: "https://drive.google.com/file/d/1GCI1tD6t5BlqwYQFbC-bHp7ovADZRnlk/view?usp=sharing",
-  },
-  {
-    id: "tech-rob-4",
-    title: "Maze Rush",
-    category: "Technical",
-    subCategory: "Robotics",
-    day: "28-03-2026",
-    registration: "300/- per team",
-    prize: "22,000",
-    link: "/event/maze-rush",
-    description: "Remote controlled bot navigation through a maze in minimum time.",
-    image: "/images/technical/mazerush.jpeg",
-    rulebook: "https://drive.google.com/file/d/1I8C2Y1rb0Vw_U4jl4Np7UlmV0ca0vF3n/view?usp=sharing",
-  },
-
   // --- STEM ---
   {
     id: "tech-ste-1",
@@ -1119,5 +1064,5 @@ export const eventsData = [
     image: "/images/technical/enigma.jpeg",
     rulebook: "https://drive.google.com/file/d/11L6XG0JCFO13xQZ8xbXaihOKDRdW2nNk/view?usp=sharing",
   },
-  
+
 ];
