@@ -466,7 +466,8 @@ export const eventsData = [
     prize: "3,000",
     link: "/event/vad-vivaad",
     description: "Hindi debating competition based on common man's views and TV formats.",
-    image: "/images/cultural/vadvivaad.jpeg"
+    image: "/images/cultural/vadvivaad.jpeg",
+    rulebook: "https://drive.google.com/file/d/19m5x2ks5jAB41jDxOReCJzvUiEqeeryi/view?usp=sharing",
   },
   {
     id: "cult-hin-2",
@@ -478,7 +479,8 @@ export const eventsData = [
     prize: "3,000",
     link: "/event/mehfil",
     description: "Poetry competition for original Shayari, Ghazal, and Nazm in Hindi/Urdu.",
-    image: "/images/cultural/mehfil.jpeg"
+    image: "/images/cultural/mehfil.jpeg",
+    rulebook: "https://drive.google.com/file/d/19m5x2ks5jAB41jDxOReCJzvUiEqeeryi/view?usp=sharing",
   },
   {
     id: "cult-hin-3",
@@ -490,7 +492,8 @@ export const eventsData = [
     prize: "3,000",
     link: "/event/filmy-sangram",
     description: "Hindi storytelling competition focused on writing finesse and coherence.",
-    image: "/images/cultural/filmysangram.jpeg"
+    image: "/images/cultural/filmysangram.jpeg",
+    rulebook: "https://drive.google.com/file/d/1sq5mGYxUxOm-nlFuSwxv8vSApNrrWa72/view?usp=sharing",
   },
   {
     id: "cult-hin-4",
