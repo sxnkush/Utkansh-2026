@@ -346,7 +346,19 @@ export const eventsData = [
     image: "/images/cultural/madads.jpeg",
     rulebook: "https://drive.google.com/file/d/1ymcCTSRj9dNZFUcvHb_TXu20nkQwgULa/view?usp=sharing",
   },
-
+{
+    id: "cult-vid-2",
+    title: "Creator's Cut",
+    category: "Cultural",
+    subCategory: "Videography",
+    day: "28-03-2026",
+    registration: "100/- per team",
+    prize: "8,000",
+    link: "/event/creators-cut",
+    description: "Creator’s Cut is a reel-making competition that challenges participants to showcase their creativity, storytelling, and editing skills through short, engaging videos.",
+    image: "https://www.google.com/imgres?q=reel%20images&imgurl=https%3A%2F%2Fimages.stockcake.com%2Fpublic%2F7%2F2%2F9%2F72999f82-714f-49a2-9ab9-506cedc8eb99_large%2Fcinematic-memory-reel-stockcake.jpg&imgrefurl=https%3A%2F%2Fstockcake.com%2Fi%2Fcinematic-memory-reel_2231115_1385284&docid=WjGCQpYIfR4yZM&tbnid=IGl-gG6GKrQb2M&vet=12ahUKEwjNoqf5o6yTAxVT4jgGHb0COiMQnPAOegQIYRAB..i&w=672&h=384&hcb=2&ved=2ahUKEwjNoqf5o6yTAxVT4jgGHb0COiMQnPAOegQIYRAB",
+    rulebook: "https://drive.google.com/file/d/1BxNmvukDZmzCF8Q-LPY26imI_B_YCcI9/view?usp=sharing",
+  },
 
   // --- DANCE ---
   {
@@ -663,6 +675,33 @@ export const eventsData = [
       "Presentation: 10 minutes total, including a Q&A session with the judges[cite: 13].",
       "Judging: Evaluation is based on entrepreneurial action and meaningful impact. Decisions are final and binding[cite: 8, 15]."
     ],
+  },
+  {
+    id: "tech-bus-8",
+    title: "Questango",
+    category: "Technical",
+    subCategory: "Quest",
+    day: "28-03-2026",
+    registration: "100/- per team",
+    prize: "N/A",
+    link: "/event/techbiz-quest",
+    description: "The General Quiz for the inquisitive minds to answer the questions about anything under the sun or even beyond. With questions ranging from History, Physics, Literature, Science, Business, Sports and much more, Quest Saga is the General Quiz to pacify your hunger for knowledge.",
+    image: "https://www.google.com/imgres?q=people%20having%20papers%20in%20hand%20images&imgurl=https%3A%2F%2Fspectrum.ieee.org%2Fmedia-library%2Fhand-grading-school-work-with-an-a.jpg%3Fid%3D25576639%26width%3D400%26height%3D300&imgrefurl=https%3A%2F%2Fspectrum.ieee.org%2Fnew-website-shows-lists-which-mobile-apps-are-worst-privacy-offenders&docid=94cIjRUCuZRSnM&tbnid=RRLjpFXdyX47FM&vet=12ahUKEwi5zc-ppKyTAxXV-TgGHcKgBjoQnPAOegQIJxAB..i&w=400&h=300&hcb=2&ved=2ahUKEwi5zc-ppKyTAxXV-TgGHcKgBjoQnPAOegQIJxAB",
+    rulebook:"https://drive.google.com/file/d/1JdIbDgN8IRVqC4bU3Tdj4ckvoh8PsZiX/view?usp=sharing"
+  },
+
+  {
+    id: "tech-bus-9",
+    title: "Matwars",
+    category: "Technical",
+    subCategory: "Software",
+    day: "28-03-2026",
+    registration: "N/A",
+    prize: "10,000",
+    link: "/event/civil-ideathon",
+    description: "MATWARS, organized by the Society of Mechanical Engineers (SoME), is designed to ignite students' curiosity and enhance their proficiency in MATLAB. The competition provides participants with an opportunity to experience how engineers use MATLAB tools in industry through engaging and practical simulation challenges.",
+    image: "https://www.google.com/imgres?q=matlab%20and%20software%20images&imgurl=https%3A%2F%2Fsciengineer.com%2Fwp-content%2Fuploads%2F2023%2F10%2FThe-Benefits-of-the-MATLAB-Campus-Wide-License-%25E2%2580%2593-Focusing-on-AI-Applications.webp&imgrefurl=https%3A%2F%2Fsciengineer.com%2Fevents%2Fthe-benefits-of-the-matlab-campus-wide-license-focusing-on-techniques-to-improve-code-performance%2F&docid=AzXJAS75_R0Y0M&tbnid=ZerXOKYaIEc1jM&vet=12ahUKEwi6hZSWpKyTAxX_4zgGHVysFP4QnPAOegQIchAB..i&w=1920&h=1080&hcb=2&ved=2ahUKEwi6hZSWpKyTAxX_4zgGHVysFP4QnPAOegQIchAB",
+    rulebook: "https://drive.google.com/file/d/1yggjZf53Umj0Yd76eHYtEeBQ8CgZIuwD/view?usp=sharing",
   },
 
   // --- CIRCUITS ---
@@ -1080,4 +1119,5 @@ export const eventsData = [
     image: "/images/technical/enigma.jpeg",
     rulebook: "https://drive.google.com/file/d/11L6XG0JCFO13xQZ8xbXaihOKDRdW2nNk/view?usp=sharing",
   },
+  
 ];
