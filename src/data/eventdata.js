@@ -266,7 +266,7 @@ export const eventsData = [
     link: "/event/raporiot",
     description: "Lyrical mastery and creativity competition for rappers.",
     image: "/images/cultural/raporiot.jpeg",
-    rulebook: "https://drive.google.com/file/d/1KQYvV_nophBnrvCaDaFSA-7Sxf2kAb4n/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1oenqPcUgxxm-gtJVx1TtgEF_iorllZCK/view?usp=sharing",
   },
   {
     id: "cult-mus-3",
@@ -756,7 +756,8 @@ export const eventsData = [
     prize: "30,000",
     link: "/event/neura-nova",
     description: "AI in healthcare debate and mini buildathon.",
-    image: "/images/technical/neuranova.jpeg"
+    image: "/images/technical/neuranova.jpeg",
+    rulebook: "https://drive.google.com/file/d/1suOY1zY3mBlgz7dwQZzNGOQfy0M2RS6w/view?usp=sharing",
   },
   {
     id: "tech-cod-2",
