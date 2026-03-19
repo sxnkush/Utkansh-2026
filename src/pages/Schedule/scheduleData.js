@@ -33,8 +33,7 @@ export const scheduleData = {
     Date: "27/3/26",
     Technical: {
       Coding: [
-        { id: "tech-cod-0", time: "9:00 AM - EOD", name: "ARENA X: VALORANT (VORTEX)", location: "LT402" },
-        { id: "tech-cod-1", time: "9:00 AM - EOD", name: "ARENA X: BGMI (VORTEX)", location: "Library" },
+
         { id: "tech-cod-2", time: "10:00 AM - 1:30 PM", name: "This Should Work (Cybernauts)", location: "SAC-206" },
         { id: "tech-cod-3", time: "2:00 PM - 5:00 PM", name: "Debug to Deploy (SUPER QUANT CODERS)", location: "SAC 206" }
       ],
@@ -59,7 +58,9 @@ export const scheduleData = {
         { id: "tech-cir-1", time: "10:00 AM - 3:00 PM", name: "Rapid Wire (SEED Society)", location: "SB-3" }
       ],
       Gaming: [
-        { id: "tech-gam-v1", time: "11:00 AM - 9:00 PM", name: "ARENA X: SMASH KARTS (VORTEX)", location: "VCH" }
+        { id: "tech-gam-v1", time: "11:00 AM - 9:00 PM", name: "ARENA X: SMASH KARTS (VORTEX)", location: "VCH" },
+        { id: "tech-cod-0", time: "9:00 AM - EOD", name: "ARENA X: VALORANT (VORTEX)", location: "LT402" },
+        { id: "tech-cod-1", time: "9:00 AM - EOD", name: "ARENA X: BGMI (VORTEX)", location: "Library" },
       ],
       Managerial: [
         { id: "tech-man-1", time: "10:30 AM - 6:30 PM", name: "Minute Mayhem (Managerial Society)", location: "SB Outside" }
