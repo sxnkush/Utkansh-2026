@@ -694,19 +694,6 @@ export const eventsData = [
       "Judging: Evaluation is based on entrepreneurial action and meaningful impact. Decisions are final and binding[cite: 8, 15]."
     ],
   },
-  {
-    id: "tech-bus-8",
-    title: "Questiongo",
-    category: "Technical",
-    subCategory: "Quest",
-    day: "28-03-2026",
-    registration: "100/- per team",
-    prize: "N/A",
-    link: "/event/techbiz-quest",
-    description: "The General Quiz for the inquisitive minds to answer the questions about anything under the sun or even beyond. With questions ranging from History, Physics, Literature, Science, Business, Sports and much more, Quest Saga is the General Quiz to pacify your hunger for knowledge.",
-    image: "https://www.google.com/imgres?q=people%20having%20papers%20in%20hand%20images&imgurl=https%3A%2F%2Fspectrum.ieee.org%2Fmedia-library%2Fhand-grading-school-work-with-an-a.jpg%3Fid%3D25576639%26width%3D400%26height%3D300&imgrefurl=https%3A%2F%2Fspectrum.ieee.org%2Fnew-website-shows-lists-which-mobile-apps-are-worst-privacy-offenders&docid=94cIjRUCuZRSnM&tbnid=RRLjpFXdyX47FM&vet=12ahUKEwi5zc-ppKyTAxXV-TgGHcKgBjoQnPAOegQIJxAB..i&w=400&h=300&hcb=2&ved=2ahUKEwi5zc-ppKyTAxXV-TgGHcKgBjoQnPAOegQIJxAB",
-    rulebook: "https://drive.google.com/file/d/1JdIbDgN8IRVqC4bU3Tdj4ckvoh8PsZiX/view?usp=sharing"
-  },
 
   {
     id: "tech-bus-9",
