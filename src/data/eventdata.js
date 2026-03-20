@@ -308,7 +308,8 @@ export const eventsData = [
     prize: "5,000",
     link: "/event/questopia",
     description: "General quiz covering history, science, literature, and sports.",
-    image: "/images/cultural/questopia.jpeg"
+    image: "/images/cultural/questopia.jpeg",
+    rulebook: "https://drive.google.com/file/d/1DjFwpnveBBA1D7y3nBvhS5m5qiIBoQ75/view?usp=sharing",
   },
   {
     id: "cult-san-1",
@@ -565,7 +566,7 @@ export const eventsData = [
     registration: "350/- per team",
     prize: "18,000",
     link: "/event/machine-wars",
-    description: "Robot battle involving Tug of War, Drag Race, and Robo-Sumo.",
+    description: "hurdle race where a robot navigates obstacles while picking up tokens and accurately placing them at designated locations using an onboard robotic gripper.",
     image: "/images/technical/machinewars.jpeg",
     rulebook: "https://drive.google.com/file/d/1D4a2LO98AiT8b3NrqYMd83JIVAK0cOB4/view?usp=sharing",
   },
