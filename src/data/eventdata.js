@@ -239,7 +239,8 @@ export const eventsData = [
     prize: "NIL",
     link: "/event/word-poem",
     description: "Spontaneous poetry writing on the spot using given themes.",
-    image: "/images/cultural/wordpoem.jpeg"
+    image: "/images/cultural/wordpoem.jpeg",
+    rulebook: "https://drive.google.com/file/d/1sFLwHsLAhqU_Kuvfk8eqfS273AH0rvyV/view?usp=sharing",
   },
   {
     id: "cult-lit-4",
@@ -251,7 +252,8 @@ export const eventsData = [
     prize: "15,000",
     link: "/event/diplomacy-battle",
     description: "High Stakes MUN style showdown with Fierce debate and resolution drafting(All participants will be asked for their countries preference personally)",
-    image: "/images/cultural/diplomacybattle.jpeg"
+    image: "/images/cultural/diplomacybattle.jpeg",
+    rulebook: "https://drive.google.com/file/d/1AYXPDWB4GVoxcsUniG92_kRH7i_980Q2/view?usp=sharing",
   },
 
   // --- MUSIC ---
@@ -588,7 +590,7 @@ export const eventsData = [
     category: "Technical",
     subCategory: "Aeronautics",
     day: "28-03-2026",
-    registration: "50/- per person",
+    registration: "150/- per team",
     prize: "50, 000",
     link: "/event/under-sky",
     description: "Star gazing with telescope observation and constellation identification.",
@@ -694,7 +696,7 @@ export const eventsData = [
   },
   {
     id: "tech-bus-8",
-    title: "Questango",
+    title: "Questiongo",
     category: "Technical",
     subCategory: "Quest",
     day: "28-03-2026",
@@ -786,7 +788,7 @@ export const eventsData = [
     link: "/event/root-breach",
     description: "24-hour national CTF competition focused on cybersecurity.",
     image: "/images/technical/rootbreach.jpeg",
-    rulebook: "https://drive.google.com/file/d/1hJWkDaCWtPTF4oIJdhZWCmj8l9158YIj/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1FoBwFi3jpDTO8BHOLVfbDLHNag9VSU2-/view?usp=sharing",
 
   },
 
@@ -986,7 +988,7 @@ export const eventsData = [
     subCategory: "STEM",
     day: "29-03-2026",
     registration: "200/- per person",
-    prize: "10,000",
+    prize: "50,000",
     link: "/event/stem-mun",
     description: "STEM and business based MUN style Debate and Merger Competition",
     image: "/images/technical/stemmun.jpeg",
