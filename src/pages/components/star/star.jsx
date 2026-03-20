@@ -3,7 +3,8 @@ import React from "react";
 const Star = () => {
     return (
         <section className="w-full relative z-[20] -mt-32">
-
+            {/* Top fade overlapping previous section */}
+            <div className="absolute -top-24 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none"></div>
             {/* Image */}
             <img
                 src="/images/mohit.png"
