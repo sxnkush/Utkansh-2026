@@ -142,7 +142,7 @@ const IntroLoader = ({ onLoaded, audioControl }) => {
                             
                           `}
                     >
-                        <span className="group-hover:line-through transition-all duration-300">Dont</span> Click here
+                        <span className="">Enter</span> Utkansh
                     </div>
                 )}
             </div>
