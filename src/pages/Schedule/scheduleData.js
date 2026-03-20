@@ -33,7 +33,6 @@ export const scheduleData = {
     Date: "27/3/26",
     Technical: {
       Coding: [
-
         { id: "tech-cod-2", time: "10:00 AM - 1:30 PM", name: "This Should Work (Cybernauts)", location: "SAC-206" },
         { id: "tech-cod-3", time: "2:00 PM - 5:00 PM", name: "Debug to Deploy (SUPER QUANT CODERS)", location: "SAC 206" }
       ],
@@ -43,7 +42,7 @@ export const scheduleData = {
       STEM: [
         { id: "tech-ste-2", time: "10:00 AM - 2:00 PM", name: "The Human Hunt (Sober)", location: "BT Department" },
         { id: "tech-ste-3", time: "11:00 AM - 1:00 PM", name: "Escape Room (PHY Science Society)", location: "SB 209" },
-        { id: "tech-ste-4", time: "2:00 PM - 5:30 PM", name: "Escape Room (Q-MAINA)", location: "LT 201, 202" }
+        { id: "tech-ste-4", time: "2:00 PM - 5:30 PM", name: "Escape Room (Q-MANIA)", location: "LT 201, 202" }
       ],
       Designing: [
         { id: "tech-des-1", time: "10:30 AM - 4:30 PM", name: "Steel Arch Making (SocCEr)", location: "Civil Parking" },

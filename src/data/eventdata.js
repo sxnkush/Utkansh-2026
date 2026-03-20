@@ -103,7 +103,7 @@ export const eventsData = [
     registration: "300/- per person",
     prize: "4,00,00,000+",
     link: "/event/hackmol",
-    description: "Community-focused 24-hour hackathon for beginners and experts.",
+    description: "A community-focused 24-hour hackathon for beginners and experts. Also Register only if you have received a mail from the HackMol team for joining the offline round.",
     image: "/images/technical/hackmol7.0.jpeg",
     rulebook: "https://drive.google.com/file/d/1-ugTNk-lm-qkKfvuZJB7LruExWq0N72r/view?usp=sharing",
   },
