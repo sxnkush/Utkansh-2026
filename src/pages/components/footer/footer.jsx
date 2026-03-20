@@ -4,7 +4,7 @@ import { useTransition } from "../../../transition/transitioncontext";
 
 const Footer = () => {
     // Neon color
-    const neonColor = "#71E560";
+    const neonColor = "#d1f903";
     const { startTransition } = useTransition();
 
     // Navigation links
