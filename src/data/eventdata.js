@@ -838,7 +838,7 @@ export const eventsData = [
   // --- GAMING & MANAGERIAL ---
   {
     id: "tech-gam-1",
-    title: "Arena XO-(Valorant)",
+    title: "Arena X-(Valorant)",
     category: "Technical",
     subCategory: "Gaming",
     day: "27-29 Mar",
@@ -851,7 +851,7 @@ export const eventsData = [
   },
   {
     id: "tech-gam-2",
-    title: "Arena XO-(BGMI)",
+    title: "Arena X-(BGMI)",
     category: "Technical",
     subCategory: "Gaming",
     day: "27-29 Mar",
@@ -864,7 +864,7 @@ export const eventsData = [
   },
   {
     id: "tech-gam-3",
-    title: "Arena XO-(Real Cricket)",
+    title: "Arena X-(Real Cricket)",
     category: "Technical",
     subCategory: "Gaming",
     day: "27-29 Mar",
@@ -877,7 +877,7 @@ export const eventsData = [
   },
   {
     id: "tech-gam-4",
-    title: "Arena XO-(Clash Royale)",
+    title: "Arena X-(Clash Royale)",
     category: "Technical",
     subCategory: "Gaming",
     day: "27-29 Mar",
@@ -890,7 +890,7 @@ export const eventsData = [
   },
   {
     id: "tech-gam-5",
-    title: "Arena XO-(Smash Karts)",
+    title: "Arena X-(Smash Karts)",
     category: "Technical",
     subCategory: "Gaming",
     day: "27-29 Mar",
