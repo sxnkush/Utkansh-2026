@@ -116,7 +116,7 @@ export const eventsData = [
     link: "/event/asmita",
     description: "Spontaneous performance art creating unscripted scenes and stories.",
     image: "/images/cultural/asmita.jpeg",
-    rulebook: "https://drive.google.com/file/d/1eBlvslf0rzhFGPMCS7xCFxJgt09fdzRo/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1eBlvslf0rzhFGPMCS7xCFxJgt09fdzRo/view?usp=drive_link",
   },
   {
     id: "cult-dra-2",
@@ -129,7 +129,7 @@ export const eventsData = [
     link: "/event/rangmanch",
     description: "Stage play competition focused on living a character on stage.",
     image: "/images/cultural/rangmanch.jpeg",
-    rulebook: "https://drive.google.com/file/d/1i6Mmd-vKCFsMe3ynoKOrxEa4Mhe4nIxd/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1i6Mmd-vKCFsMe3ynoKOrxEa4Mhe4nIxd/view?usp=drive_link",
   },
   {
     id: "cult-dra-3",
@@ -142,7 +142,7 @@ export const eventsData = [
     link: "/event/halla-bol",
     description: "Street play competition addressing social issues for positive change.",
     image: "/images/cultural/hallabol.jpeg",
-    rulebook: "https://drive.google.com/file/d/1dE_xRBx-EzxeG2FHRgK5KSEuCAZq4akx/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1dE_xRBx-EzxeG2FHRgK5KSEuCAZq4akx/view?usp=drive_link",
   },
   {
     id: "cult-dra-4",
@@ -155,7 +155,7 @@ export const eventsData = [
     link: "/event/eklavya",
     description: "Solo theatrical performance portraying multiple characters through voice modulation.",
     image: "/images/cultural/eklavya.jpeg",
-    rulebook: "https://drive.google.com/file/d/1quNz81MLHhbT3iM8aGIwaX_YiSopP-fW/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1WRgic_C2k0-Q3j9_pFPClJ4PVq8hU2QH/view?usp=drive_link",
   },
   // --- GUEST LECTURE(NEW) ---
   {
@@ -182,7 +182,7 @@ export const eventsData = [
     link: "/event/nirvana",
     description: "Fashion parade featuring talented models and designers.",
     image: "/images/cultural/nirvana.jpeg",
-    rulebook: "https://drive.google.com/file/d/1pqAI4-7zXRVwmK3aU7ecPp9hs0ucenCV/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1pqAI4-7zXRVwmK3aU7ecPp9hs0ucenCV/view?usp=drive_link",
   },
   {
     id: "cult-fla-1",
@@ -195,7 +195,7 @@ export const eventsData = [
     link: "/event/spice-wars",
     description: "Culinary competition to create flavor-packed spice-infused dishes.",
     image: "/images/cultural/spicewars3.0.jpeg",
-    rulebook: "https://drive.google.com/file/d/1I_vpkOkDKoHn6VcpTOsaBecRqxrpOu4m/view?usp=drive_link",
+    rulebook: "https://drive.google.com/file/d/1bcRxFYF1unnLGHs4qQ4FoWlOs8a-_Vtb/view?usp=drive_link",
   },
 
   // --- LITERATURE ---
@@ -903,7 +903,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     link: "/event/arena-xo",
     description: "E-gaming tournament for Smash Karts",
     image: "/images/technical/smash.png",
-    rulebook: "https://drive.google.com/file/d/1AqKLWVRVafjOmLQqAGCGOorsKm_Wh8HO/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/18_a5Purm1TSBpD9yvNsEb0z8Aj8DHk22/view?usp=sharing",
   },
   {
     id: "tech-man-1",

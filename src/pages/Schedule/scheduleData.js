@@ -232,7 +232,7 @@ export const scheduleData = {
         { id: "cult-lit-4", time: "9:30 AM - 12:30 PM", name: "Word poem (LADC)", location: "SB-1" }
       ],
       "Hindi Sahitya": [
-        { id: "cult-hin-3", time: "11:30 AM - 2:00 PM", name: "Filmy Sangram (RAJ BASHA)", location: "SB- 2" }
+        { id: "cult-hin-3", time: "11:30 AM - 2:00 PM", name: "Filmy Sangram (RAJ BHASHA)", location: "SB- 2" }
       ],
       Photography: [
         { id: "cult-pho-4", time: "11:00 AM - EOD", name: "Nazariya (Online) (NETRA)", location: "Online" }
