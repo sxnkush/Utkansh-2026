@@ -167,7 +167,7 @@ export const scheduleData = {
       ],
       Literature: [
         { id: "cult-lit-2", time: "1:00 PM - 7:00 PM", name: "Charter and Change (ZEAL)", location: "VCH" },
-        { id: "cult-lit-3", time: "10:00 AM - 5:30 PM", name: "Diplomacy Battle (LADC)", location: "SB 1 & SB 2" }
+        { id: "cult-lit-3", time: "09:00 AM - 5:30 PM", name: "Diplomacy Battle (LADC)", location: "SB 1 & SB 2" }
       ],
       "Hindi Sahitya": [
         { id: "cult-hin-2", time: "9:30 AM - 1:00 PM", name: "Mehfil (RAJBASHA)", location: "Dominos" }

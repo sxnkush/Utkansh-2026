@@ -23,9 +23,10 @@ const EventDetails = () => {
       style={{ backgroundImage: `url('/images/accomodation 2.webp')` }}
     >
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 
-      <div className="relative text-white min-h-screen pb-28">
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-[2px] -z-10" />
+
+      <div className="relative z-10 min-h-screen overflow-y-auto text-white">
         <button
           onClick={() => startTransition("/events")}
           className="absolute left-6 md:left-16 top-6 md:top-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center border-2 border-white text-white bg-white/backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-300 z-50"
@@ -87,7 +88,6 @@ const EventDetails = () => {
               </div>
             )}
           </div>
-
         </section>
 
         {/* ================= ABOUT + INFO ================= */}
@@ -99,9 +99,10 @@ const EventDetails = () => {
             </h2>
 
             {foundEvent.description && (
-              <p className="text-lg font-semibold leading-relaxed text-gray-200">
-                {foundEvent.description}
-              </p>
+              <p
+                className="text-lg font-semibold leading-relaxed text-gray-200"
+                dangerouslySetInnerHTML={{ __html: foundEvent.description }}
+              />
             )}
           </div>
 
@@ -177,7 +178,7 @@ const EventDetails = () => {
         {foundEvent.link && (
           <div className="hidden md:flex justify-center pb-24">
             <a
-              href="https://v1.nitj.ac.in/events_registration/utkansh_2026/login"
+              href={foundEvent.title !== "DriftX" ? "https://v1.nitj.ac.in/events_registration/utkansh_2026/login":"https://pages.razorpay.com/driftx-ticket"}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
@@ -189,9 +190,7 @@ const EventDetails = () => {
       </div>
       {showRulebook && (
         <div className="fixed inset-0 bg-black/90 z-[999] flex items-center justify-center p-4">
-
           <div className="w-full max-w-5xl h-[85vh] bg-white relative border-[4px] border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
-
             {/* CLOSE BUTTON */}
             <button
               onClick={() => setShowRulebook(false)}

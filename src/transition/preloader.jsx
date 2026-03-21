@@ -120,7 +120,6 @@ const IntroLoader = ({ onLoaded, audioControl }) => {
                 <div
                     className={`
     absolute inset-0 z-[-10] h-full w-full
-    bg-[url('/svgs/preloader/pleasedont.svg')] 
     bg-no-repeat bg-center
     bg-[length:94%_auto] 
     transition-all duration-400 ease-[cubic-bezier(0.69,0.54,0.55,1.01)]
