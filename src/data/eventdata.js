@@ -274,7 +274,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     registration: "250/- per person",
     prize: "12,000",
     link: "/event/raporiot",
-    description: `Lyrical mastery and creativity competition for rappers.<br/> Upload video at: <a href="https://forms.gle/qkVCwjmcqZL5m27A" target="_blank" style="color:#fbbf24; font-weight:600;">Click Here</a>`,
+    description: `Lyrical mastery and creativity competition for rappers.<br/> Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" style="color:#fbbf24; font-weight:600;">Click Here</a>`,
     image: "/images/cultural/raporiot.jpeg",
     rulebook: "https://drive.google.com/file/d/1oenqPcUgxxm-gtJVx1TtgEF_iorllZCK/view?usp=sharing",
   },
