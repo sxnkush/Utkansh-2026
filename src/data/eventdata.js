@@ -39,7 +39,7 @@ export const eventsData = [
     registration: "100/- per person",
     prize: "5,000",
     link: "/event/inkspire",
-    description: "Creative competition focused on original tattoo designs on paper.",
+    description: "Creative competition focused on original tattoo designs on thier partner's hand.",
     image: "/images/cultural/inkspire.jpeg",
     rulebook: "https://drive.google.com/file/d/16GVxz7E3EgCCL03Qthm6IbDEObZnNmK6/view?usp=sharing",
   },
