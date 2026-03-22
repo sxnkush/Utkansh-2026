@@ -1035,7 +1035,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     link: "/event/inside-out",
     description: "Anatomy-themed treasure hunt following clues across body systems.",
     image: "/images/technical/insideout.jpeg",
-    rulebook: "https://drive.google.com/file/d/1conq1oNjOdq3aj9-LHvLsjmmpBRCP3t-/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1conq1oNjOdq3aj9-LHvLsjmmpBRCP3t-/view?usp=drive_link",
   },
   {
     id: "tech-ste-7",
