@@ -49,14 +49,14 @@ const EventCard = ({ event }) => {
           >
             More Info
           </Link>
-          {/* <a 
+          <a 
             href={event.title !== "DriftX" ? "https://v1.nitj.ac.in/events_registration/utkansh_2026/login":"https://pages.razorpay.com/driftx-ticket"}
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center bg-[#00E676] border-2 border-black py-2 font-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all active:translate-y-0.5 active:shadow-none"
           >
             Register
-          </a> */}
+          </a>
         </div>
       </div>
     </div>
