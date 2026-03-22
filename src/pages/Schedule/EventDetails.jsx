@@ -161,7 +161,7 @@ const EventDetails = () => {
         {/* ================= REGISTER BUTTON ================= */}
 
         {/* Mobile Sticky */}
-        {foundEvent.link && (
+        {/* {foundEvent.link && (
           <div className="fixed bottom-0 left-0 w-full md:hidden bg-black border-t-[5px] border-white p-4">
             <a
               href="https://v1.nitj.ac.in/events_registration/utkansh_2026/login"
@@ -172,10 +172,10 @@ const EventDetails = () => {
               Register Now
             </a>
           </div>
-        )}
+        )} */}
 
         {/* Desktop Button */}
-        {foundEvent.link && (
+        {/* {foundEvent.link && (
           <div className="hidden md:flex justify-center pb-24">
             <a
               href={foundEvent.title !== "DriftX" ? "https://v1.nitj.ac.in/events_registration/utkansh_2026/login":"https://pages.razorpay.com/driftx-ticket"}
@@ -186,7 +186,7 @@ const EventDetails = () => {
               Register Now
             </a>
           </div>
-        )}
+        )} */}
       </div>
       {showRulebook && (
         <div className="fixed inset-0 bg-black/90 z-[999] flex items-center justify-center p-4">
