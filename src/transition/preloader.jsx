@@ -111,11 +111,7 @@ const IntroLoader = ({ onLoaded, audioControl }) => {
 
             {/* Default Screen */}
             <div className={`absolute inset-0 flex items-center justify-center ${loading !== 0 ? "pointer-events-none invisible" : "visible"}`}>
-                <DontSendText
-                    className={`absolute inset-0 m-auto -z-10 h-full tracking-[0.2em] hidden md:block
-  transition-transform duration-[1200ms] ease-[cubic-bezier(0.76,0,0.24,1)]
-  ${isExploded ? "-translate-x-[110%]" : "translate-x-0"}`}
-                />
+
                 {/* Mobile Background Image */}
                 <div
                     className={`
