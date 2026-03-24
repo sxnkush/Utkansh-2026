@@ -627,7 +627,8 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     prize: "10,000",
     link: "/event/analyst-edge",
     description: "Portfolio-building challenge using analysis tools and fixed capital.",
-    image: "/images/technical/analystedge.jpeg"
+    image: "/images/technical/analystedge.jpeg",
+    rulebook: "https://drive.google.com/file/d/1BSVSlU7QfGtHeppW1Ebbz2OzPUNPVT4L/view?usp=sharing"
   },
   {
     id: "tech-bus-3",
@@ -635,7 +636,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     category: "Technical",
     subCategory: "Business",
     day: "27-03-2026",
-    registration: "300/- per team",
+    registration: "100/- per team",
     prize: "10,000",
     link: "/event/traders-arena",
     description: "Live stock exchange simulation with virtual demat accounts.",
@@ -721,7 +722,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     category: "Technical",
     subCategory: "Circuits",
     day: "27-03-2026",
-    registration: "200/- per team",
+    registration: " ₹100/- per team",
     prize: "4,500",
     link: "/event/rapid-wire",
     description: "Technical event with rounds based on electrical and software logic.",
@@ -734,7 +735,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     category: "Technical",
     subCategory: "Circuits",
     day: "28-03-2026",
-    registration: "120/- per person",
+    registration: "100/- per person",
     prize: "6,000",
     link: "/event/grid-collapse",
     description: "Campus-wide treasure hunt solving circuit-based puzzles to restore power.",
