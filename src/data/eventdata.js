@@ -691,7 +691,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     image: "/images/technical/midastouch.jpg",
     rulebook: "https://drive.google.com/file/d/1BO7QQh8N5O5Z8mlxbjA6e92RcK99SJJ1/view?usp=sharing",
     rules: [
-      "Participation: 2 members per team.",
+      "Participation: 2-4 members per team.",
       "Round 1: Quiz-based screening on SDGs, current affairs, and social entrepreneurship.",
       "Round 2: Shortlisted teams analyze a real-world problem and propose a socially sustainable solution[cite: 7].",
       "Preparation: Teams get 30 minutes to prepare a solution and a 3-5 slide presentation[cite: 11, 12].",
@@ -966,9 +966,9 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     title: "React & Resolve",
     category: "Technical",
     subCategory: "STEM",
-    day: "29-03-2026",
+    day: "27-03-2026",
     registration: "150/- per team",
-    prize: "15,000",
+    prize: "5,000",
     link: "/event/react-resolve",
     description: "Solving real-world chemical engineering problems before a panel.",
     image: "/images/technical/reactandresolve.jpeg"
@@ -998,18 +998,6 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     description: "Tech challenge with aptitude thinking and a 4-hour hackathon.",
     image: "/images/technical/mindthemind.jpeg",
     rulebook: "https://drive.google.com/file/d/1kUqjDMZbnJ7NxJQpWXRbH7ejOxoVqqYg/view?usp=sharing",
-  },
-  {
-    id: "tech-ste-4",
-    title: "ChemXplore",
-    category: "Technical",
-    subCategory: "STEM",
-    day: "27-03-2026",
-    registration: "100/- per team",
-    prize: "9,000",
-    link: "/event/chemxplore",
-    description: "Interactive scenarios for chemical engineering problem solving.",
-    image: "/images/technical/chemxplore.jpeg"
   },
   {
     id: "tech-ste-5",

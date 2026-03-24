@@ -42,7 +42,8 @@ export const scheduleData = {
       STEM: [
         { id: "tech-ste-2", time: "10:00 AM - 2:00 PM", name: "The Human Hunt (Sober)", location: "BT Department" },
         { id: "tech-ste-3", time: "11:00 AM - 1:00 PM", name: "Escape Room (PHY Science Society)", location: "SB 209" },
-        { id: "tech-ste-4", time: "2:00 PM - 5:30 PM", name: "Escape Room (Q-MANIA)", location: "LT 201, 202" }
+        { id: "tech-ste-4", time: "2:00 PM - 5:30 PM", name: "Escape Room (Q-MANIA)", location: "LT 201, 202" },
+        { id: "tech-ste-10", time: "10:00 AM - EOD", name: "React and Resolve (Online) (ChEss)", location: "Online" }
       ],
       Designing: [
         { id: "tech-des-1", time: "10:30 AM - 4:30 PM", name: "Steel Arch Making (SocCEr)", location: "Civil Parking" },
@@ -114,10 +115,9 @@ export const scheduleData = {
       ],
       Robotics: [
         { id: "tech-rob-2", time: "9:30 AM - 1:30 PM", name: "Maze Rush (SPICE)", location: "INFRONT OF ICE BUILD" },
-        { id: "tech-rob-3", time: "10:00 AM - 3:00 PM", name: "Gear Blitz (DAKSH)", location: "Main Ground" }
+        { id: "tech-rob-3", time: "10:00 AM - 3:00 PM", name: "Gear Blitz (DAKSH)", location: "Main Ground" },
       ],
       STEM: [
-        { id: "tech-ste-1", time: "9:30 AM - EOD", name: "ChemXplore (ChESS)", location: "Chem Dept." },
         { id: "tech-ste-5", time: "11:00 AM - 4:00 PM", name: "Mind The Mind (SOECE)", location: "LT 404" },
         { id: "tech-ste-6", time: "10:00 AM - 2:00 PM", name: "Who Killed The Cell (SOBER)", location: "BT Dept." },
         { id: "tech-ste-7", time: "3:30 PM - 6:00 PM", name: "Enigma'26 (EDU SOCIETY)", location: "ALT" },
@@ -199,7 +199,6 @@ export const scheduleData = {
       ],
       STEM: [
         { id: "tech-ste-9", time: "9:30 AM - EOD", name: "STEM MUN (APOGEE/ E CELL /Q-MAINA)", location: "VCH" },
-        { id: "tech-ste-10", time: "10:00 AM - EOD", name: "React and Resolve (Online) (ChEss)", location: "Online" }
       ],
       Business: [
         { id: "tech-bus-7", time: "10:30 AM - 12:30 PM", name: "TechBiz Quest 2.0 (StrataBiz Club)", location: "LT 101" }
@@ -216,7 +215,7 @@ export const scheduleData = {
     },
     Cultural: {
       Music: [
-        { id: "cult-mus-3", time: "1:30 PM - 5:00 PM", name: "Raporoit (OCTAVES)", location: "TENNIS COURT" }
+        { id: "cult-mus-3", time: "1:30 PM - 5:00 PM", name: "Rapriot (OCTAVES)", location: "TENNIS COURT" }
       ],
       Dance: [
         { id: "cult-dan-5", time: "1:30 PM - 6:30 PM", name: "Bhangra Fiesta (BHANGRA CLUB)", location: "CSH" }
