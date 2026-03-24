@@ -15,7 +15,7 @@ export const eventsData = [
     link: "/event/kuchad-kala",
     description: "Painting decorative pillars with cultural motifs, modern patterns, or abstract designs.",
     image: "/images/cultural/kuchadkala.jpeg",
-    rulebook: "https://drive.google.com/file/d/1ij79GZDegSSRupCnsshmb-yega000Ras/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1kuaGdQ99rKOqT9EUopnBGcN5UatTjBg6/view?usp=sharing",
   },
   {
     id: "cult-art-2",
@@ -28,7 +28,7 @@ export const eventsData = [
     link: "/event/manga-muse",
     description: "Platform to express passion for anime through character creation and animation styles.",
     image: "/images/cultural/mangamuse.jpeg",
-    rulebook: "https://drive.google.com/file/d/1kzB_pIdcjdF6zDNMQbzxw4LYXzww31SG/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/10vNZqDCLeN4tRIRb29Msxn-i_jn7ToLH/view?usp=sharing",
   },
   {
     id: "cult-art-3",
@@ -41,7 +41,7 @@ export const eventsData = [
     link: "/event/inkspire",
     description: "Creative competition focused on original tattoo designs on thier partner's hand.",
     image: "/images/cultural/inkspire.jpeg",
-    rulebook: "https://drive.google.com/file/d/16GVxz7E3EgCCL03Qthm6IbDEObZnNmK6/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1olUYuL_5EUIaoQ0-bt-TZhzhfYflyZZa/view?usp=sharing",
   },
   {
     id: "cult-art-4",
@@ -54,7 +54,7 @@ export const eventsData = [
     link: "/event/folded-blooms",
     description: "Origami competition highlighting precision in creating paper bouquets.",
     image: "/images/cultural/foldedblooms.jpeg",
-    rulebook: "https://drive.google.com/file/d/1m_7qIEXRFplmTGsCaIy8QEBMF5mfxAqZ/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1q7cDW_RK7RqHv5uSZx2HkqA79q3Mb4Hf/view?usp=sharing",
   },
   {
     id: "cult-art-5",
@@ -67,7 +67,7 @@ export const eventsData = [
     link: "/event/art-chase",
     description: "Interactive event following clues and solving art-based tasks.",
     image: "/images/cultural/theartchase.jpeg",
-    rulebook: "https://drive.google.com/file/d/1qki33RH9nBReL6aCn1YQwyM-AhMwrUER/view?usp=sharing",
+    rulebook: "https://drive.google.com/file/d/1GE7j9KlWGNL4XASPNLmhDRtYX7aSse0l/view?usp=sharing",
   },
   {
     id: "cult-art-6",
