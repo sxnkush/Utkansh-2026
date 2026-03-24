@@ -707,7 +707,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     subCategory: "Software",
     day: "28-03-2026",
     registration: "100/- per person (External)\n50/- per person (Internal)",
-    prize: "10,000",
+    prize: "5,000",
     link: "/event/civil-ideathon",
     description: "MATWARS, organized by the Society of Mechanical Engineers (SoME), is designed to ignite students' curiosity and enhance their proficiency in MATLAB. The competition provides participants with an opportunity to experience how engineers use MATLAB tools in industry through engaging and practical simulation challenges.",
     image: "/images/cultural/matwars.jpeg",
