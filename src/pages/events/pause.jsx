@@ -10,54 +10,97 @@ const PausePage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const contactGroups = [
-        {
-            title: "For all Registrations",
-            people: [
-                { name: "Niraj Kumar", phone: "+91 7978147562" },
-                { name: "Sarvesh Singh", phone: "+91 8085384184" },
-                { name: "Preeti Sharma", phone: "+91 8791703200" },
-            ],
-        },
-        {
-            title: "Fine Arts Society",
-            people: [
-                { name: "Komal", phone: "+91 7814322180" },
-                { name: "Himanshu", phone: "+91 7033279285" },
-                { name: "Abhijeet", phone: "+91 9873565723" },
-            ],
-        },
-        {
-            title: "Dance",
-            people: [
-                { name: "Khusi", phone: "+91 9255194145" },
-                { name: "Kajal", phone: "+91 8302707716" },
-                { name: "Bartika", phone: "+91 9650100419" },
-            ],
-        },
-        {
-            title: "Bhangra",
-            people: [
-                { name: "Nihal", phone: "+91 9463413023" },
-                { name: "Gunroop", phone: "+91 7973826168" },
-                { name: "Baaj ", phone: "+91  7696264208" },
-            ],
-        },
-        {
-            title: "Music",
-            people: [
-                { name: "Arnav", phone: "+91 9958857603" },
-                { name: "Raghunandan", phone: "+91 8728821256" },
-            ],
-        },
-        {
-            title: "Fashion",
-            people: [
-                { name: "Tiyas", phone: "+91 9832603861" },
-                { name: "Abhinandan", phone: "+91 6280493065" },
-            ],
-        },
-    ];
+const contactGroups = [
+    {
+        title: "For all Registrations",
+        people: [
+            { name: "Niraj Kumar", phone: "+91 7978147562" },
+            { name: "Sarvesh Singh", phone: "+91 8085384184" },
+            { name: "Preeti Sharma", phone: "+91 8791703200" },
+        ],
+    },
+    {
+        title: "Fine Arts Society",
+        people: [
+            { name: "Komal", phone: "+91 7814322180" },
+            { name: "Himanshu", phone: "+91 7033279285" },
+            { name: "Abhijeet", phone: "+91 9873565723" },
+        ],
+    },
+    {
+        title: "Dance",
+        people: [
+            { name: "Khusi", phone: "+91 9255194145" },
+            { name: "Kajal", phone: "+91 8302707716" },
+            { name: "Bartika", phone: "+91 9650100419" },
+        ],
+    },
+    {
+        title: "Bhangra",
+        people: [
+            { name: "Nihal", phone: "+91 9463413023" },
+            { name: "Gunroop", phone: "+91 7973826168" },
+            { name: "Baaj ", phone: "+91  7696264208" },
+        ],
+    },
+    {
+        title: "Music",
+        people: [
+            { name: "Arnav", phone: "+91 9958857603" },
+            { name: "Raghunandan", phone: "+91 8728821256" },
+            { name: "Anupam", phone: "+91 79738 57686" },
+        ],
+    },
+    {
+        title: "Fashion",
+        people: [
+            { name: "Tiyas", phone: "+91 9832603861" },
+            { name: "Abhinandan", phone: "+91 6280493065" },
+        ],
+    },
+    {
+        title: "Cybernauts",
+        people: [
+            { name: "Manan", phone: "+91 9990833513" },
+            { name: "Mahir", phone: "+91 94173 87948" },
+        ],
+    },
+    {
+        title: "SPICE",
+        people: [
+            { name: "Sarvesh", phone: "+91 8085384184" },
+            { name: "Ayush", phone: "+91 7201050327" },
+        ],
+    },
+    {
+        title: "Sober (The Human Hunt / Who Killed the Cell)",
+        people: [
+            { name: "Jaya", phone: "+91 63677 16310" },
+            { name: "Neha", phone: "+91 78220 70166" },
+        ],
+    },
+    {
+        title: "TIES",
+        people: [
+            { name: "Alok", phone: "+91 6283524987" },
+            { name: "Ruchir", phone: "+91 9431645370" },
+        ],
+    },
+    {
+        title: "Matwars",
+        people: [
+            { name: "Shrey", phone: "+91 7351510532" },
+            { name: "Harshit", phone: "+91 7009743448" },
+        ],
+    },
+    {
+        title: "Seed (Power Arena, Rapid Wire, Grid Collapse)",
+        people: [
+            { name: "Rinku Diwakar", phone: "+91 9137438718" },
+            { name: "Ripudaman", phone: "+91 89685 21134" },
+        ],
+    },
+];
     return (
         <div className="relative z-10 text-white min-h-screen flex items-center justify-center px-4 py-20 overflow-y-auto">
 
