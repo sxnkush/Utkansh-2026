@@ -4,7 +4,7 @@ import { Context } from "../Context/Context";
 import { useTransition } from "../../transition/transitioncontext";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const EventDetails = () => {
   const { eventId } = useParams();
@@ -164,7 +164,6 @@ const EventDetails = () => {
         {/* Mobile Sticky */}
         {foundEvent.link && (
           <div className="fixed bottom-0 left-0 w-full md:hidden bg-black border-t-[5px] border-white p-4">
-
             {foundEvent.title === "DriftX" ? (
               <a
                 href="https://pages.razorpay.com/driftx-ticket"
@@ -174,23 +173,22 @@ const EventDetails = () => {
               >
                 Register Now
               </a>
-            ) : 
-            foundEvent.title === "STEM MUN"? <h4>Registrations Closed foor this event</h4> :
+            ) : foundEvent.title === "STEM MUN" ? (
+              <h4>Registrations Closed for this event</h4>
+            ) : (
               <Link
                 to="/paused"
                 className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
               >
                 Register Now
               </Link>
-            }
-
+            )}
           </div>
         )}
 
         {/* Desktop Button */}
         {foundEvent.link && (
           <div className="hidden md:flex justify-center pb-24">
-
             {foundEvent.title === "DriftX" ? (
               <a
                 href="https://pages.razorpay.com/driftx-ticket"
@@ -200,15 +198,16 @@ const EventDetails = () => {
               >
                 Register Now
               </a>
+            ) : foundEvent.title === "STEM MUN" ? (
+              <h4>Registrations Closed for this event</h4>
             ) : (
               <Link
                 to="/paused"
-                className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
+                className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
               >
                 Register Now
               </Link>
             )}
-
           </div>
         )}
       </div>
