@@ -130,14 +130,16 @@ const contactGroups = [
 
                     {/* Heading */}
                     <h1 className="text-center text-4xl md:text-5xl font-black mb-4">
-                        Registrations Paused
+                        Registrations Diverted
                     </h1>
 
                     <p className="text-center text-gray-300 text-lg mb-10">
-                        Registrations are currently paused.
+                        <span className="font-semibold underline">For external students:</span> Registrations are done by the designated coordinators.
                         Please contact the relevant coordinators below.
                     </p>
-
+                    <p className="text-center text-gray-300 text-lg mb-10">
+                        <span className="font-semibold underline">For internal students (via NITJ Wi-Fi):</span> <a href="https://v1.nitj.ac.in/events_registration/utkansh_2026/login" target="_blank" className="text-amber-300"> Click Here</a>
+                    </p>
                     {/* 🔥 Categories */}
                     <div className="space-y-8">
                         {contactGroups.map((group, idx) => (
@@ -169,7 +171,9 @@ const contactGroups = [
                     <p className="text-center text-sm text-gray-400 mt-10">
                         We’ll resume registrations soon. Stay tuned!
                     </p>
-
+                    <p className="text-center text-sm text-gray-400 mt-10">
+                        *T&C- Once registration is completed, no refund will be initiated from institute.
+                    </p>
                 </div>
             </div>
         </div>
