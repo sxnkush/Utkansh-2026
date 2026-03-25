@@ -43,6 +43,20 @@ const PausePage = () => {
                 { name: "Baaj ", phone: "+91  7696264208" },
             ],
         },
+        {
+            title: "Music",
+            people: [
+                { name: "Arnav", phone: "+91 9958857603" },
+                { name: "Raghunandan", phone: "+91 8728821256" },
+            ],
+        },
+        {
+            title: "Fashion",
+            people: [
+                { name: "Tiyas", phone: "+91 9832603861" },
+                { name: "Abhinandan", phone: "+91 6280493065" },
+            ],
+        },
     ];
     return (
         <div className="relative z-10 text-white min-h-screen flex items-center justify-center px-4 py-20 overflow-y-auto">
