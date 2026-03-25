@@ -66,7 +66,7 @@ const contactGroups = [
         ],
     },
     {
-        title: "SPICE",
+        title: "SPICE (Maze Rush)",
         people: [
             { name: "Sarvesh", phone: "+91 8085384184" },
             { name: "Ayush", phone: "+91 7201050327" },

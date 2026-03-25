@@ -37,7 +37,7 @@ export const scheduleData = {
         { id: "tech-cod-3", time: "2:00 PM - 5:00 PM", name: "Debug to Deploy (SUPER QUANT CODERS)", location: "SAC 206" }
       ],
       Robotics: [
-        { id: "tech-rob-1", time: "10:00 AM - 3:00 PM", name: "Sky Rush (Agastya)", location: "MBH Ground" }
+        
       ],
       STEM: [
         { id: "tech-ste-2", time: "10:00 AM - 2:00 PM", name: "The Human Hunt (Sober)", location: "BT Department" },
@@ -116,10 +116,11 @@ export const scheduleData = {
       Robotics: [
         { id: "tech-rob-2", time: "9:30 AM - 1:30 PM", name: "Maze Rush (SPICE)", location: "INFRONT OF ICE BUILD" },
         { id: "tech-rob-3", time: "10:00 AM - 3:00 PM", name: "Gear Blitz (DAKSH)", location: "Main Ground" },
+        { id: "tech-rob-1", time: "10:00 AM - 3:00 PM", name: "Sky Rush (Agastya)", location: "MBH Ground" }
       ],
       STEM: [
         { id: "tech-ste-5", time: "11:00 AM - 4:00 PM", name: "Mind The Mind (SOECE)", location: "LT 404" },
-        { id: "tech-ste-6", time: "10:00 AM - 2:00 PM", name: "Who Killed The Cell (SOBER)", location: "BT Dept." },
+        { id: "tech-ste-6", time: "2:00 PM - 4:00 PM", name: "Who Killed The Cell (SOBER)", location: "BT Dept." },
         { id: "tech-ste-7", time: "3:30 PM - 6:00 PM", name: "Enigma'26 (EDU SOCIETY)", location: "ALT" },
         { id: "tech-ste-8", time: "11:00 AM - 1:00 PM", name: "Treasure Hunt (Physical Science Society)", location: "SB OUTSIDE" }
       ],

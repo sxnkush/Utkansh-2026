@@ -332,18 +332,18 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
   },
 
   // --- VIDEOGRAPHY ---
-  {
-    id: "cult-vid-1",
-    title: "Reel Making",
-    category: "Cultural",
-    subCategory: "Videography",
-    day: "28 Mar",
-    registration: "100/- per team",
-    prize: "8,000",
-    link: "/event/reel-making",
-    description: "Capture and edit powerful short stories to inspire the audience.",
-    image: "/images/cultural/reelmaking.jpeg"
-  },
+  // {
+  //   id: "cult-vid-1",
+  //   title: "Reel Making",
+  //   category: "Cultural",
+  //   subCategory: "Videography",
+  //   day: "28 Mar",
+  //   registration: "100/- per team",
+  //   prize: "8,000",
+  //   link: "/event/reel-making",
+  //   description: "Capture and edit powerful short stories to inspire the audience.",
+  //   image: "/images/cultural/reelmaking.jpeg"
+  // },
   {
     id: "cult-vid-2",
     title: "Mad Ads",
