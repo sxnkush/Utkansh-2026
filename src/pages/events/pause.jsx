@@ -100,6 +100,20 @@ const contactGroups = [
             { name: "Ripudaman", phone: "+91 89685 21134" },
         ],
     },
+    {
+        title: "Q'Mania Escape Room",
+        people: [
+            { name: "Gursimar", phone: "+91 7888548694" },
+            { name: "Harsh", phone: "+91 7296959188" },
+        ],
+    },
+    {
+        title: "EDUCARE Society Presents: ENIGMA 2026",
+        people: [
+            { name: "Piyush Mishra", phone: "+91 9341328828" },
+            { name: "Raj Malhotra", phone: "+91 9905863139" },
+        ],
+    },
 ];
     return (
         <div className="relative z-10 text-white min-h-screen flex items-center justify-center px-4 py-20 overflow-y-auto">
