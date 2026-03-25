@@ -552,7 +552,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
     title: "Sky Rush",
     category: "Technical",
     subCategory: "Robotics",
-    day: "27-03-2026",
+    day: "28-03-2026",
     registration: "250/- per team",
     prize: "30,000",
     link: "/event/sky-rush",
