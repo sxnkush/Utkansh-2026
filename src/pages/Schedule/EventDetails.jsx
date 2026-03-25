@@ -174,14 +174,15 @@ const EventDetails = () => {
               >
                 Register Now
               </a>
-            ) : (
+            ) : 
+            foundEvent.title === "STEM MUN"? <h4>Registrations Closed foor this event</h4> :
               <Link
                 to="/paused"
                 className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
               >
                 Register Now
               </Link>
-            )}
+            }
 
           </div>
         )}
