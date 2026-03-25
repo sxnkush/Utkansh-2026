@@ -203,7 +203,7 @@ const EventDetails = () => {
             ) : (
               <Link
                 to="/paused"
-                className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
+                className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
               >
                 Register Now
               </Link>
