@@ -13,6 +13,7 @@ import Events from "./pages/events/events";
 import EventsPage from "./pages/events";
 import Accomodation from "./pages/accomodation/accomodation";
 import EventDetails from "./pages/Schedule/EventDetails";
+import PausePage from "./pages/events/pause";
 
 function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -22,7 +23,7 @@ function App() {
   const { phase, setPhase, targetPath } = useTransition();
 
   //  Hide on contact page
-  const hideNavRoutes = ["/contact", "/events"];
+  const hideNavRoutes = ["/contact", "/events", "/paused"];
   const shouldHideNav = hideNavRoutes.includes(location.pathname);
 
   return (
@@ -47,8 +48,9 @@ function App() {
         <Route path="/teams" element={<DevelopersPage />} />
         <Route path="/contact" element={<ContactUsUtkansh26 />} />
         <Route path='/events' element={<EventsPage />} />
-        <Route path='/events/:eventId' element={<EventDetails/>} />
-        <Route path='/accomodation' element={<Accomodation/>} />
+        <Route path='/events/:eventId' element={<EventDetails />} />
+        <Route path='/accomodation' element={<Accomodation />} />
+        <Route path="/paused" element={<PausePage />} />
       </Routes>
       {/* LOADER ON TOP */}
       {!introDone && (

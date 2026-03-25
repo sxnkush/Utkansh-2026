@@ -4,6 +4,7 @@ import { Context } from "../Context/Context";
 import { useTransition } from "../../transition/transitioncontext";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const EventDetails = () => {
   const { eventId } = useParams();
@@ -163,28 +164,50 @@ const EventDetails = () => {
         {/* Mobile Sticky */}
         {foundEvent.link && (
           <div className="fixed bottom-0 left-0 w-full md:hidden bg-black border-t-[5px] border-white p-4">
-            <a
-              href="https://v1.nitj.ac.in/events_registration/utkansh_2026/login"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
-            >
-              Register Now
-            </a>
+
+            {foundEvent.title === "DriftX" ? (
+              <a
+                href="https://pages.razorpay.com/driftx-ticket"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
+              >
+                Register Now
+              </a>
+            ) : (
+              <Link
+                to="/paused"
+                className="block w-full text-center bg-red-600 border-[5px] border-black py-4 font-black uppercase text-white text-lg shadow-[8px_8px_0px_0px_#000] active:translate-y-1 active:shadow-none transition-all"
+              >
+                Register Now
+              </Link>
+            )}
+
           </div>
         )}
 
         {/* Desktop Button */}
         {foundEvent.link && (
           <div className="hidden md:flex justify-center pb-24">
-            <a
-              href={foundEvent.title !== "DriftX" ? "https://v1.nitj.ac.in/events_registration/utkansh_2026/login":"https://pages.razorpay.com/driftx-ticket"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
-            >
-              Register Now
-            </a>
+
+            {foundEvent.title === "DriftX" ? (
+              <a
+                href="https://pages.razorpay.com/driftx-ticket"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
+              >
+                Register Now
+              </a>
+            ) : (
+              <Link
+                to="/paused"
+                className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
+              >
+                Register Now
+              </Link>
+            )}
+
           </div>
         )}
       </div>
