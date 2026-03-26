@@ -682,7 +682,7 @@ Upload video at: <a href="https://forms.gle/HqkVCwjmcqZL5m27A" target="_blank" s
   {
     id: "tech-bus-7",
     title: "The Midas Touch",
-    category: "Technical",
+    category: "Cultural",
     subCategory: "Business",
     day: "27-03-2026",
     registration: "200/- per team",
