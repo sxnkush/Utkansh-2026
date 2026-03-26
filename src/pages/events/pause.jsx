@@ -16,7 +16,7 @@ const contactGroups = [
         people: [
             { name: "Niraj Kumar", phone: "+91 7978147562" },
             { name: "Sarvesh Singh", phone: "+91 8085384184" },
-            { name: "Preeti Sharma", phone: "+91 8791703200" },
+            { name: "Omkar", phone: "+91 7879333646" },
         ],
     },
     {
