@@ -202,7 +202,7 @@ const EventDetails = () => {
               <h4>Registrations Closed for this event</h4>
             ) : (
               <Link
-                to="/paused"
+                to="https://v1.nitj.ac.in/events_registration/utkansh_2026/login"
                 className="bg-red-600 border-[6px] border-black px-14 py-5 font-black uppercase text-white text-xl shadow-[12px_12px_0px_0px_#000] hover:scale-105 transition-all"
               >
                 Register Now

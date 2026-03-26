@@ -62,7 +62,7 @@ const EventCard = ({ event }) => {
           ) : 
           event.title === "STEM MUN" ? <p>Registrations Closed</p> :
             <Link
-              to="/paused"
+              to="https://v1.nitj.ac.in/events_registration/utkansh_2026/login"
               className="flex items-center justify-center bg-[#00E676] border-2 border-black py-2 font-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all active:translate-y-0.5 active:shadow-none"
             >
               Register
