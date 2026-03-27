@@ -36,38 +36,7 @@ const sponsors = [
         id: 1,
         img: "/images/sponsors/canara.png",
         link: "https://canarabank.com/",
-    },
-    {
-        id: 2,
-        img: "/images/sponsors/hdfc.png",
-        link: "https://www.hdfcbank.com/",
-    },
-    {
-        id: 3,
-        img: "/images/sponsors/icici.png",
-        link: "https://www.icicibank.com/",
-    },
-    {
-        id: 4,
-        img: "/images/sponsors/monotech.png",
-        link: "https://monotech.in/",
-    },
-    {
-        id: 5,
-        img: "/images/sponsors/ntpc.png",
-        link: "https://ntpc.co.in/",
-    },
-    {
-        id: 6,
-        img: "/images/sponsors/noscars.png",
-        link: "https://noscar.co.in/",
-    },
-    {
-        id: 7,
-        img: "/images/sponsors/jiosaavn.png",
-        link: "https://jiosaavn.com/",
-    },
-
+    }
 ];
 
 export default function Sponsors() {
