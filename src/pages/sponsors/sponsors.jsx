@@ -2,6 +2,36 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 const sponsors = [
+        {
+        id: 8,
+        img: "/images/sponsors/plam.png",
+        link: "https://plumgoodness.com/?utm_source=google_search&utm_medium=brandsearch&utm_campaign=TP_Plum_Brand_Search_IS_Jan24_Brand_Skincare_Jan26&gad_source=1&gad_campaignid=20945206455&gbraid=0AAAAADoQ5k3GXTlMPimsSMZugL3H1VBr-&gclid=Cj0KCQjw1ZjOBhCmARIsADDuFTBirGHdF4G03356ah9x0yLt1zLibyoWRuofuZWl-bT8C4i7s55tF1oaArj9EALw_wcB",
+    },
+    {
+        id: 9,
+        img: "/images/sponsors/kotak.png",
+        link: "https://www.kotak.bank.in/en/home.html",
+    },
+    {
+        id: 10,
+        img: "/images/sponsors/verka.png",
+        link: "https://verka.coop/",
+    },
+    {
+        id: 11,
+        img: "/images/sponsors/HP.png",
+        link: "https://www.hindustanpetroleum.com/",
+    },
+    {
+        id: 12,
+        img: "/images/sponsors/amul.png",
+        link: "https://amul.com/index.php",
+    },
+    {
+        id: 13,
+        img: "/images/sponsors/krafton.png",
+        link: "https://esports.battlegroundsmobileindia.com/",
+    },
     {
         id: 1,
         img: "/images/sponsors/canara.png",
@@ -37,6 +67,7 @@ const sponsors = [
         img: "/images/sponsors/jiosaavn.png",
         link: "https://jiosaavn.com/",
     },
+
 ];
 
 export default function Sponsors() {
