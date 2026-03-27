@@ -82,7 +82,7 @@ export default function Sponsors() {
                 className="text-white bg-black text-6xl py-6 w-full text-center tracking-widest mb-0"
                 style={{ fontFamily: "Permanent Marker, cursive" }}
             >
-                Past Sponsors
+                Sponsors
             </h1>
 
             <Marquee
